@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj": {}
+    "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj": {}
   },
   "projects": {
-    "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj": {
+    "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
+        "projectUniqueName": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
         "projectName": "ProyectoHoteleroFARS",
-        "projectPath": "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
+        "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
         "packagesPath": "C:\\Users\\randa\\.nuget\\packages\\",
-        "outputPath": "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\obj\\",
+        "outputPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\randa\\AppData\\Roaming\\NuGet\\NuGet.Config",

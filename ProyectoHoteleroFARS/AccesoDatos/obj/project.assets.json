@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
+      "projectUniqueName": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
       "projectName": "AccesoDatos",
-      "projectPath": "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
+      "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
       "packagesPath": "C:\\Users\\randa\\.nuget\\packages\\",
-      "outputPath": "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\AccesoDatos\\obj\\",
+      "outputPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\randa\\AppData\\Roaming\\NuGet\\NuGet.Config",
