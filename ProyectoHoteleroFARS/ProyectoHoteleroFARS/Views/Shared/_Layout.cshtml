@@ -3,36 +3,39 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ProyectoHoteleroFARS</title>
+    <title>@ViewData["Title"] - Home</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ProyectoHoteleroFARS</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <img class="col-3" src="https://www.flaticon.com/svg/vstatic/svg/845/845022.svg?token=exp=1619647544~hmac=b263f28c980cf51600680c32838d0e10" />
+                    <h1 class="navbar-brand text-light col-6" style="padding-top:0.5em">Nombre Hotel</h1>
                 </div>
+                
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 btn-group-vertical">
+                <a asp-action="" class="btn btn-dark" style="width:100%">Home</a>
+                <a asp-action="" class="btn btn-dark" style="width:100%">Sobre Nosotros</a>
+                <a asp-action="" class="btn btn-dark" style="width:100%">Facilidades</a>
+                <a asp-action="" class="btn btn-dark" style="width:100%">Como llegar</a>
+                <a asp-action="" class="btn btn-dark" style="width:100%">Tarifas</a>
+                <a asp-action="" class="btn btn-dark" style="width:100%">Reservar en línea</a>
+                <a asp-action="" class="btn btn-dark" style="width:100%">Contactenos</a>
+            </div>
+            <div class="col-10">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
     </div>
 
     <footer class="border-top footer text-muted">

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj": {}
+    "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj": {}
   },
   "projects": {
-    "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj": {
+    "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj",
+        "projectUniqueName": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj",
         "projectName": "ReglasNegocio",
-        "projectPath": "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj",
+        "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj",
         "packagesPath": "C:\\Users\\randa\\.nuget\\packages\\",
-        "outputPath": "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\ReglasNegocio\\obj\\",
+        "outputPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\randa\\AppData\\Roaming\\NuGet\\NuGet.Config",

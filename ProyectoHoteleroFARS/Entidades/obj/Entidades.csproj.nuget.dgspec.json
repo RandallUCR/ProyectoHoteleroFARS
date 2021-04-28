@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {}
+    "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {}
   },
   "projects": {
-    "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
+    "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj",
+        "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\randa\\.nuget\\packages\\",
-        "outputPath": "D:\\UCR\\Programación\\Codigos Visual\\ProyectoHoteleroFARS\\Entidades\\obj\\",
+        "outputPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\randa\\AppData\\Roaming\\NuGet\\NuGet.Config",
