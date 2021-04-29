@@ -1,0 +1,9 @@
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\AccesoDatos.deps.json
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\AccesoDatos.dll
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\AccesoDatos.pdb
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.csprojAssemblyReference.cache
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.AssemblyInfoInputs.cache
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.AssemblyInfo.cs
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.csproj.CoreCompileInputs.cache
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.dll
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.pdb

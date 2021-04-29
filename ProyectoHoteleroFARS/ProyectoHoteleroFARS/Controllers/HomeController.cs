@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProyectoHoteleroFARS.Models;
+using ReglasNegocio;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -18,9 +19,11 @@ namespace ProyectoHoteleroFARS.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult HomeCliente()
         {
-            return View();
+            HotelRN hrn = new HotelRN();
+            ViewBag.Hotel = hrn.getHotel();
+            return View("HomeCliente");
         }
 
         public IActionResult Privacy()

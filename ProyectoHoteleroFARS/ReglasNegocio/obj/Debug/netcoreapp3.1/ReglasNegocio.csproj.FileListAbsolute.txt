@@ -1,0 +1,14 @@
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\ReglasNegocio.deps.json
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\ReglasNegocio.dll
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\ReglasNegocio.pdb
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\AccesoDatos.dll
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\Entidades.dll
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\AccesoDatos.pdb
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\Entidades.pdb
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.csprojAssemblyReference.cache
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.AssemblyInfoInputs.cache
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.AssemblyInfo.cs
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.csproj.CoreCompileInputs.cache
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.csproj.CopyComplete
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.dll
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.pdb
