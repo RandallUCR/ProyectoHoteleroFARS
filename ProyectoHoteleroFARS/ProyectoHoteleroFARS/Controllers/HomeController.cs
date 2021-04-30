@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Entidades;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProyectoHoteleroFARS.Models;
 using ReglasNegocio;
@@ -13,7 +14,6 @@ namespace ProyectoHoteleroFARS.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -21,8 +21,7 @@ namespace ProyectoHoteleroFARS.Controllers
 
         public IActionResult HomeCliente()
         {
-            HotelRN hrn = new HotelRN();
-            ViewBag.Hotel = hrn.getHotel();
+            ViewBag.Layout = new LayoutController().getLayout();
             return View("HomeCliente");
         }
 

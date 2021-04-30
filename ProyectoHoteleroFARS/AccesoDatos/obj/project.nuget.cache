@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gCrkL+ga3lylT2v/3cOEH7E9+U/r3FyFBtgDWSWSVfuN8gc9+gtUZnNk4YWT8bWNEbH7cEddcDD+BARvHy4okQ==",
+  "dgSpecHash": "sgEeJts+WRYNY9H+zUpHkMWeDgHb/zJL5EsLzsFJHIsAuPrAm3glREgz3NhjQzmpQBb/2SNEP976Bup4gQspLA==",
   "success": true,
   "projectFilePath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
   "expectedPackageFiles": [
@@ -15,5 +15,12 @@
     "C:\\Users\\congr\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\congr\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\obj\\project.nuget.cache : Unexpected character encountered while parsing value: <. Path '', line 0, position 0."
+    }
+  ]
 }
