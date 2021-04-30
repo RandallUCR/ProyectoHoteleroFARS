@@ -7,3 +7,6 @@ D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netco
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.csproj.CoreCompileInputs.cache
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.dll
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.pdb
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\Entidades.dll
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\Entidades.pdb
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.csproj.CopyComplete

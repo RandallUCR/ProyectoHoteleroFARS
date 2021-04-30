@@ -27,7 +27,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
+                "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

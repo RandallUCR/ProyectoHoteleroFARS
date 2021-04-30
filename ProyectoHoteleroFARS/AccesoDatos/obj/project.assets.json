@@ -139,6 +139,16 @@
             "rid": "win"
           }
         }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
+        }
       }
     }
   },
@@ -482,10 +492,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Entidades/1.0.0": {
+      "type": "project",
+      "path": "../Entidades/Entidades.csproj",
+      "msbuildProject": "../Entidades/Entidades.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Entidades >= 1.0.0",
       "Newtonsoft.Json >= 13.0.1",
       "System.Data.SqlClient >= 4.8.2"
     ]
@@ -516,7 +532,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
+              "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

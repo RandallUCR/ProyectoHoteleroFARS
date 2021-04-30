@@ -413,6 +413,7 @@
       "System.Security.Principal.Windows/4.7.0": {},
       "AccesoDatos/1.0.0": {
         "dependencies": {
+          "Entidades": "1.0.0",
           "Newtonsoft.Json": "13.0.1",
           "System.Data.SqlClient": "4.8.2"
         },
