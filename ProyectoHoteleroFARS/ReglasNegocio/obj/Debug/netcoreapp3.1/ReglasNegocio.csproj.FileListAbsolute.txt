@@ -12,3 +12,17 @@ D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\net
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.csproj.CopyComplete
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.dll
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.pdb
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\ReglasNegocio.deps.json
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\ReglasNegocio.dll
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\ReglasNegocio.pdb
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\AccesoDatos.dll
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\Entidades.dll
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\AccesoDatos.pdb
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\bin\Debug\netcoreapp3.1\Entidades.pdb
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.csprojAssemblyReference.cache
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.AssemblyInfoInputs.cache
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.AssemblyInfo.cs
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.csproj.CoreCompileInputs.cache
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.csproj.CopyComplete
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.dll
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ReglasNegocio\obj\Debug\netcoreapp3.1\ReglasNegocio.pdb
