@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Home</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <img class="col-3" src="https://www.flaticon.com/svg/vstatic/svg/845/845022.svg?token=exp=1619647544~hmac=b263f28c980cf51600680c32838d0e10" />
+                    <h1 class="navbar-brand text-light col-6" style="padding-top:0.5em">@ViewBag.Hotel.TC_Nombre</h1>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 btn-group-vertical">
+                <a asp-action="" class="btn btn-dark" style="width:100%">Home</a>
+                <a asp-action="" class="btn btn-dark" style="width:100%">Sobre Nosotros</a>
+                <a asp-action="" class="btn btn-dark" style="width:100%">Facilidades</a>
+                <a asp-action="" class="btn btn-dark" style="width:100%">Como llegar</a>
+                <a asp-action="" class="btn btn-dark" style="width:100%">Tarifas</a>
+                <a asp-action="" class="btn btn-dark" style="width:100%">Reservar en línea</a>
+                <a asp-action="" class="btn btn-dark" style="width:100%">Contactenos</a>
+            </div>
+            <div class="col-10">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - ProyectoHoteleroFARS - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
