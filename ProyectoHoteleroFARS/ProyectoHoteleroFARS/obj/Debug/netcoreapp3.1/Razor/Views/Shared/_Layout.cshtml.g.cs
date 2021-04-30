@@ -154,7 +154,7 @@ using ProyectoHoteleroFARS.Models;
 #line default
 #line hidden
 #nullable disable
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1a413a78368d51aea8760c14c1874ac4a2ae70fb", @"/Views/Shared/_Layout.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"57da80c57ab12af195d32821c2e1a63430fd7f14", @"/Views/Shared/_Layout.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"88a2574cf27275204bf97baad6b0260729e88e63", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
@@ -196,7 +196,7 @@ using ProyectoHoteleroFARS.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a413a78368d51aea8760c14c1874ac4a2ae70fb6901", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57da80c57ab12af195d32821c2e1a63430fd7f146901", async() => {
                 WriteLiteral("\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>");
 #nullable restore
 #line 6 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
@@ -206,7 +206,7 @@ using ProyectoHoteleroFARS.Models;
 #line hidden
 #nullable disable
                 WriteLiteral("</title>\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "1a413a78368d51aea8760c14c1874ac4a2ae70fb7554", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "57da80c57ab12af195d32821c2e1a63430fd7f147554", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -221,7 +221,7 @@ using ProyectoHoteleroFARS.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "1a413a78368d51aea8760c14c1874ac4a2ae70fb8732", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "57da80c57ab12af195d32821c2e1a63430fd7f148732", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -539,8 +539,9 @@ WriteAttributeValue("", 735, ViewBag.Layout.hotel.TC_Logo, 735, 29, false);
     <div class=""container-fluid"">
         <div class=""row"">
             <div class=""col-2 btn-group-vertical"">
+
                 ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a413a78368d51aea8760c14c1874ac4a2ae70fb12532", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57da80c57ab12af195d32821c2e1a63430fd7f1412534", async() => {
                     WriteLiteral("Home");
                 }
                 );
@@ -558,7 +559,7 @@ WriteAttributeValue("", 735, ViewBag.Layout.hotel.TC_Logo, 735, 29, false);
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a413a78368d51aea8760c14c1874ac4a2ae70fb13940", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57da80c57ab12af195d32821c2e1a63430fd7f1413942", async() => {
                     WriteLiteral("Sobre Nosotros");
                 }
                 );
@@ -576,7 +577,7 @@ WriteAttributeValue("", 735, ViewBag.Layout.hotel.TC_Logo, 735, 29, false);
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a413a78368d51aea8760c14c1874ac4a2ae70fb15358", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57da80c57ab12af195d32821c2e1a63430fd7f1415360", async() => {
                     WriteLiteral("Facilidades");
                 }
                 );
@@ -594,7 +595,7 @@ WriteAttributeValue("", 735, ViewBag.Layout.hotel.TC_Logo, 735, 29, false);
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a413a78368d51aea8760c14c1874ac4a2ae70fb16773", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57da80c57ab12af195d32821c2e1a63430fd7f1416775", async() => {
                     WriteLiteral("Como llegar");
                 }
                 );
@@ -612,7 +613,7 @@ WriteAttributeValue("", 735, ViewBag.Layout.hotel.TC_Logo, 735, 29, false);
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a413a78368d51aea8760c14c1874ac4a2ae70fb18188", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57da80c57ab12af195d32821c2e1a63430fd7f1418190", async() => {
                     WriteLiteral("Tarifas");
                 }
                 );
@@ -630,7 +631,7 @@ WriteAttributeValue("", 735, ViewBag.Layout.hotel.TC_Logo, 735, 29, false);
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a413a78368d51aea8760c14c1874ac4a2ae70fb19599", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57da80c57ab12af195d32821c2e1a63430fd7f1419601", async() => {
                     WriteLiteral("Reservar en línea");
                 }
                 );
@@ -648,7 +649,7 @@ WriteAttributeValue("", 735, ViewBag.Layout.hotel.TC_Logo, 735, 29, false);
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a413a78368d51aea8760c14c1874ac4a2ae70fb21020", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57da80c57ab12af195d32821c2e1a63430fd7f1421022", async() => {
                     WriteLiteral("Contactenos");
                 }
                 );
@@ -666,29 +667,29 @@ WriteAttributeValue("", 735, ViewBag.Layout.hotel.TC_Logo, 735, 29, false);
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n\r\n                <h5 style=\"margin-top:1em\">Espacio Publicitario</h5>\r\n                <section style=\"border: 1px solid black; margin-top:1em\">\r\n                    <a");
-                BeginWriteAttribute("href", " href=\"", 2007, "\"", 2048, 1);
+                BeginWriteAttribute("href", " href=\"", 2009, "\"", 2050, 1);
 #nullable restore
-#line 39 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
-WriteAttributeValue("", 2014, ViewBag.Layout.publicidad.TC_Link, 2014, 34, false);
+#line 40 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
+WriteAttributeValue("", 2016, ViewBag.Layout.publicidad.TC_Link, 2016, 34, false);
 
 #line default
 #line hidden
 #nullable disable
                 EndWriteAttribute();
-                WriteLiteral(" target=\"_blank\"><img style=\"display:block; max-width: 285px; max-height: 500px; width:auto; height:auto\"");
-                BeginWriteAttribute("src", " \r\n                                                              src=\"", 2154, "\"", 2333, 4);
-                WriteAttributeValue("", 2224, "data:image/", 2224, 11, true);
+                WriteLiteral(" target=\"_blank\"><img style=\"display:block; max-width: 100%; max-height: 500px; height:auto\"");
+                BeginWriteAttribute("src", " \r\n                                                              src=\"", 2143, "\"", 2322, 4);
+                WriteAttributeValue("", 2213, "data:image/", 2213, 11, true);
 #nullable restore
-#line 40 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
-WriteAttributeValue("", 2235, ViewBag.Layout.publicidad.galeria.TC_Formato, 2235, 45, false);
+#line 41 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
+WriteAttributeValue("", 2224, ViewBag.Layout.publicidad.galeria.TC_Formato, 2224, 45, false);
 
 #line default
 #line hidden
 #nullable disable
-                WriteAttributeValue("", 2280, ";base64,", 2280, 8, true);
+                WriteAttributeValue("", 2269, ";base64,", 2269, 8, true);
 #nullable restore
-#line 40 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
-WriteAttributeValue("", 2288, ViewBag.Layout.publicidad.galeria.TV_Archivo, 2288, 45, false);
+#line 41 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
+WriteAttributeValue("", 2277, ViewBag.Layout.publicidad.galeria.TV_Archivo, 2277, 45, false);
 
 #line default
 #line hidden
@@ -696,14 +697,14 @@ WriteAttributeValue("", 2288, ViewBag.Layout.publicidad.galeria.TV_Archivo, 2288
                 EndWriteAttribute();
                 WriteLiteral(" /></a> \r\n                </section>\r\n            </div>\r\n            <div class=\"col-10\">\r\n                <main role=\"main\" class=\"pb-3\">\r\n                    ");
 #nullable restore
-#line 45 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
+#line 46 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
                Write(RenderBody());
 
 #line default
 #line hidden
 #nullable disable
                 WriteLiteral("\r\n                </main>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a413a78368d51aea8760c14c1874ac4a2ae70fb24577", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57da80c57ab12af195d32821c2e1a63430fd7f1424566", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -717,7 +718,7 @@ WriteAttributeValue("", 2288, ViewBag.Layout.publicidad.galeria.TV_Archivo, 2288
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a413a78368d51aea8760c14c1874ac4a2ae70fb25677", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57da80c57ab12af195d32821c2e1a63430fd7f1425666", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -731,7 +732,7 @@ WriteAttributeValue("", 2288, ViewBag.Layout.publicidad.galeria.TV_Archivo, 2288
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a413a78368d51aea8760c14c1874ac4a2ae70fb26777", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57da80c57ab12af195d32821c2e1a63430fd7f1426766", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -741,7 +742,7 @@ WriteAttributeValue("", 2288, ViewBag.Layout.publicidad.galeria.TV_Archivo, 2288
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ScriptTagHelper.Src = (string)__tagHelperAttribute_8.Value;
                 __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_8);
 #nullable restore
-#line 53 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
+#line 54 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_ScriptTagHelper.AppendVersion = true;
 
 #line default
@@ -757,7 +758,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ScriptTagHelper.AppendVersion = true;
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
 #nullable restore
-#line 54 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
+#line 55 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
 Write(RenderSection("Scripts", required: false));
 
 #line default

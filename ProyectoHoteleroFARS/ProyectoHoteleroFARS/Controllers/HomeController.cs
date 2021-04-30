@@ -21,7 +21,7 @@ namespace ProyectoHoteleroFARS.Controllers
 
         public IActionResult HomeCliente()
         {
-            ViewBag.Layout = new LayoutController().getLayout();
+            ViewBag.Layout = new LayoutController().getLayout(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL CLIENTE******
             return View("HomeCliente");
         }
 

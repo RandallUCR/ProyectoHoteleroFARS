@@ -26,6 +26,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-2 btn-group-vertical">
+
                 <a asp-action="" class="btn btn-dark" style="width:100%">Home</a>
                 <a asp-action="" class="btn btn-dark" style="width:100%">Sobre Nosotros</a>
                 <a asp-action="" class="btn btn-dark" style="width:100%">Facilidades</a>
@@ -36,7 +37,7 @@
 
                 <h5 style="margin-top:1em">Espacio Publicitario</h5>
                 <section style="border: 1px solid black; margin-top:1em">
-                    <a href="@ViewBag.Layout.publicidad.TC_Link" target="_blank"><img style="display:block; max-width: 285px; max-height: 500px; width:auto; height:auto" 
+                    <a href="@ViewBag.Layout.publicidad.TC_Link" target="_blank"><img style="display:block; max-width: 100%; max-height: 500px; height:auto" 
                                                               src="data:image/@ViewBag.Layout.publicidad.galeria.TC_Formato;base64,@ViewBag.Layout.publicidad.galeria.TV_Archivo" /></a> 
                 </section>
             </div>
