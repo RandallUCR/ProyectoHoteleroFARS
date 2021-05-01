@@ -544,19 +544,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\randa\\.nuget\\packages\\": {}
+    "C:\\Users\\Ani Achi Sanchez\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
+      "projectUniqueName": "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
       "projectName": "ProyectoHoteleroFARS",
-      "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
-      "packagesPath": "C:\\Users\\randa\\.nuget\\packages\\",
-      "outputPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\obj\\",
+      "projectPath": "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
+      "packagesPath": "C:\\Users\\Ani Achi Sanchez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\randa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ani Achi Sanchez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -568,10 +568,9 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj": {
-              "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj"
+            "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj": {
+              "projectPath": "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj"
             }
           }
         }
@@ -584,7 +583,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -603,7 +601,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

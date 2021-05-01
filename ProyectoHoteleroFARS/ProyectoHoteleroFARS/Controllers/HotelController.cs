@@ -34,6 +34,8 @@ namespace ProyectoHoteleroFARS.Controllers
             ViewBag.Layout = new LayoutController().getLayout(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL CLIENTE******
             Hotel h = new HotelRN().getHotel();
             ViewBag.SobreNosotros = h.TC_Sobre_Nosotros;
+            GaleriaRN gal = new GaleriaRN();
+            ViewBag.Galeria = gal.getGaleria();
             return View("SobreNosotros");
         }
 
