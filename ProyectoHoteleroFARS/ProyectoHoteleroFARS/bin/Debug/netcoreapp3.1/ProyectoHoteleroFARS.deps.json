@@ -8,9 +8,16 @@
       "TRACE",
       "DEBUG",
       "NETCOREAPP",
-      "NETCOREAPP3_1"
+      "NETCOREAPP3_1",
+      "NETCOREAPP1_0_OR_GREATER",
+      "NETCOREAPP1_1_OR_GREATER",
+      "NETCOREAPP2_0_OR_GREATER",
+      "NETCOREAPP2_1_OR_GREATER",
+      "NETCOREAPP2_2_OR_GREATER",
+      "NETCOREAPP3_0_OR_GREATER",
+      "NETCOREAPP3_1_OR_GREATER"
     ],
-    "languageVersion": "",
+    "languageVersion": "8.0",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -24,7 +31,9 @@
     ".NETCoreApp,Version=v3.1": {
       "ProyectoHoteleroFARS/1.0.0": {
         "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
           "ReglasNegocio": "1.0.0",
+          "System.Data.SqlClient": "4.8.2",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -418,6 +427,10 @@
         }
       },
       "Entidades/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "System.Data.SqlClient": "4.8.2"
+        },
         "runtime": {
           "Entidades.dll": {}
         },
@@ -428,7 +441,9 @@
       "ReglasNegocio/1.0.0": {
         "dependencies": {
           "AccesoDatos": "1.0.0",
-          "Entidades": "1.0.0"
+          "Entidades": "1.0.0",
+          "Newtonsoft.Json": "13.0.1",
+          "System.Data.SqlClient": "4.8.2"
         },
         "runtime": {
           "ReglasNegocio.dll": {}
