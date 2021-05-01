@@ -1,0 +1,26 @@
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\bin\Debug\netcoreapp3.1\Entidades.deps.json
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\bin\Debug\netcoreapp3.1\Entidades.dll
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\bin\Debug\netcoreapp3.1\Entidades.pdb
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.csprojAssemblyReference.cache
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.AssemblyInfoInputs.cache
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.AssemblyInfo.cs
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.csproj.CoreCompileInputs.cache
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.dll
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.pdb
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\bin\Debug\netcoreapp3.1\Entidades.deps.json
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\bin\Debug\netcoreapp3.1\Entidades.dll
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\bin\Debug\netcoreapp3.1\Entidades.pdb
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.csprojAssemblyReference.cache
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.AssemblyInfoInputs.cache
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.AssemblyInfo.cs
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.dll
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.pdb
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\bin\Debug\netcoreapp3.1\Entidades.deps.json
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\bin\Debug\netcoreapp3.1\Entidades.dll
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\bin\Debug\netcoreapp3.1\Entidades.pdb
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.csprojAssemblyReference.cache
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.AssemblyInfoInputs.cache
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.AssemblyInfo.cs
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.dll
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.pdb
