@@ -507,19 +507,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\randa\\.nuget\\packages\\": {}
+    "C:\\Users\\Ani Achi Sanchez\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
+      "projectUniqueName": "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
       "projectName": "AccesoDatos",
-      "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
-      "packagesPath": "C:\\Users\\randa\\.nuget\\packages\\",
-      "outputPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\obj\\",
+      "projectPath": "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
+      "packagesPath": "C:\\Users\\Ani Achi Sanchez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\randa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ani Achi Sanchez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -531,10 +531,9 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
-              "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj"
+            "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj"
             }
           }
         }
@@ -547,7 +546,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Newtonsoft.Json": {
             "target": "Package",
@@ -573,7 +571,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
