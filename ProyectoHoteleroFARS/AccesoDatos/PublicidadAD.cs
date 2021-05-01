@@ -1,11 +1,9 @@
 ﻿using Entidades;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
 
-namespace AccesoDatos 
+namespace AccesoDatos
 {
     public class PublicidadAD : ConexionAD
     {

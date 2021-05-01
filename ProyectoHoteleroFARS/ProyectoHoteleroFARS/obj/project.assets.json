@@ -158,6 +158,10 @@
       "Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "System.Data.SqlClient": "4.8.2"
+        },
         "compile": {
           "bin/placeholder/Entidades.dll": {}
         },
@@ -170,7 +174,9 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "AccesoDatos": "1.0.0",
-          "Entidades": "1.0.0"
+          "Entidades": "1.0.0",
+          "Newtonsoft.Json": "13.0.1",
+          "System.Data.SqlClient": "4.8.2"
         },
         "compile": {
           "bin/placeholder/ReglasNegocio.dll": {}
@@ -540,23 +546,25 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "ReglasNegocio >= 1.0.0"
+      "Newtonsoft.Json >= 13.0.1",
+      "ReglasNegocio >= 1.0.0",
+      "System.Data.SqlClient >= 4.8.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ani Achi Sanchez\\.nuget\\packages\\": {}
+    "C:\\Users\\randa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
+      "projectUniqueName": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
       "projectName": "ProyectoHoteleroFARS",
-      "projectPath": "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
-      "packagesPath": "C:\\Users\\Ani Achi Sanchez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\obj\\",
+      "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
+      "packagesPath": "C:\\Users\\randa\\.nuget\\packages\\",
+      "outputPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ani Achi Sanchez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\randa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -568,9 +576,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj": {
-              "projectPath": "C:\\Users\\Ani Achi Sanchez\\Desktop\\PFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj"
+            "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj": {
+              "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj"
             }
           }
         }
@@ -583,6 +592,17 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
+          },
+          "System.Data.SqlClient": {
+            "target": "Package",
+            "version": "[4.8.2, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -601,7 +621,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

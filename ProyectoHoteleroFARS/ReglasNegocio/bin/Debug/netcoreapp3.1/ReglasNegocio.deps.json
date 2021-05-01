@@ -9,7 +9,9 @@
       "ReglasNegocio/1.0.0": {
         "dependencies": {
           "AccesoDatos": "1.0.0",
-          "Entidades": "1.0.0"
+          "Entidades": "1.0.0",
+          "Newtonsoft.Json": "13.0.1",
+          "System.Data.SqlClient": "4.8.2"
         },
         "runtime": {
           "ReglasNegocio.dll": {}
@@ -109,6 +111,10 @@
         }
       },
       "Entidades/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "System.Data.SqlClient": "4.8.2"
+        },
         "runtime": {
           "Entidades.dll": {}
         }
