@@ -21,7 +21,6 @@ D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\De
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\ProyectoHoteleroFARS.TagHelpers.input.cache
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\ProyectoHoteleroFARS.TagHelpers.output.cache
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\ProyectoHoteleroFARS.RazorCoreGenerate.cache
-D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -47,7 +46,6 @@ D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\bin\De
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\bin\Debug\netcoreapp3.1\ReglasNegocio.pdb
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\bin\Debug\netcoreapp3.1\AccesoDatos.pdb
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\bin\Debug\netcoreapp3.1\Entidades.pdb
-D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Home\HomeCliente.cshtml.g.cs
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -98,3 +96,6 @@ C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHo
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\ProyectoHoteleroFARS.dll
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\ProyectoHoteleroFARS.pdb
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\ProyectoHoteleroFARS.genruntimeconfig.cache
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\HomeCliente.cshtml.g.cs
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\Privacy.cshtml.g.cs
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\SobreNosotros.cshtml.g.cs

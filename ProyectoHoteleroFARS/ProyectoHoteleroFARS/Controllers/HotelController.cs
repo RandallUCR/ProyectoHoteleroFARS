@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 
 namespace ProyectoHoteleroFARS.Controllers
 {
-    public class HomeController : Controller
+    public class HotelController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ILogger<HotelController> _logger;
+        public HotelController(ILogger<HotelController> logger)
         {
             _logger = logger;
         }
@@ -27,6 +27,16 @@ namespace ProyectoHoteleroFARS.Controllers
             ViewBag.Descripcion = h.TC_Descripcion;
             ViewBag.FotoPrincipal = h.TC_Foto_Principal;
             return View("HomeCliente");
+        }
+
+        public IActionResult SobreNosotrosCliente()
+        {
+            ViewBag.Layout = new LayoutController().getLayout(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL CLIENTE******
+            /*Hotel h = new HotelRN().getHotel();
+            ViewBag.Nombre = h.TC_Nombre;
+            ViewBag.Descripcion = h.TC_Descripcion;
+            ViewBag.FotoPrincipal = h.TC_Foto_Principal;*/
+            return View("SobreNosotros");
         }
 
         public IActionResult Privacy()
