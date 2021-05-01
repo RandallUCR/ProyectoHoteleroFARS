@@ -507,19 +507,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\congr\\.nuget\\packages\\": {}
+    "C:\\Users\\randa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
+      "projectUniqueName": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
       "projectName": "AccesoDatos",
-      "projectPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
-      "packagesPath": "C:\\Users\\congr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\obj\\",
+      "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
+      "packagesPath": "C:\\Users\\randa\\.nuget\\packages\\",
+      "outputPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\congr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\randa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -531,9 +531,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj"
+            "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
+              "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj"
             }
           }
         }
@@ -546,6 +547,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Newtonsoft.Json": {
             "target": "Package",
@@ -571,16 +573,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015115\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\obj\\project.nuget.cache : Unexpected character encountered while parsing value: <. Path '', line 0, position 0."
-    }
-  ]
+  }
 }
