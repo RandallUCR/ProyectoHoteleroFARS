@@ -50,7 +50,7 @@ namespace ProyectoHoteleroFARS
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=HomeCliente}/{id?}");
+                    pattern: "{controller=Hotel}/{action=HomeCliente}/{id?}");
             });
         }
     }
