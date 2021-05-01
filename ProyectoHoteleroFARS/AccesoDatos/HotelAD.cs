@@ -23,7 +23,7 @@ namespace AccesoDatos
                         TN_Id = int.Parse(dr[0].ToString()),
                         TC_Nombre = dr[1].ToString(),
                         TC_Descripcion = dr[2].ToString(),
-                        TC_Sobre_Nostros = dr[3].ToString(),
+                        TC_Sobre_Nosotros = dr[3].ToString(),
                         TC_Ubicacion = dr[4].ToString(),
                         TC_Maps = dr[5].ToString(),
                         TN_Cod_Postal = int.Parse(dr[6].ToString()),
