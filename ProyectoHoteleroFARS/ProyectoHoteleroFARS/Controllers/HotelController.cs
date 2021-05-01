@@ -32,10 +32,8 @@ namespace ProyectoHoteleroFARS.Controllers
         public IActionResult SobreNosotrosCliente()
         {
             ViewBag.Layout = new LayoutController().getLayout(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL CLIENTE******
-            /*Hotel h = new HotelRN().getHotel();
-            ViewBag.Nombre = h.TC_Nombre;
-            ViewBag.Descripcion = h.TC_Descripcion;
-            ViewBag.FotoPrincipal = h.TC_Foto_Principal;*/
+            Hotel h = new HotelRN().getHotel();
+            ViewBag.SobreNosotros = h.TC_Sobre_Nosotros;
             return View("SobreNosotros");
         }
 
