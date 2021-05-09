@@ -23,32 +23,30 @@
             </div>
         </nav>
     </header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-2 btn-group-vertical">
+    <div class="container-fluid" style="display:flex">
+        <section class="" style="display:flex; flex-direction: column; margin-right:1em">
+            <a asp-action="HomeCliente" asp-controller="Hotel" class="btn btn-dark" style="width:100%; border-radius:0px">Home</a>
+            <a asp-action="SobreNosotrosCliente" asp-controller="Hotel" class="btn btn-dark" style="width:100%; border-radius:0px">Sobre Nosotros</a>
+            <a asp-action="" class="btn btn-dark" style="width:100%; border-radius:0px">Facilidades</a>
+            <a asp-action="" class="btn btn-dark" style="width:100%; border-radius:0px">Como llegar</a>
+            <a asp-action="" class="btn btn-dark" style="width:100%; border-radius:0px">Tarifas</a>
+            <a asp-action="" class="btn btn-dark" style="width:100%; border-radius:0px">Reservar en línea</a>
+            <a asp-action="" class="btn btn-dark" style="width:100%; border-radius:0px">Contactenos</a>
 
-                <a asp-action="" class="btn btn-dark" style="width:100%">Home</a>
-                <a asp-action="" class="btn btn-dark" style="width:100%">Sobre Nosotros</a>
-                <a asp-action="" class="btn btn-dark" style="width:100%">Facilidades</a>
-                <a asp-action="" class="btn btn-dark" style="width:100%">Como llegar</a>
-                <a asp-action="" class="btn btn-dark" style="width:100%">Tarifas</a>
-                <a asp-action="" class="btn btn-dark" style="width:100%">Reservar en línea</a>
-                <a asp-action="" class="btn btn-dark" style="width:100%">Contactenos</a>
-
-                <h5 style="margin-top:1em">Espacio Publicitario</h5>
-                <section style="border: 1px solid black; margin-top:1em">
-                    <a href="@ViewBag.Layout.publicidad.TC_Link" target="_blank">
-                        <img style="display:block; max-width: 100%; max-height: 500px; height:auto" 
-                             src="data:image/@ViewBag.Layout.publicidad.galeria.TC_Formato;base64,@ViewBag.Layout.publicidad.galeria.TV_Archivo" />
-                    </a> 
-                </section>
-            </div>
-            <div class="col-10">
-                <main role="main" class="pb-3">
-                    @RenderBody()
-                </main>
-            </div>
-        </div>
+            <h5 style="margin-top:1em">Espacio Publicitario</h5>
+            <section style="border: 1px solid black; margin-top:1em">
+                <a href="@ViewBag.Layout.publicidad.TC_Link" target="_blank">
+                    <img style="display:block; max-width: 200px; max-height: 500px; height:auto"
+                         src="data:image/@ViewBag.Layout.publicidad.galeria.TC_Formato;base64,@ViewBag.Layout.publicidad.galeria.TV_Archivo" />
+                </a>
+            </section>
+        </section>
+                
+        <section style="margin-left: 1em">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </section>
     </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
