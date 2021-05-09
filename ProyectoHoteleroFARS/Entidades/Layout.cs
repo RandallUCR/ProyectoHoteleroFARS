@@ -7,6 +7,6 @@ namespace Entidades
     public class Layout
     {
         public Hotel hotel {set; get;}
-        public Publicidad publicidad { set; get; }
+        public List<Publicidad> publicidad { set; get; }
     }
 }
