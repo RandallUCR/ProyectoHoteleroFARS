@@ -1,0 +1,20 @@
+﻿@{ 
+    ViewData["Title"] = "Facilidades";
+    Layout = "_Layout";
+}
+
+
+<legend>Facilidades</legend>
+@for (int i = 0; i < ViewBag.Facilidades.Count; i++) {
+    <hr />
+    <div class="row justify-content-center" style="margin-bottom: 1em;">
+        <div class="col-12 col-md-5 align-self-center">
+            <img class="align-self-center" src="data:image/@ViewBag.Facilidades[i].galeria.TC_Formato;base64,@ViewBag.Facilidades[i].galeria.TV_Archivo" alt="@ViewBag.Facilidades[i].galeria.TC_Descripcion" style="max-width: 100%; height: 300px;">
+        </div>
+        <div class="col-12 col-md-5">
+            <p class="text-justify">
+                @ViewBag.Facilidades[i].TC_Descripcion
+            </p>
+        </div>
+    </div>
+}
