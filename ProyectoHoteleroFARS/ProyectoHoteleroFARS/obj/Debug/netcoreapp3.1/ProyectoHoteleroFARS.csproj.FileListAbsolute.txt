@@ -146,6 +146,7 @@ C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFAR
 C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\ProyectoHoteleroFARS.csproj.CopyComplete
 C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\ProyectoHoteleroFARS.dll
 C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\ProyectoHoteleroFARS.pdb
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\Facilidades.cshtml.g.cs
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\HomeCliente.cshtml.g.cs
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\Privacy.cshtml.g.cs
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\SobreNosotros.cshtml.g.cs
