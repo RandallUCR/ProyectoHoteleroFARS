@@ -19,6 +19,7 @@ namespace AccesoDatos
                     while (dr.Read()){
 
                         Facilidad facilidad = new Facilidad();
+                        facilidad.galeria = new Galeria();
                         facilidad.TN_Id = int.Parse(dr[0].ToString());
                         facilidad.TC_Descripcion = dr[1].ToString();
                         facilidad.TN_Id_Hotel = int.Parse(dr[2].ToString());
