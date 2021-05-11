@@ -3,19 +3,21 @@
     Layout = "_Layout";
 }
 
+<div class="row shadow-lg p-3 mb-5 bg-white rounded" style="padding-left: 1em; padding-right: 0.5em; text-align:center">
+    <legend style="font-weight: bold;">Bienvenido</legend>
+</div>
 
+<div class="row shadow-lg p-3 mb-5 bg-white rounded" style="padding-left: 1em; padding-right: 1em; justify-content:center; text-align:center">
 
-<div class="row shadow-lg p-3 mb-5 bg-white rounded" style="padding-left: 1em; padding-right: 1em; margin-right:0.5em">
-
-    <div class="col-12 col-md-5">
-        <img height="450" width="450" src="data:image/jpeg;base64,@ViewBag.FotoPrincipal"/>
-    </div>
-
-    <div class="col-12 col-md-7">
-        <legend>Bienvenido al @ViewBag.Nombre</legend>
-        <p class="text-justify">
+    <div>
+        <legend>@ViewBag.Nombre</legend>
+        <p class="">
             @ViewBag.Descripcion
         </p>
+    </div>
+
+    <div>
+        <img height="auto" width="auto" style="max-height:550px; max-width:550px" src="data:image/jpeg;base64,@ViewBag.FotoPrincipal" />
     </div>
 
 </div>

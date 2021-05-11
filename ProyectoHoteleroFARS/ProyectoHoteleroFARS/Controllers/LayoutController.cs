@@ -17,7 +17,7 @@ namespace ProyectoHoteleroFARS.Controllers
             return hrn.getHotel();
         }
 
-        public Publicidad getPublicidad()
+        public List<Publicidad> getPublicidad()
         {
             PublicidadRN prn = new PublicidadRN();
             return prn.getVallaPublicitaria();

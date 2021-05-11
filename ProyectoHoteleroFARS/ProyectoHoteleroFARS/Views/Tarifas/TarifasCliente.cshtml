@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Tarifas";
+    Layout = "_Layout";
+}
+
+<div class="row shadow-lg p-3 mb-5 bg-white rounded">
+    <legend>Tarifas</legend>
+</div>
+
+<div class="row">
+    @foreach (Entidades.TipoHabitacion t in ViewBag.TiposHabitacion)
+    {
+        <div class="col-12 col-md-12">
+            <hr />
+            <div class="row">
+                <div class="col-12 col-md-5 align-self-center" style="max-width: 400px">
+                    <img class="align-self-center" src="data:image/@t.galeria.TC_Formato;base64,@t.galeria.TV_Archivo" style="max-width: 100%; height: 300px;">
+                </div>
+                <div class="col-12 col-md-5" style="display:flex; flex-direction:column">
+                    <h5>@t.TC_Nombre</h5>
+                    <div style="text-align:left"><p>@t.TC_Descripcion</p></div>
+                    
+                    @foreach (Entidades.Caracteristica c in t.caracteristicas)
+                    {
+                    <div style="display:flex">
+                        <p class="text-justify text-dark font-weight-bold mr-1">
+                            ●
+                        </p>
+                        <p class="text-justify text-dark font-weight-bold">
+                            @c.TC_Descripcion
+                        </p>
+                    </div>
+                        
+                    }
+
+                <div class="shadow-sm bg-dark rounded" style="display:flex; text-align:center; justify-content:center">
+                    <p class="mr-1 font-weight-bold text-light">Precio: ₡@t.TN_Precio</p>
+                    <p class="mr-3 text-light">($@t.TN_Precio_Dolares)</p>
+                    @if (t.promocion.TN_Id > -1)
+                    {   
+                        <p class="font-weight-bold text-success">¡Ofertal del @t.promocion.TN_Porcentaje%!</p>
+
+                    }
+
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+    }
+</div>

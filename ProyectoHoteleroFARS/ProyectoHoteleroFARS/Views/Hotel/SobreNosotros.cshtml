@@ -3,7 +3,7 @@
     Layout = "_Layout";
 }
 
-<div class="row shadow-lg p-3 mb-5 bg-white rounded" style="padding-left: 1em; padding-right: 1em; margin-right:0.5em">
+<div class="row shadow-lg p-3 mb-5 bg-white rounded" style="padding-left: 1em; padding-right: 1em;">
     <div class="col-12 col-md-12">
         <legend>Sobre Nosotros</legend>
         <p class="text-justify">
@@ -12,11 +12,11 @@
     </div>
 </div>
 
-<div class="row shadow-lg p-3 mb-5 bg-white rounded" style="padding-left: 1em; padding-right: 0.5em; margin-right:0.5em">
+<div class="row shadow-lg p-3 mb-5 bg-white rounded" style="padding-left: 1em; padding-right: 1em;">
     <legend>Galeria</legend>
 </div>
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width:600px; height:400px">
+<div id="carouselExampleControls" class="row carousel slide" data-ride="carousel" style="width:600px; height:400px; align-content:center; justify-content:center; padding-left: 1em; padding-right: 0.5em;">
     <div class="carousel-inner">
 
         @for (int i = 0; i < ViewBag.Galeria.Count; i++)

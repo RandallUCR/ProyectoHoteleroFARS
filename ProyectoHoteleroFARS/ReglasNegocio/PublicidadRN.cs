@@ -10,7 +10,7 @@ namespace ReglasNegocio
     public class PublicidadRN
     {
 
-        public Publicidad getVallaPublicitaria()
+        public List<Publicidad> getVallaPublicitaria()
         {
             PublicidadAD pad = new PublicidadAD();
             string respuesta = null;
@@ -28,8 +28,8 @@ namespace ReglasNegocio
             {
                 Console.WriteLine(e.Message);
             }
-
-            if (p.Count > 1)
+            
+            /*if (p.Count > 1)
             {
                 Random r = new Random();
                 return p[r.Next(p.Count)];
@@ -44,8 +44,8 @@ namespace ReglasNegocio
                 {
                     return null;
                 }
-            }
-            
+            }*/
+            return p;
         }
 
     }
