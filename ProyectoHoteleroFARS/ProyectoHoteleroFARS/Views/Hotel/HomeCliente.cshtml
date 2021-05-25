@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "_Layout";
+}
+
+<div class="row shadow-lg p-3 mb-5 bg-white rounded" style="padding-left: 1em; padding-right: 0.5em; text-align:center">
+    <legend style="font-weight: bold;">Bienvenido</legend>
+</div>
+
+<div class="row shadow-lg p-3 mb-5 bg-white rounded" style="padding-left: 1em; padding-right: 1em; justify-content:center; text-align:center">
+
+    <div>
+        <legend>@ViewBag.Nombre</legend>
+        <p class="">
+            @ViewBag.Descripcion
+        </p>
+    </div>
+
+    <div>
+        <img height="auto" width="auto" style="max-height:550px; max-width:550px" src="data:image/jpeg;base64,@ViewBag.FotoPrincipal" />
+    </div>
+
+</div>

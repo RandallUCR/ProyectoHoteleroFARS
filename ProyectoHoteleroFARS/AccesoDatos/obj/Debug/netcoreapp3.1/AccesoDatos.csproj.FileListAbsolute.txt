@@ -1,0 +1,35 @@
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\AccesoDatos.deps.json
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\AccesoDatos.dll
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\AccesoDatos.pdb
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.csprojAssemblyReference.cache
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.AssemblyInfoInputs.cache
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.AssemblyInfo.cs
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.csproj.CoreCompileInputs.cache
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.dll
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.pdb
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\AccesoDatos.deps.json
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\AccesoDatos.dll
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\AccesoDatos.pdb
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.csprojAssemblyReference.cache
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.AssemblyInfoInputs.cache
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.AssemblyInfo.cs
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.dll
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.pdb
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\Entidades.dll
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\Entidades.pdb
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.csproj.CopyComplete
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\Entidades.dll
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\Entidades.pdb
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.csproj.CopyComplete
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\AccesoDatos.deps.json
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\AccesoDatos.dll
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\AccesoDatos.pdb
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\Entidades.dll
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\bin\Debug\netcoreapp3.1\Entidades.pdb
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.csprojAssemblyReference.cache
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.AssemblyInfoInputs.cache
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.AssemblyInfo.cs
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.csproj.CopyComplete
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.dll
+C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\AccesoDatos\obj\Debug\netcoreapp3.1\AccesoDatos.pdb
