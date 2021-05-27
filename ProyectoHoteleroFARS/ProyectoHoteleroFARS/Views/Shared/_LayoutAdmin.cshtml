@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body style="background: #F5E3B7
+">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <section class="col-3">
+                        <img style="display:block; max-width: 50px; max-height: 50px; width:auto; height:auto" src="data:image/png;base64,@ViewBag.Layout.TC_Logo" />
+                    </section>
+                    <section class="col-9">
+                        <h1 class="navbar-brand text-light" style="padding-top:0.5em">@ViewBag.Layout.TC_Nombre</h1>
+                    </section>
+                </div>
+            </div>
+            <h1 class="navbar-brand text-light" style="padding-top:0.5em">Bienvenido @ViewBag.Usuario</h1>
+            <a asp-controller="" asp-action="" class="font-weight-bold text-primary">LogOut</a>
+        </nav>
+    </header>
+    <div class="container-fluid" style="display:flex;">
+        <section class="" style="display:flex; flex-direction: column; margin-right:1em">
+            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Home</a>
+            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Modificar Páginas</a>
+            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Listado de Reservaciones</a>
+            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Administrar Habitaciones</a>
+            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Ver estado del hotel hoy</a>
+            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Consultar Disponibilidad de Habitaciones</a>
+            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Publicidad</a>
+            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Temporadas</a>
+            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Promociones</a>
+        </section>
+        <section class="ml-3 mr-3">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </section>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
