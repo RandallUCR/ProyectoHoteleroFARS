@@ -39,6 +39,18 @@ namespace ProyectoHoteleroFARS.Controllers
             return View("SobreNosotros");
         }
 
+        public IActionResult FacilidadesCliente() {
+            ViewBag.Layout = new LayoutController().getLayout(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL CLIENTE******
+            ViewBag.Facilidades = new FacilidadRN().getFacilidadRN();
+            return View("Facilidades");
+        }
+        public IActionResult Contactenos()
+        {
+            ViewBag.Layout = new LayoutController().getLayout(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL CLIENTE******
+            ViewBag.Contactenos = new ContactoRN().getContactosRN();
+            return View("Contactenos");
+        }
+
         public IActionResult Privacy()
         {
             return View();
