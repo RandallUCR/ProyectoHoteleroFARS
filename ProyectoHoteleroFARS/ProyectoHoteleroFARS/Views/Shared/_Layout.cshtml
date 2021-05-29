@@ -32,7 +32,7 @@
             <a asp-action="ComoLlegarCliente" asp-controller="Hotel" class="btn btn-dark" style="width:100%; border-radius:0px">¿Cómo llegar?</a>
             <a asp-action="TarifasCliente" asp-controller="Tarifas" class="btn btn-dark" style="width:100%; border-radius:0px">Tarifas</a>
             <a asp-action="" class="btn btn-dark" style="width:100%; border-radius:0px">Reservar en línea</a>
-            <a asp-action="" class="btn btn-dark" style="width:100%; border-radius:0px">Contáctenos</a>
+            <a asp-action="Contactenos" asp-controller="Hotel"  class="btn btn-dark" style="width:100%; border-radius:0px">Contactenos</a>
 
             <h5 style="margin-top:1em">Espacio Publicitario</h5>
             <section style="border: 1px solid black; margin-top:1em">
@@ -66,7 +66,7 @@
 </section>
         </section>
                 
-        <section class="ml-3 mr-3" >
+        <section class="ml-3 mr-3 container-fluid">
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>

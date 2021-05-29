@@ -44,6 +44,12 @@ namespace ProyectoHoteleroFARS.Controllers
             ViewBag.Facilidades = new FacilidadRN().getFacilidadRN();
             return View("Facilidades");
         }
+        public IActionResult Contactenos()
+        {
+            ViewBag.Layout = new LayoutController().getLayout(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL CLIENTE******
+            ViewBag.Contactenos = new ContactoRN().getContactosRN();
+            return View("Contactenos");
+        }
 
         public IActionResult ComoLlegarCliente() {
             ViewBag.Layout = new LayoutController().getLayout(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL CLIENTE******
