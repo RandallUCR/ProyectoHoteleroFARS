@@ -22,7 +22,7 @@ namespace ProyectoHoteleroFARS.Controllers
                 HttpContext.Session.SetString("AdminActualUsuario",a.TC_Usuario);
                 HttpContext.Session.SetInt32("AdminActualRol", a.rol.TN_Id);
 
-                ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper();
+                ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
                 return View("HomeAdmin");
             }
         }
@@ -36,6 +36,7 @@ namespace ProyectoHoteleroFARS.Controllers
         public IActionResult AdministrarHabitacion() {
             ViewBag.Layout = new LayoutController().getHotel(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
             if (HttpContext.Session.GetInt32("AdminActualId") != null) { //este if debe aparecer en todas las acciones del administrador
+                ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
                 return View("AdministrarHabitacion");
             }
             return View("Login", -2); //este return debe aparecer en todas las acciones del administrador
@@ -52,6 +53,7 @@ namespace ProyectoHoteleroFARS.Controllers
                 ViewBag.Formato = th.galeria.TC_Formato;
                 ViewBag.Foto = th.galeria.TV_Archivo;
 
+                ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
                 return View("CambiarDescripcion");
             }
             return View("Login", -2);
@@ -59,12 +61,21 @@ namespace ProyectoHoteleroFARS.Controllers
 
         public IActionResult LogOut()
         {
-            HttpContext.Session.SetInt32("AdminActualId", -1);
-            HttpContext.Session.SetString("AdminActualUsuario", "");
-            HttpContext.Session.SetInt32("AdminActualRol", -1);
+            HttpContext.Session.Clear();
 
             ViewBag.Layout = new LayoutController().getHotel();
             return View("Login");
+        }
+
+        public IActionResult Home()
+        {
+            ViewBag.Layout = new LayoutController().getHotel();
+            if (HttpContext.Session.GetInt32("AdminActualId") != null)
+            {
+                ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+                return View("HomeAdmin");
+            }
+            return View("Login", -2);
         }
     }
 }
