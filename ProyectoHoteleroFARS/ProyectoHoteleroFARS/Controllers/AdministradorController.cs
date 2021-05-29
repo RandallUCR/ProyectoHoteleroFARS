@@ -36,5 +36,15 @@ namespace ProyectoHoteleroFARS.Controllers
             ViewBag.Layout = new LayoutController().getHotel(); 
             return View("Login");
         }
+
+        public IActionResult LogOut()
+        {
+            HttpContext.Session.SetInt32("AdminActualId", -1);
+            HttpContext.Session.SetString("AdminActualUsuario", "");
+            HttpContext.Session.SetInt32("AdminActualRol", -1);
+
+            ViewBag.Layout = new LayoutController().getHotel();
+            return View("Login");
+        }
     }
 }
