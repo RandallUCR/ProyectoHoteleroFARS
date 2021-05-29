@@ -1,0 +1,22 @@
+﻿@{ ViewData["Title"] = "Home";
+    Layout = "_Layout";
+}
+
+
+<div class="row shadow-lg p-3 mb-5 bg-white rounded">
+    <div class="col-12">
+        <legend>¿Cómo llegar?</legend>
+    </div>
+</div>
+
+<div class="row justify-content-center shadow-lg p-3 mb-5 bg-white rounded">
+    <div class="col-11" style="display:flex">
+        <p class="text-justify">
+            @ViewBag.Ubicacion
+        </p>
+    </div>
+    <hr />
+    <div class="col-11">
+        <iframe src="@ViewBag.Maps" width="640" height="480"></iframe>
+    </div>
+</div>
