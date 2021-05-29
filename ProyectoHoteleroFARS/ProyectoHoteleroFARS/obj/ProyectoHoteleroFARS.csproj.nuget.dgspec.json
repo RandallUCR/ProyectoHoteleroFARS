@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj": {}
+    "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj": {}
   },
   "projects": {
-    "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj": {
+    "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
+        "projectUniqueName": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
         "projectName": "AccesoDatos",
-        "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
-        "packagesPath": "C:\\Users\\randa\\.nuget\\packages\\",
-        "outputPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\obj\\",
+        "projectPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj",
+        "packagesPath": "C:\\Users\\congr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\randa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\congr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,10 +26,9 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
-                "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj"
+              "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -42,7 +41,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Newtonsoft.Json": {
               "target": "Package",
@@ -68,21 +66,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015115\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\randa\\.nuget\\packages\\",
-        "outputPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\congr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\randa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\congr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,7 +92,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -106,7 +103,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Newtonsoft.Json": {
               "target": "Package",
@@ -132,21 +128,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015115\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj": {
+    "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
+        "projectUniqueName": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
         "projectName": "ProyectoHoteleroFARS",
-        "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
-        "packagesPath": "C:\\Users\\randa\\.nuget\\packages\\",
-        "outputPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\obj\\",
+        "projectPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS.csproj",
+        "packagesPath": "C:\\Users\\congr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\randa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\congr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -158,10 +154,9 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj": {
-                "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj"
+              "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj": {
+                "projectPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj"
               }
             }
           }
@@ -174,7 +169,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Newtonsoft.Json": {
               "target": "Package",
@@ -203,21 +197,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015115\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj": {
+    "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj",
+        "projectUniqueName": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj",
         "projectName": "ReglasNegocio",
-        "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj",
-        "packagesPath": "C:\\Users\\randa\\.nuget\\packages\\",
-        "outputPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\obj\\",
+        "projectPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\ReglasNegocio.csproj",
+        "packagesPath": "C:\\Users\\congr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\ReglasNegocio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\randa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\congr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -229,13 +223,12 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj": {
-                "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj"
+              "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj": {
+                "projectPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\AccesoDatos\\AccesoDatos.csproj"
               },
-              "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
-                "projectPath": "D:\\UCR\\Ing\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj"
+              "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\congr\\source\\repos\\ProyectoHoteleroFARS\\ProyectoHoteleroFARS\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -248,7 +241,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Newtonsoft.Json": {
               "target": "Package",
@@ -274,7 +266,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015115\\RuntimeIdentifierGraph.json"
         }
       }
     }
