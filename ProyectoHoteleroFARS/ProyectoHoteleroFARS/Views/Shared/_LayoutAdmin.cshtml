@@ -27,7 +27,7 @@
     </header>
     <div class="container-fluid" style="display:flex;">
         <section class="" style="display:flex; flex-direction: column; margin-right:1em">
-            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Home</a>
+            <a asp-action="Home" asp-controller="Administrador" class="btn btn-dark" style="width:100%; border-radius:0px">Home</a>
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Modificar Páginas</a>
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Listado de Reservaciones</a>
             <a asp-action="AdministrarHabitacion" asp-controller="Administrador" class="btn btn-dark" style="width:100%; border-radius:0px">Administrar Habitaciones</a>
@@ -37,7 +37,7 @@
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Temporadas</a>
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Promociones</a>
         </section>
-        <section class="ml-3 mr-3">
+        <section class="ml-3 mr-3 container-fluid">
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
