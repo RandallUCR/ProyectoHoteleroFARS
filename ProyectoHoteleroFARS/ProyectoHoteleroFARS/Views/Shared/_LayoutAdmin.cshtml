@@ -22,7 +22,7 @@
                 </div>
             </div>
             <h1 class="navbar-brand text-light" style="padding-top:0.5em">Bienvenido @ViewBag.Usuario</h1>
-            <a asp-controller="" asp-action="" class="font-weight-bold text-primary">LogOut</a>
+            <a asp-controller="Administrador" asp-action="LogOut" class="font-weight-bold text-primary">LogOut</a>
         </nav>
     </header>
     <div class="container-fluid" style="display:flex;">
@@ -30,7 +30,7 @@
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Home</a>
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Modificar Páginas</a>
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Listado de Reservaciones</a>
-            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Administrar Habitaciones</a>
+            <a asp-action="AdministrarHabitacion" asp-controller="Administrador" class="btn btn-dark" style="width:100%; border-radius:0px">Administrar Habitaciones</a>
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Ver estado del hotel hoy</a>
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Consultar Disponibilidad de Habitaciones</a>
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Publicidad</a>

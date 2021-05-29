@@ -10,6 +10,24 @@ namespace AccesoDatos
     public class TipoHabitacionAD : ConexionAD
     {
 
+        public string getTipoHabitacionById(int id) {
+            TipoHabitacion th = new TipoHabitacion { galeria = new Galeria() };
+            try {
+                SqlDataReader dr = consultar($"EXEC get_tipo_habitacion_by_id {id}");
+                if (dr != null) {
+                    dr.Read();
+                    th.TN_Id = int.Parse(dr[0].ToString());
+                    th.TC_Nombre = dr[1].ToString();
+                    th.TC_Descripcion = dr[2].ToString();
+                    th.TN_Precio = decimal.Parse(dr[3].ToString());
+                    th.galeria.TC_Formato = dr[4].ToString();
+                    th.galeria.TV_Archivo = dr[5].ToString();
+                }
+            } catch (SqlException e) {}
+
+            return JsonConvert.SerializeObject(th);
+        }
+
         public string getTiposHabitacionTemp()
         {
             List<TipoHabitacion> data = new List<TipoHabitacion>();
