@@ -10,6 +10,24 @@ namespace ReglasNegocio
     public class TipoHabitacionRN
     {
 
+        public TipoHabitacion getTipoHabitacionById(int id) {
+
+            TipoHabitacionAD thad = new TipoHabitacionAD();
+            TipoHabitacion th = new TipoHabitacion();
+            string respuesta = null;
+
+            try {
+                respuesta = thad.getTipoHabitacionById(id);
+                if (respuesta != null) { 
+                    th = JsonConvert.DeserializeObject<TipoHabitacion>(respuesta);
+                }
+            } catch (Exception e) {
+                Console.WriteLine(e.Message);
+            }
+
+            return th;
+        }
+        
         public List<TipoHabitacion> getTiposHabitacionTemp()
         {
             TipoHabitacionAD tad = new TipoHabitacionAD();
