@@ -51,6 +51,15 @@ namespace ProyectoHoteleroFARS.Controllers
             return View("Contactenos");
         }
 
+        public IActionResult ComoLlegarCliente() {
+            ViewBag.Layout = new LayoutController().getLayout(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL CLIENTE******
+            Hotel h = new HotelRN().getHotel();
+            ViewBag.Ubicacion = h.TC_Ubicacion;
+            ViewBag.Maps = h.TC_Maps;
+            return View("ComoLlegar");
+        }
+
+
         public IActionResult Privacy()
         {
             return View();
