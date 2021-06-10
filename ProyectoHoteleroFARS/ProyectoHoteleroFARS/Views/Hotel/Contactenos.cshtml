@@ -3,17 +3,17 @@
     Layout = "_Layout";
 }
 
-<div class="row shadow-lg p-3 mb-5 bg-white rounded">
-    <legend>Contáctenos</legend>
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
+    <legend style="font-weight: bold;  font-family:Felix Titling;">Contáctenos</legend>
 </div>
-<div class="row shadow-lg p-3 mb-5 bg-white rounded">
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded" style="font-family: Century Gothic;">
     @for (int i = 0; i < ViewBag.Contactenos.Count; i++)
     {
         <div class="col-12 col-md-12">
             <hr />
             <div class="row">
                 <div class="col-12 col-md-12" style="display:flex">
-                    <p class="text-justify text-dark font-weight-bold mr-1">
+                    <p class="text-justify text-dark font-weight-bold mr-1" style="font-family: Century Gothic;">
                         ● @ViewBag.Contactenos[i].TN_Contacto
                     </p>
                 </div>              
