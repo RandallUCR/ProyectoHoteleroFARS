@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body style="background: #F5E3B7
-">
+<!--<body style="background: #F5E3B7">-->
+<body style="background-image: url(https://media.istockphoto.com/photos/blue-abstract-diagonal-backgrounds-picture-id1131996097?k=6&m=1131996097&s=612x612&w=0&h=-Wgup3_71kmsjcd-gCNXP_nskRs77CusXlImqAjESjU=);
+      background-repeat: no-repeat;background-size: cover; background-attachment: fixed;">
+  
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -17,22 +20,22 @@
                         <img style="display:block; max-width: 50px; max-height: 50px; width:auto; height:auto" src="data:image/png;base64,@ViewBag.Layout.hotel.TC_Logo" />
                     </section>
                     <section class="col-9">
-                        <h1 class="navbar-brand text-light" style="padding-top:0.5em">@ViewBag.Layout.hotel.TC_Nombre</h1>
+                        <h1 class="navbar-brand" style="padding-top: 0.5em; font-family:Forte; color:deepskyblue;">@ViewBag.Layout.hotel.TC_Nombre</h1>
                     </section>
                 </div>
-                
+
             </div>
         </nav>
     </header>
     <div class="container-fluid" style="display:flex">
         <section class="" style="display:flex; flex-direction: column; margin-right:1em">
-            <a asp-action="HomeCliente" asp-controller="Hotel" class="btn btn-dark" style="width:100%; border-radius:0px">Home</a>
-            <a asp-action="SobreNosotrosCliente" asp-controller="Hotel" class="btn btn-dark" style="width:100%; border-radius:0px">Sobre Nosotros</a>
-            <a asp-action="FacilidadesCliente" asp-controller="Hotel" class="btn btn-dark" style="width:100%; border-radius:0px">Facilidades</a>
-            <a asp-action="ComoLlegarCliente" asp-controller="Hotel" class="btn btn-dark" style="width:100%; border-radius:0px">¿Cómo llegar?</a>
-            <a asp-action="TarifasCliente" asp-controller="Tarifas" class="btn btn-dark" style="width:100%; border-radius:0px">Tarifas</a>
-            <a asp-action="" class="btn btn-dark" style="width:100%; border-radius:0px">Reservar en línea</a>
-            <a asp-action="Contactenos" asp-controller="Hotel"  class="btn btn-dark" style="width:100%; border-radius:0px">Contactenos</a>
+            <a asp-action="HomeCliente" asp-controller="Hotel" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Home</a>
+            <a asp-action="SobreNosotrosCliente" asp-controller="Hotel" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Sobre Nosotros</a>
+            <a asp-action="FacilidadesCliente" asp-controller="Hotel" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Facilidades</a>
+            <a asp-action="ComoLlegarCliente" asp-controller="Hotel" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">¿Cómo llegar?</a>
+            <a asp-action="TarifasCliente" asp-controller="Tarifas" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Tarifas</a>
+            <a asp-action="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Reservar en línea</a>
+            <a asp-action="Contactenos" asp-controller="Hotel"  class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Contactenos</a>
 
             <h5 style="margin-top:1em">Espacio Publicitario</h5>
             <section style="border: 1px solid black; margin-top:1em">
@@ -49,10 +52,12 @@
                               </a>
                             </div>
                             }
-                            else { 
+                            else {
                             <div class="carousel-item">
                               <a href="@ViewBag.Layout.publicidad[i].TC_Link" target="_blank">
-                                  <img class="d-block w-100" style="max-width: 100%; height:150px"
+                                  <img class="d-block w-100" style="        max-width: 100%;
+        height: 150px
+"
                                        src="data:image/@ViewBag.Layout.publicidad[i].galeria.TC_Formato;base64,@ViewBag.Layout.publicidad[i].galeria.TV_Archivo" />
                               </a>
                             </div>
@@ -62,10 +67,10 @@
 
                         </div>
                 </div>
-                    
+
 </section>
         </section>
-                
+
         <section class="ml-3 mr-3 container-fluid">
             <main role="main" class="pb-3">
                 @RenderBody()
