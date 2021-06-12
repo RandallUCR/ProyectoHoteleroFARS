@@ -168,3 +168,6 @@ D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\De
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\AdministrarHabitacion.cshtml.g.cs
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\CambiarDescripcion.cshtml.g.cs
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\ComoLlegar.cshtml.g.cs
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Reserva\VerificarReservaCliente.cshtml.g.cs
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Reserva\Reservar.cshtml.g.cs
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Reserva\ConfirmacionReserva.cshtml.g.cs
