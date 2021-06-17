@@ -3,29 +3,29 @@
 }
 
 
-<div class="row shadow-lg p-3 mb-5 bg-white rounded">
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
     <div class="col-12">
-        <legend>Modificar habitaciones</legend>
+        <legend style="font-weight: bold;  font-family:Felix Titling;">Modificar habitaciones</legend>
     </div>
 </div>
 
-<div class="row justify-content-center shadow-lg p-3 mb-5 bg-white rounded">
+<div class="row justify-content-center shadow-lg p-3 mb-5 bg-transparent rounded">
     <div class="col-11 col-md-5">
-        @ViewBag.Nombre
+        <label class="font-weight-bold" style="font-family: Century Gothic;">@ViewBag.Nombre </label>
     </div>
     <div class="col-11 col-md-5">
         Tarifa diaria: <input type="number" value="@ViewBag.Precio" />
     </div>
-    <div class="col-11" style="margin-top: 1em;">
+    <div class="col-11" style="margin-top: 1em; font-family: Century Gothic;">
         <label for="txtDesc">Descripción</label>
-        <textarea class="form-control" id="txtDesc" name="txtDesc" rows="4" cols="50"> @ViewBag.Descripcion </textarea>
+        <textarea class="form-control" style="font-family: Century Gothic;" id="txtDesc" name="txtDesc" rows="4" cols="50"> @ViewBag.Descripcion </textarea>
     </div>
-    <div class="col-12 col-md-5" style="margin-top: 1em;">
+    <div class="col-12 col-md-5" style="margin-top: 1em; font-family: Century Gothic;">
         Imagen actual: <br />
         <img height="auto" width="auto" style="max-height:inherit; max-width:inherit" src="data:@ViewBag.Formato;base64,@ViewBag.Foto" />
     </div>
     <div class="col-12 col-md-5" style="margin-top: 1em;">
-        <label for="inputImagen">Subir nueva imagen</label>
+        <label for="inputImagen" style="font-family: Century Gothic;">Subir nueva imagen</label>
         <input class="form-control" type="file" id="inputImagen" name="inputImagen" />
     </div>
     <div class="col-12 col-md-4 align-self-end" style="margin-top: 1em;">
