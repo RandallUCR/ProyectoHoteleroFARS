@@ -1,0 +1,107 @@
+﻿@{ ViewData["Title"] = "Home";
+    Layout = "_LayoutAdmin"; 
+}
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
+    <div class="col-12">
+        <legend style="font-weight: bold;  font-family:Felix Titling;">Modificar páginas</legend>
+        <span style="font-family: Century Gothic; margin-top: 1em;">Seleccione el nombre de una página para poder modificar la información</span>
+    </div>
+</div>
+
+<div class="accordion bg-transparent rounded" id="accordionModificarPaginas">
+    <!--Edición para la página home-->
+    <div class="card">
+        <div class="card-header" id="cabeceraHome">
+            <h2 class="mb-0">
+                <button class="btn btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseHome" aria-expanded="true" aria-controls="collapseHome">
+                    Home
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseHome" class="collapse" aria-labelledby="cabeceraHome" data-parent="#accordionModificarPaginas">
+            <div class="card-body">
+                Opciones para editar la página home
+            </div>
+        </div>
+    </div>
+
+    <!--Edición para la página sobre nosotros-->
+    <div class="card">
+        <div class="card-header" id="cabeceraSobreNosotros">
+            <h2 class="mb-0">
+                <button class="btn btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseSobreNosotros" aria-expanded="true" aria-controls="collapseSobreNosotros">
+                    Sobre Nosotros
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseSobreNosotros" class="collapse" aria-labelledby="cabeceraSobreNosotros" data-parent="#accordionModificarPaginas">
+            <div class="card-body">
+                <span style="font-family: Century Gothic; margin-top: 1em;">Texto de la página Sobre Nosotros</span>
+                <!--Cargar el texto que está en la base de datos-->
+                <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="txtDesc" name="txtDesc" rows="4" cols="50">@ViewBag.SobreNosotros</textarea>
+                <div class="col-12 col-md-4 align-self-end" style="margin-top: 1em;">
+                    <button class="btn btn-info" type="button">Aceptar</button>
+                    <button class="btn btn-danger" type="button">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Edición para la página sobre nosotros (Galería)-->
+    <div class="card">
+        <div class="card-header" id="cabeceraGaleria">
+            <h2 class="mb-0">
+                <button class="btn btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseGaleria" aria-expanded="true" aria-controls="collapseGaleria">
+                    Galería
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseGaleria" class="collapse" aria-labelledby="cabeceraGaleria" data-parent="#accordionModificarPaginas">
+            <div class="card-body">
+                <span style="font-family: Century Gothic; margin-top: 1em;">Imágenes en Galería</span>
+                <div class="col-12 col-md-4 align-self-end" style="margin-top: 1em;">
+                    <button class="btn btn-info" type="button">Aceptar</button>
+                    <button class="btn btn-danger" type="button">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Edición para la página Facilidades-->
+    <div class="card">
+        <div class="card-header" id="cabeceraFacilidades">
+            <h2 class="mb-0">
+                <button class="btn btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseFacilidades" aria-expanded="true" aria-controls="collapseFacilidades">
+                    Facilidades
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseFacilidades" class="collapse" aria-labelledby="cabeceraFacilidades" data-parent="#accordionModificarPaginas">
+            <div class="card-body">
+                Opciones para editar la página Facilidades
+            </div>
+        </div>
+    </div>
+
+    <!--Edición para la página como llegar-->
+    <div class="card">
+        <div class="card-header" id="cabeceraComoLlegar">
+            <h2 class="mb-0">
+                <button class="btn btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseComoLlegar" aria-expanded="true" aria-controls="collapseComoLlegar">
+                    ¿Cómo llegar?
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseComoLlegar" class="collapse" aria-labelledby="cabeceraComoLlegar" data-parent="#accordionModificarPaginas">
+            <div class="card-body">
+                Opciones para editar la página ¿Cómo llegar?
+            </div>
+        </div>
+    </div>
+</div>

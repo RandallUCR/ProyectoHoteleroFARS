@@ -42,6 +42,25 @@ namespace ProyectoHoteleroFARS.Controllers
             return View("Login", -2); //este return debe aparecer en todas las acciones del administrador
         }
 
+        public IActionResult AdministrarPaginas() {
+            ViewBag.Layout = new LayoutController().getHotel(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+            if (HttpContext.Session.GetInt32("AdminActualId") != null)
+            { //este if debe aparecer en todas las acciones del administrador
+                ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+                //cargar el texto de home
+                //cargar el texto de sobre nosotros
+                Hotel h = new HotelRN().getHotel();
+                ViewBag.SobreNosotros = h.TC_Sobre_Nosotros;
+                //cargar las fotos de la galería
+                GaleriaRN gal = new GaleriaRN();
+                ViewBag.Galeria = gal.getGaleria();
+                //cargar el texto de facilidades
+                //cargar el texto de como llegar
+                return View("ModificarPaginas");
+            }
+            return View("Login", -2); //este return debe aparecer en todas las acciones del administrador
+        }
+
         public IActionResult CambiarDescripcion(int id) {
             ViewBag.Layout = new LayoutController().getHotel(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
 
