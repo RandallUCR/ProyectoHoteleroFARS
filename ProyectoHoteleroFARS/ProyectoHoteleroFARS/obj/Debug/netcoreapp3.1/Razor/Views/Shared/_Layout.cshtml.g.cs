@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\_ViewImports.cshtml"
+#line 1 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\_ViewImports.cshtml"
 using ProyectoHoteleroFARS;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\_ViewImports.cshtml"
+#line 2 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\_ViewImports.cshtml"
 using ProyectoHoteleroFARS.Models;
 
 #line default
@@ -91,7 +91,7 @@ using ProyectoHoteleroFARS.Models;
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "269e84bafca9475bce9b3098d041ccff1241532612838", async() => {
                 WriteLiteral("\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>");
 #nullable restore
-#line 6 "C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
+#line 6 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
       Write(ViewData["Title"]);
 
 #line default
@@ -143,7 +143,7 @@ using ProyectoHoteleroFARS.Models;
                 }
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
-                WriteLiteral("\n");
+                WriteLiteral("\r\n");
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_HeadTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.HeadTagHelper>();
@@ -169,23 +169,23 @@ using ProyectoHoteleroFARS.Models;
                 BeginWriteAttribute("src", " src=\"", 1156, "\"", 1213, 2);
                 WriteAttributeValue("", 1162, "data:image/png;base64,", 1162, 22, true);
 #nullable restore
-#line 23 "C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
-WriteAttributeValue("", 1162, ViewBag.Layout.hotel.TC_Logo, 1162, 29, false);
+#line 23 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
+WriteAttributeValue("", 1184, ViewBag.Layout.hotel.TC_Logo, 1184, 29, false);
 
 #line default
 #line hidden
 #nullable disable
                 EndWriteAttribute();
-                WriteLiteral(" />\n                    </section>\n                    <section class=\"col-9\">\n                        <h1 class=\"navbar-brand\" style=\"padding-top: 0.5em; font-family:Forte; color:deepskyblue;\">");
+                WriteLiteral(" />\r\n                    </section>\r\n                    <section class=\"col-9\">\r\n                        <h1 class=\"navbar-brand\" style=\"padding-top: 0.5em; font-family:Forte; color:deepskyblue;\">");
 #nullable restore
-#line 26 "C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
+#line 26 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
                                                                                                               Write(ViewBag.Layout.hotel.TC_Nombre);
 
 #line default
 #line hidden
 #nullable disable
-                WriteLiteral("</h1>\n                    </section>\n                </div>\n\n            </div>\n        </nav>\n    </header>\n    <div class=\"container-fluid\" style=\"display:flex\">\n        <section");
-                BeginWriteAttribute("class", " class=\"", 1597, "\"", 1605, 0);
+                WriteLiteral("</h1>\r\n                    </section>\r\n                </div>\r\n\r\n            </div>\r\n        </nav>\r\n    </header>\r\n    <div class=\"container-fluid\" style=\"display:flex\">\r\n        <section");
+                BeginWriteAttribute("class", " class=\"", 1630, "\"", 1638, 0);
                 EndWriteAttribute();
                 WriteLiteral(" style=\"display:flex; flex-direction: column; margin-right:1em\">\r\n            ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "269e84bafca9475bce9b3098d041ccff1241532620028", async() => {
@@ -393,7 +393,7 @@ WriteAttributeValue("", 3977, ViewBag.Layout.publicidad[i].galeria.TV_Archivo, 3
 #line hidden
 #nullable disable
                 EndWriteAttribute();
-                WriteLiteral(" />\n                                    </a>\n                                </div>\n");
+                WriteLiteral(" />\r\n                                    </a>\r\n                                </div>\r\n");
 #nullable restore
 #line 58 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
                             }
@@ -432,7 +432,7 @@ WriteAttributeValue("", 4595, ViewBag.Layout.publicidad[i].galeria.TV_Archivo, 4
 #line hidden
 #nullable disable
                 EndWriteAttribute();
-                WriteLiteral(" />\n                                    </a>\n                                </div>\n");
+                WriteLiteral(" />\r\n                                    </a>\r\n                                </div>\r\n");
 #nullable restore
 #line 67 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
                             }
@@ -441,7 +441,7 @@ WriteAttributeValue("", 4595, ViewBag.Layout.publicidad[i].galeria.TV_Archivo, 4
 #line default
 #line hidden
 #nullable disable
-                WriteLiteral("\n\n                    </div>\n                </div>\n\n            </section>\n        </section>\n\n        <section class=\"ml-3 mr-3 container-fluid\">\n            <main role=\"main\" class=\"pb-3\">\n                ");
+                WriteLiteral("\r\n\r\n                    </div>\r\n                </div>\r\n\r\n            </section>\r\n        </section>\r\n\r\n        <section class=\"ml-3 mr-3 container-fluid\">\r\n            <main role=\"main\" class=\"pb-3\">\r\n                ");
 #nullable restore
 #line 79 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
            Write(RenderBody());
@@ -547,7 +547,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ScriptTagHelper.AppendVersion = true;
                 }
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
-                WriteLiteral("\n    ");
+                WriteLiteral("\r\n    ");
 #nullable restore
 #line 91 "D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Views\Shared\_Layout.cshtml"
 Write(RenderSection("Scripts", required: false));
@@ -555,7 +555,7 @@ Write(RenderSection("Scripts", required: false));
 #line default
 #line hidden
 #nullable disable
-                WriteLiteral("\n");
+                WriteLiteral("\r\n");
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_BodyTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.BodyTagHelper>();
@@ -568,7 +568,7 @@ Write(RenderSection("Scripts", required: false));
             }
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            WriteLiteral("\n</html>\n");
+            WriteLiteral("\r\n</html>\r\n");
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
