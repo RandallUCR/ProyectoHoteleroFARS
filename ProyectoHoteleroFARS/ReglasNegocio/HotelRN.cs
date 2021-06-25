@@ -29,6 +29,25 @@ namespace ReglasNegocio
             return h;
         }
 
+        public int registrarSugerencia(string sug)
+        {
+            HotelAD had = new HotelAD();
+            int result = 2;
+
+            try
+            {
+                result = had.registrarSugerencia(sug);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                result = 2;
+            }
+
+            return result;
+        }
+
 
     }
 }

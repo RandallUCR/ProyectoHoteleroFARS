@@ -6,6 +6,7 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/daterangepciker.css" />
 </head>
 <body style="background-image: url(https://media.istockphoto.com/photos/blue-abstract-diagonal-backgrounds-picture-id1131996097?k=6&m=1131996097&s=612x612&w=0&h=-Wgup3_71kmsjcd-gCNXP_nskRs77CusXlImqAjESjU=);
       background-repeat: no-repeat;background-size: cover; background-attachment: fixed;">
@@ -29,7 +30,7 @@
         <section class="" style="display:flex; flex-direction: column; margin-right:1em">
             <a asp-action="Home" asp-controller="Administrador" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Home</a>
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Modificar Páginas</a>
-            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Listado de Reservaciones</a>
+            <a asp-action="Lista_Reservar" asp-controller="Administrador" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Listado de Reservaciones</a>
             <a asp-action="AdministrarHabitacion" asp-controller="Administrador" class="btn btn-dark" style="width: 100%; font-family:Century Gothic; border-radius: 0px">Administrar Habitaciones</a>
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Ver estado del hotel hoy</a>
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Consultar Disponibilidad de Habitaciones</a>
@@ -46,6 +47,9 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="~/js/moment.min.js"></script>
+    <script type="text/javascript" src="~/js/daterangepicker.js"></script>
+    <script type="text/javascript" src="~/js/swal.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>

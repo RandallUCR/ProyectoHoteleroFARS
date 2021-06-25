@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Sobre Nostros";
+    Layout = "_Layout";
+}
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
+    <legend style="font-weight: bold;  font-family:Felix Titling;">Sugerencias</legend>
+</div>
+
+<form id="sugForm" class="row bg-transparent shadow-lg rounded p-3 justify-content-center" autocomplete="off" asp-controller="Hotel" asp-action="RegistrarSugerencia" style="max-width:50%;text-align:center">
+    <legend style="font-weight: bold;  font-family:Forte;">Su recomendación nos hace crecer</legend>
+    <p>"Para nosotros como organización es de suma importancia conocer las sugerencias u opiniones que tiene usted como cliente acerca de los servicios brindados y de la página web"</p>
+    <input type="text" class="form-control mt-1" id="sug" name="sug" placeholder="Sugerencia" required />
+    <input type="submit" value="Enviar" class="btn btn-primary mt-1" />
+</form>

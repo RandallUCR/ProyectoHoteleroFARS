@@ -59,6 +59,27 @@ namespace ProyectoHoteleroFARS.Controllers
             return View("ComoLlegar");
         }
 
+        public IActionResult Sugerencias()
+        {
+            ViewBag.Layout = new LayoutController().getLayout(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL CLIENTE******
+            return View("Sugerencias");
+        }
+
+        public JsonResult RegistrarSugerencia(string sug)
+        {
+            int result = new HotelRN().registrarSugerencia(sug);
+
+            if (result == 1)
+            {
+                return Json(new { success = true });
+            }
+            else
+            {
+                return Json(new { success = false });
+            }
+            
+        }
+
 
         public IActionResult Privacy()
         {
