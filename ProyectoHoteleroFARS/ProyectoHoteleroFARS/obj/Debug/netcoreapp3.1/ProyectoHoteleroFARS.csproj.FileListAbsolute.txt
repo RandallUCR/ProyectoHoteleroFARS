@@ -181,3 +181,4 @@ C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHo
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\ListaReservar.cshtml.g.cs
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\Sugerencias.cshtml.g.cs
 >>>>>>> Stashed changes
+D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\ModificarPaginas.cshtml.g.cs
