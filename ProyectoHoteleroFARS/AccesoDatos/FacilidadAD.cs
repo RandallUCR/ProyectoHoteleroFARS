@@ -38,5 +38,71 @@ namespace AccesoDatos
             return JsonConvert.SerializeObject(data);
         }
 
+        public int guardarNuevaFacilidadAD(Facilidad facilidad) {
+            int respuesta = -1;
+            try
+            {
+                SqlDataReader dr = consultar($"EXEC sp_create_facilidad '{facilidad.TC_Descripcion}', '{facilidad.galeria.TV_Archivo}', '{facilidad.galeria.TC_Formato}'");
+                if (dr != null)
+                {
+                    dr.Read();
+                    respuesta = int.Parse(dr[0].ToString());
+                }
+                else
+                {
+                    respuesta = -1;
+                }
+            }
+            catch (SqlException e)
+            {
+                respuesta = -2;
+            }
+            return respuesta;
+        }
+
+        public int editarFacilidadAD(Facilidad facilidad) {
+            int respuesta = -1;
+            try
+            {
+                SqlDataReader dr = consultar($"EXEC sp_update_facilidad {facilidad.TN_Id}, '{facilidad.TC_Descripcion}'");
+                if (dr != null)
+                {
+                    dr.Read();
+                    respuesta = int.Parse(dr[0].ToString());
+                }
+                else
+                {
+                    respuesta = -1;
+                }
+            }
+            catch (SqlException e)
+            {
+                respuesta = -2;
+            }
+            return respuesta;
+        }
+
+        public int eliminarFacilidadAD(Facilidad facilidad) {
+            int respuesta = -1;
+            try
+            {
+                SqlDataReader dr = consultar($"EXEC sp_delete_facilidad {facilidad.TN_Id}");
+                if (dr != null)
+                {
+                    dr.Read();
+                    respuesta = int.Parse(dr[0].ToString());
+                }
+                else
+                {
+                    respuesta = -1;
+                }
+            }
+            catch (SqlException e)
+            {
+                respuesta = -2;
+            }
+            return respuesta;
+        }
+
     }
 }

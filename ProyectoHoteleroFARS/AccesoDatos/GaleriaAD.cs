@@ -26,8 +26,6 @@ namespace AccesoDatos
                         p.TC_Formato = dr[2].ToString();
                         p.TV_Archivo = dr[3].ToString();
 
-                        
-
                         data.Add(p);
                     }
                 }
@@ -41,6 +39,38 @@ namespace AccesoDatos
                 data.Add(null);
             }
             return JsonConvert.SerializeObject(data);
+        }
+
+        public int guardarImagenGaleriaAD(Galeria galeria) {
+            int respuesta = -1;
+            try{
+                SqlDataReader dr = consultar($"EXEC sp_add_img_galeria '{galeria.TC_Descripcion}', '{galeria.TV_Archivo}', '{galeria.TC_Formato}', {1}");
+                if (dr != null){
+                    dr.Read();
+                    respuesta = int.Parse(dr[0].ToString());
+                }else{
+                    respuesta = -1;
+                }
+            }catch (SqlException e){
+                respuesta = -2;
+            }
+            return respuesta;
+        }
+
+        public int eliminarImagenGaleriaAD(int id){
+            int respuesta = -1;
+            try{
+                SqlDataReader dr = consultar($"EXEC sp_delete_img_galeria {id}");
+                if (dr != null){
+                    dr.Read();
+                    respuesta = int.Parse(dr[0].ToString());
+                }else{
+                    respuesta = -1;
+                }
+            }catch (SqlException e){
+                respuesta = -2;
+            }
+            return respuesta;
         }
     }
 }

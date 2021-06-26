@@ -31,5 +31,13 @@ namespace ReglasNegocio
             return p;
 
         }
+
+        public int guardarImagenGaleriaRN(Galeria galeria) {
+            return new GaleriaAD().guardarImagenGaleriaAD(galeria);
+        }
+
+        public int eliminarImagenGaleriaRN(int id) {
+            return new GaleriaAD().eliminarImagenGaleriaAD(id);
+        }
     }
 }
