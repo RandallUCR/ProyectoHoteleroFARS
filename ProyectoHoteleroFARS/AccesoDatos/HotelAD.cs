@@ -62,9 +62,6 @@ namespace AccesoDatos
             return respuesta;
         }
 
-    }
-}
-
         public int registrarSugerencia(string sug)
         {
             int result = 2;
@@ -90,3 +87,6 @@ namespace AccesoDatos
             }
             return result;
         }
+
+    }
+}

@@ -73,6 +73,30 @@ namespace ProyectoHoteleroFARS.Controllers
             return new GaleriaRN().eliminarImagenGaleriaRN(idImg);
         }
 
+        public int guardarNuevaFacilidad(string base64, string formato, string descF) {
+
+            Facilidad facilidad = new Facilidad();
+            facilidad.TC_Descripcion = descF;
+            facilidad.galeria = new Galeria();
+            facilidad.galeria.TC_Formato = formato;
+            facilidad.galeria.TV_Archivo = base64;
+            
+            return new FacilidadRN().guardarNuevaFacilidadRN(facilidad);
+        }
+
+        public int editarFacilidad(int idFac, string descripcion) {
+            Facilidad facilidad = new Facilidad();
+            facilidad.TN_Id = idFac;
+            facilidad.TC_Descripcion = descripcion;
+            return new FacilidadRN().editarFacilidadRN(facilidad);
+        }
+
+        public int eliminarFacilidad(int idFac){
+            Facilidad facilidad = new Facilidad();
+            facilidad.TN_Id = idFac;
+            return new FacilidadRN().eliminarFacilidadRN(facilidad);
+        }
+
         public IActionResult CambiarDescripcion(int id) {
             ViewBag.Layout = new LayoutController().getHotel(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
 

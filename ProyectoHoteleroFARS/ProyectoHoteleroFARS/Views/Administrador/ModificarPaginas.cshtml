@@ -179,7 +179,7 @@
                 <form>
                     <div style="margin-bottom: 1em;">
                         <span>Descripción</span><br />
-                        <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="ta_descripcion" name="ta_descripcion" rows="4" cols="40"></textarea>
+                        <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="ta_facilidad" name="ta_facilidad" rows="4" cols="40"></textarea>
                     </div>
                     <div>
                         <label for="image_facilidad">Seleccione una imagen para guardarla en la galería</label>
@@ -215,12 +215,12 @@
                                     <form>
                                         <div>
                                             <span>Descripción</span><br />
-                                            <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="ta_descripcion" name="ta_descripcion" rows="4" cols="40">@ViewBag.Facilidad[i].TC_Descripcion</textarea>
+                                            <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="ta_fac_@ViewBag.Facilidad[i].TN_Id" name="ta_fac_@ViewBag.Facilidad[i].TN_Id" rows="4" cols="40">@ViewBag.Facilidad[i].TC_Descripcion</textarea>
                                         </div>
                                         <div>
                                             <button type="button" id="@ViewBag.Facilidad[i].TN_Id" onclick="editarFacilidad(this)">Guardar</button>
                                             <br />
-                                            <span id="respuestaFL"></span>
+                                            <span id="respuestaFL_@ViewBag.Facilidad[i].TN_Id"></span>
                                         </div>
                                     </form>
                                 </td>

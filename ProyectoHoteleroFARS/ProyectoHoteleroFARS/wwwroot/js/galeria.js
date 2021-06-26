@@ -81,7 +81,6 @@ function guardarImgGaleria() {
         var reader = new FileReader();
         reader.readAsDataURL(input.files[0]);
         reader.onload = function () {
-            alert(reader.result)
             var dataURL = reader.result;
 
             var base64 = dataURL.split(',')[1];

@@ -3,9 +3,9 @@ const previewF = document.querySelector('.previewFacilidad');
 
 inputF.style.opacity = 0;
 
-inputF.addEventListener('change', updateImageDisplay);
+inputF.addEventListener('change', updateImageDisplayF);
 
-function updateImageDisplay() {
+function updateImageDisplayF() {
     while (previewF.firstChild) {
         previewF.removeChild(previewF.firstChild);
     }
@@ -46,7 +46,7 @@ function updateImageDisplay() {
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
-const fileTypes = [
+const fileTypesF = [
     'image/apng',
     'image/bmp',
     'image/gif',
@@ -60,7 +60,7 @@ const fileTypes = [
 ];
 
 function validFileType(file) {
-    return fileTypes.includes(file.type);
+    return fileTypesF.includes(file.type);
 }
 
 function returnFileSize(number) {
@@ -73,14 +73,148 @@ function returnFileSize(number) {
     }
 }
 
-function guardarFacilidad() {
-    alert('Hola');
+function agregarFacilidad() {
+    const curFiles = inputF.files;
+    if (curFiles.length === 0) {
+        Swal.fire('No se ha seleccionado ningún archivo', '', 'error');
+    } else {
+        var reader = new FileReader();
+        reader.readAsDataURL(inputF.files[0]);
+        reader.onload = function () {
+            var dataURL = reader.result;
+
+            var base64 = dataURL.split(',')[1];
+            var ext = (dataURL.split(';')[0]).split('/')[1];
+
+            //hacer llamada al controller para guardar
+            parametros = { "base64": base64, "formato": ext, "descF": document.getElementById('ta_facilidad').value };
+            $.ajax(
+                {
+                    data: parametros,
+                    url: '/Administrador/guardarNuevaFacilidad',
+                    type: 'post',
+                    beforeSend: function () {
+                        var div = document.createElement('div');
+                        div.setAttribute('class', 'd-flex align-items-center justify-content-center');
+
+                        var divSpin = document.createElement('div');
+                        divSpin.setAttribute('class', 'spinner-grow text-primary');
+                        divSpin.setAttribute('style', 'width: 2em; height: 2em;');
+                        divSpin.setAttribute('role', 'status');
+
+                        var newSpan = document.createElement('strong');
+                        //newSpan.setAttribute('class', 'sr-only');
+                        newSpan.innerHTML = 'Guardando....';
+
+                        div.appendChild(divSpin);
+                        div.appendChild(newSpan);
+                        document.getElementById('respuestaNFL').innerHTML = '';
+                        document.getElementById('respuestaNFL').appendChild(div);
+                    }, //antes de enviar
+
+                    success: function (response) {
+                        document.getElementById('respuestaNFL').innerHTML = '';
+                        alert(response);
+                        if (response == 1) {
+                            Swal.fire('Facilidad guardada', '', 'success');
+                            window.location.href = '/Administrador/AdministrarPaginas';
+                        } else {
+                            Swal.fire('Error al guardar la nueva facilidad', '', 'error');
+                        }
+                    }
+                }
+            );
+        };
+        //esto va al final
+        while (preview.firstChild) {
+            preview.removeChild(preview.firstChild);
+        }
+        const para = document.createElement('p');
+        para.textContent = 'No se ha seleccionado ningún archivo';
+        preview.appendChild(para);
+    }
 }
 
-function editarFacilidad(button) {
 
+function editarFacilidad(button) {
+    var idFac = button.id;
+    var desc = document.getElementById('ta_fac_' + idFac).value;
+
+    parametros = { "idFac": idFac, "descripcion": desc };
+    $.ajax(
+        {
+            data: parametros,
+            url: '/Administrador/editarFacilidad',
+            type: 'post',
+            beforeSend: function () {
+                var div = document.createElement('div');
+                div.setAttribute('class', 'd-flex align-items-center justify-content-center');
+
+                var divSpin = document.createElement('div');
+                divSpin.setAttribute('class', 'spinner-grow text-primary');
+                divSpin.setAttribute('style', 'width: 2em; height: 2em;');
+                divSpin.setAttribute('role', 'status');
+
+                var newSpan = document.createElement('strong');
+                //newSpan.setAttribute('class', 'sr-only');
+                newSpan.innerHTML = 'Guardando....';
+
+                div.appendChild(divSpin);
+                div.appendChild(newSpan);
+                document.getElementById('respuestaFL_' + idFac).innerHTML = '';
+                document.getElementById('respuestaFL_' + idFac).appendChild(div);
+            }, //antes de enviar
+
+            success: function (response) {
+                document.getElementById('respuestaFL_' + idFac).innerHTML = '';
+                alert(response);
+                if (response == 1) {
+                    Swal.fire('Facilidad editada', '', 'success');
+                    window.location.href = '/Administrador/AdministrarPaginas';
+                } else {
+                    Swal.fire('Error al editar la nueva facilidad', '', 'error');
+                }
+            }
+        }
+    );
 }
 
 function eliminarFacilidad(button) {
+    parametros = { "idFac": button.id};
+    $.ajax(
+        {
+            data: parametros,
+            url: '/Administrador/eliminarFacilidad',
+            type: 'post',
+            beforeSend: function () {
+                var div = document.createElement('div');
+                div.setAttribute('class', 'd-flex align-items-center justify-content-center');
 
+                var divSpin = document.createElement('div');
+                divSpin.setAttribute('class', 'spinner-grow text-primary');
+                divSpin.setAttribute('style', 'width: 2em; height: 2em;');
+                divSpin.setAttribute('role', 'status');
+
+                var newSpan = document.createElement('strong');
+                //newSpan.setAttribute('class', 'sr-only');
+                newSpan.innerHTML = 'Eliminando....';
+
+                div.appendChild(divSpin);
+                div.appendChild(newSpan);
+                document.getElementById('respuestaFL_' + button.id).innerHTML = '';
+                document.getElementById('respuestaFL_' + button.id).appendChild(div);
+            }, //antes de enviar
+
+            success: function (response) {
+                document.getElementById('respuestaFL_' + button.id).innerHTML = '';
+                alert(response);
+                if (response == 1) {
+                    Swal.fire('Facilidad eliminada', '', 'success');
+                    window.location.href = '/Administrador/AdministrarPaginas';
+                } else {
+                    Swal.fire('Error al eliminar la nueva facilidad', '', 'error');
+                }
+            }
+        }
+    );
 }
