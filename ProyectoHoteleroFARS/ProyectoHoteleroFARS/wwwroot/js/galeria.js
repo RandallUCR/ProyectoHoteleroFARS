@@ -114,7 +114,6 @@ function guardarImgGaleria() {
 
                     success: function (response) {
                         document.getElementById('respuestaGL').innerHTML = '';
-                        alert(response);
                         if (response == 1) {
                             Swal.fire('Imagen guardada', '', 'success');
                         } else {
@@ -163,7 +162,6 @@ function eliminarImgGaleria(button) {
 
             success: function (response) {
                 document.getElementById('respuestaGL').innerHTML = '';
-                alert(response);
                 if (response == 1) {
                     Swal.fire('Imagen eliminada', '', 'success');
                 } else {
