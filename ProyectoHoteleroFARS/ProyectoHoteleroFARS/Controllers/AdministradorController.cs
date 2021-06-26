@@ -52,13 +52,49 @@ namespace ProyectoHoteleroFARS.Controllers
                 Hotel h = new HotelRN().getHotel();
                 ViewBag.SobreNosotros = h.TC_Sobre_Nosotros;
                 //cargar las fotos de la galería
-                GaleriaRN gal = new GaleriaRN();
-                ViewBag.Galeria = gal.getGaleria();
+                ViewBag.Galeria = new GaleriaRN().getGaleria();
                 //cargar el texto de facilidades
+                ViewBag.Facilidad = new FacilidadRN().getFacilidadRN();
                 //cargar el texto de como llegar
                 return View("ModificarPaginas");
             }
             return View("Login", -2); //este return debe aparecer en todas las acciones del administrador
+        }
+
+        public int modificarSobreNosotros(string sobreNosotros) {
+            return new HotelRN().modificarSobreNosotrosRN(new Hotel { TC_Sobre_Nosotros = sobreNosotros});
+        }
+
+        public int guardarImagenGaleria(string base64, string formato) {
+            return new GaleriaRN().guardarImagenGaleriaRN(new Galeria { TC_Descripcion = "desc", TV_Archivo = base64, TC_Formato = formato });
+        }
+
+        public int eliminarImagenGaleria(int idImg) {
+            return new GaleriaRN().eliminarImagenGaleriaRN(idImg);
+        }
+
+        public int guardarNuevaFacilidad(string base64, string formato, string descF) {
+
+            Facilidad facilidad = new Facilidad();
+            facilidad.TC_Descripcion = descF;
+            facilidad.galeria = new Galeria();
+            facilidad.galeria.TC_Formato = formato;
+            facilidad.galeria.TV_Archivo = base64;
+            
+            return new FacilidadRN().guardarNuevaFacilidadRN(facilidad);
+        }
+
+        public int editarFacilidad(int idFac, string descripcion) {
+            Facilidad facilidad = new Facilidad();
+            facilidad.TN_Id = idFac;
+            facilidad.TC_Descripcion = descripcion;
+            return new FacilidadRN().editarFacilidadRN(facilidad);
+        }
+
+        public int eliminarFacilidad(int idFac){
+            Facilidad facilidad = new Facilidad();
+            facilidad.TN_Id = idFac;
+            return new FacilidadRN().eliminarFacilidadRN(facilidad);
         }
 
         public IActionResult CambiarDescripcion(int id) {

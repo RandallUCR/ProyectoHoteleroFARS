@@ -171,14 +171,13 @@ D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\De
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Reserva\VerificarReservaCliente.cshtml.g.cs
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Reserva\Reservar.cshtml.g.cs
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Reserva\ConfirmacionReserva.cshtml.g.cs
-<<<<<<< Updated upstream
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\ModificarPaginas.cshtml.g.cs
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\Contactenos.cshtml.g.cs
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Reserva\ConfirmacionReserva.cshtml.g.cs
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Reserva\Reservar.cshtml.g.cs
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Reserva\VerificarReservaCliente.cshtml.g.cs
-=======
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\ListaReservar.cshtml.g.cs
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\Sugerencias.cshtml.g.cs
->>>>>>> Stashed changes
 D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\ModificarPaginas.cshtml.g.cs
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\ListaReservar.cshtml.g.cs
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\Sugerencias.cshtml.g.cs

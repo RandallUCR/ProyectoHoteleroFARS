@@ -1,6 +1,59 @@
 ﻿@{ ViewData["Title"] = "Home";
-    Layout = "_LayoutAdmin"; 
+    Layout = "_LayoutAdmin";
 }
+
+<style>
+    form {
+        width: 600px;
+        background: #ccc;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid black;
+    }
+
+    form ol {
+        padding-left: 0;
+    }
+
+    form li, div > p {
+        background: #eee;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        list-style-type: none;
+        border: 1px solid black;
+    }
+
+    form img {
+        height: 64px;
+        order: 1;
+    }
+
+    form p {
+        line-height: 32px;
+        padding-left: 10px;
+    }
+
+    form label, form button {
+        background-color: #7F9CCB;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px ridge black;
+        font-size: 0.8rem;
+        height: auto;
+    }
+
+        form label:hover, form button:hover {
+            background-color: #2D5BA3;
+            color: white;
+        }
+
+        form label:active, form button:active {
+            background-color: #0D3F8F;
+            color: white;
+        }
+</style>
+
 
 <div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
     <div class="col-12">
@@ -41,11 +94,12 @@
             <div class="card-body">
                 <span style="font-family: Century Gothic; margin-top: 1em;">Texto de la página Sobre Nosotros</span>
                 <!--Cargar el texto que está en la base de datos-->
-                <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="txtDesc" name="txtDesc" rows="4" cols="50">@ViewBag.SobreNosotros</textarea>
+                <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="taSobreNosotros" name="taSobreNosotros" rows="4" cols="50">@ViewBag.SobreNosotros</textarea>
                 <div class="col-12 col-md-4 align-self-end" style="margin-top: 1em;">
-                    <button class="btn btn-info" type="button">Aceptar</button>
+                    <button class="btn btn-info" type="button" onclick="aceptarModificarSobreNosotros()">Aceptar</button>
                     <button class="btn btn-danger" type="button">Cancelar</button>
                 </div>
+                <br /> <span id="respuestaSN"></span>
             </div>
         </div>
     </div>
@@ -62,11 +116,50 @@
 
         <div id="collapseGaleria" class="collapse" aria-labelledby="cabeceraGaleria" data-parent="#accordionModificarPaginas">
             <div class="card-body">
+                <form style="margin-bottom: 1em;">
+                    <div>
+                        <label for="image_uploads">Seleccione una imagen para guardarla en la galería</label>
+                        <input class="formGalery" type="file" id="image_uploads" name="image_uploads" accept="image/*">  <!-- accept=".jpg, .jpeg, .png" -->
+                    </div>
+                    <div class="preview">
+                        <p>No se ha seleccionado ningún archivo</p>
+                    </div>
+                    <div>
+                        <button type="button" onclick="guardarImgGaleria()">Guardar</button>
+                        <br />
+                        <span id="respuestaGL"></span>
+                    </div>
+                </form>
+
                 <span style="font-family: Century Gothic; margin-top: 1em;">Imágenes en Galería</span>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < ViewBag.Galeria.Count; i++) { 
+                            <tr>
+                                <th scope="row">@ViewBag.Galeria[i].TN_Id</th>
+                                <td>
+                                    <img height="200" width="250" style="max-height:inherit; max-width:inherit" src="data:image/@ViewBag.Galeria[i].TC_Formato;base64,@ViewBag.Galeria[i].TV_Archivo"/>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger" id="@ViewBag.Galeria[i].TN_Id" onclick="eliminarImgGaleria(this)">Eliminar</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <!--
                 <div class="col-12 col-md-4 align-self-end" style="margin-top: 1em;">
                     <button class="btn btn-info" type="button">Aceptar</button>
                     <button class="btn btn-danger" type="button">Cancelar</button>
                 </div>
+                -->
             </div>
         </div>
     </div>
@@ -83,7 +176,61 @@
 
         <div id="collapseFacilidades" class="collapse" aria-labelledby="cabeceraFacilidades" data-parent="#accordionModificarPaginas">
             <div class="card-body">
-                Opciones para editar la página Facilidades
+                <form>
+                    <div style="margin-bottom: 1em;">
+                        <span>Descripción</span><br />
+                        <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="ta_facilidad" name="ta_facilidad" rows="4" cols="40"></textarea>
+                    </div>
+                    <div>
+                        <label for="image_facilidad">Seleccione una imagen para guardarla en la galería</label>
+                        <input class="formFacilidad" type="file" id="image_facilidad" name="image_facilidad" accept="image/*">  <!-- accept=".jpg, .jpeg, .png" -->
+                    </div>
+                    <div class="previewFacilidad">
+                        <p>No se ha seleccionado ningún archivo</p>
+                    </div>
+                    <div>
+                        <button type="button" onclick="agregarFacilidad()">Guardar</button>
+                        <br />
+                        <span id="respuestaNFL"></span>
+                    </div>
+                </form>
+                <span style="font-family: Century Gothic; margin-top: 1em;">Imágenes y texto en Facilidades</span>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Edición</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < ViewBag.Facilidad.Count; i++) { 
+                            <tr>
+                                <th scope="row">@ViewBag.Facilidad[i].TN_Id</th>
+                                <td>
+                                    <img height="200" width="250" style="max-height:inherit; max-width:inherit" src="data:image/@ViewBag.Facilidad[i].galeria.TC_Formato;base64,@ViewBag.Facilidad[i].galeria.TV_Archivo"/>
+                                </td>
+                                <td>
+                                    <form>
+                                        <div>
+                                            <span>Descripción</span><br />
+                                            <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="ta_fac_@ViewBag.Facilidad[i].TN_Id" name="ta_fac_@ViewBag.Facilidad[i].TN_Id" rows="4" cols="40">@ViewBag.Facilidad[i].TC_Descripcion</textarea>
+                                        </div>
+                                        <div>
+                                            <button type="button" id="@ViewBag.Facilidad[i].TN_Id" onclick="editarFacilidad(this)">Guardar</button>
+                                            <br />
+                                            <span id="respuestaFL_@ViewBag.Facilidad[i].TN_Id"></span>
+                                        </div>
+                                    </form>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger" id="@ViewBag.Facilidad[i].TN_Id" onclick="eliminarFacilidad(this)">Eliminar</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

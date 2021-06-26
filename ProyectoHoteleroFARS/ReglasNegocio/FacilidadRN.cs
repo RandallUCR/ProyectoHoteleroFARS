@@ -26,5 +26,16 @@ namespace ReglasNegocio{
             return facilidadList;
         }
 
+        public int guardarNuevaFacilidadRN(Facilidad facilidad) {
+            return new FacilidadAD().guardarNuevaFacilidadAD(facilidad);
+        }
+
+        public int editarFacilidadRN(Facilidad facilidad) {
+            return new FacilidadAD().editarFacilidadAD(facilidad);
+        }
+
+        public int eliminarFacilidadRN(Facilidad facilidad) {
+            return new FacilidadAD().eliminarFacilidadAD(facilidad);
+        }
     }
 }

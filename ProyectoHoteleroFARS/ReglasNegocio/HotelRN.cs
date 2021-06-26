@@ -29,6 +29,9 @@ namespace ReglasNegocio
             return h;
         }
 
+        public int modificarSobreNosotrosRN(Hotel hotel) {
+            return new HotelAD().modificarSobreNosotrosAD(hotel);
+        }
         public int registrarSugerencia(string sug)
         {
             HotelAD had = new HotelAD();
