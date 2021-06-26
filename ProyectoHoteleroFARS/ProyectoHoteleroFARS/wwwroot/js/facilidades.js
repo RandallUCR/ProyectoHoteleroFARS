@@ -114,7 +114,6 @@ function agregarFacilidad() {
 
                     success: function (response) {
                         document.getElementById('respuestaNFL').innerHTML = '';
-                        alert(response);
                         if (response == 1) {
                             Swal.fire('Facilidad guardada', '', 'success');
                             window.location.href = '/Administrador/AdministrarPaginas';
@@ -167,7 +166,6 @@ function editarFacilidad(button) {
 
             success: function (response) {
                 document.getElementById('respuestaFL_' + idFac).innerHTML = '';
-                alert(response);
                 if (response == 1) {
                     Swal.fire('Facilidad editada', '', 'success');
                     window.location.href = '/Administrador/AdministrarPaginas';
@@ -207,7 +205,6 @@ function eliminarFacilidad(button) {
 
             success: function (response) {
                 document.getElementById('respuestaFL_' + button.id).innerHTML = '';
-                alert(response);
                 if (response == 1) {
                     Swal.fire('Facilidad eliminada', '', 'success');
                     window.location.href = '/Administrador/AdministrarPaginas';
