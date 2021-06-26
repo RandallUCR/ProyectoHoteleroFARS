@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Entidades;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -42,6 +43,23 @@ namespace AccesoDatos
                 data = "Error " + e.Message;
             }
             return data;
+        }
+
+        public int modificarSobreNosotrosAD(Hotel hotel) {
+            int respuesta = -1;
+
+            try{
+                SqlDataReader dr = consultar($"EXEC update_hotel_sobre_nosotros '{hotel.TC_Sobre_Nosotros}'");
+                if (dr != null){
+                    dr.Read();
+                    respuesta = int.Parse(dr[0].ToString());
+                }else{
+                    respuesta = -1;
+                }
+            }catch (SqlException e){
+                respuesta = -2;
+            }
+            return respuesta;
         }
 
     }

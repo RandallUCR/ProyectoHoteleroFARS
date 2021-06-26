@@ -52,13 +52,25 @@ namespace ProyectoHoteleroFARS.Controllers
                 Hotel h = new HotelRN().getHotel();
                 ViewBag.SobreNosotros = h.TC_Sobre_Nosotros;
                 //cargar las fotos de la galería
-                GaleriaRN gal = new GaleriaRN();
-                ViewBag.Galeria = gal.getGaleria();
+                ViewBag.Galeria = new GaleriaRN().getGaleria();
                 //cargar el texto de facilidades
+                ViewBag.Facilidad = new FacilidadRN().getFacilidadRN();
                 //cargar el texto de como llegar
                 return View("ModificarPaginas");
             }
             return View("Login", -2); //este return debe aparecer en todas las acciones del administrador
+        }
+
+        public int modificarSobreNosotros(string sobreNosotros) {
+            return new HotelRN().modificarSobreNosotrosRN(new Hotel { TC_Sobre_Nosotros = sobreNosotros});
+        }
+
+        public int guardarImagenGaleria(string base64, string formato) {
+            return new GaleriaRN().guardarImagenGaleriaRN(new Galeria { TC_Descripcion = "desc", TV_Archivo = base64, TC_Formato = formato });
+        }
+
+        public int eliminarImagenGaleria(int idImg) {
+            return new GaleriaRN().eliminarImagenGaleriaRN(idImg);
         }
 
         public IActionResult CambiarDescripcion(int id) {
