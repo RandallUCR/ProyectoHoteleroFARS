@@ -91,7 +91,7 @@ function agregarFacilidad() {
             $.ajax(
                 {
                     data: parametros,
-                    url: '/Administrador/guardarNuevaFacilidad',
+                    url: '/AdministradorPaginas/guardarNuevaFacilidad',
                     type: 'post',
                     beforeSend: function () {
                         var div = document.createElement('div');
@@ -143,7 +143,7 @@ function editarFacilidad(button) {
     $.ajax(
         {
             data: parametros,
-            url: '/Administrador/editarFacilidad',
+            url: '/AdministradorPaginas/editarFacilidad',
             type: 'post',
             beforeSend: function () {
                 var div = document.createElement('div');
@@ -182,7 +182,7 @@ function eliminarFacilidad(button) {
     $.ajax(
         {
             data: parametros,
-            url: '/Administrador/eliminarFacilidad',
+            url: '/AdministradorPaginas/eliminarFacilidad',
             type: 'post',
             beforeSend: function () {
                 var div = document.createElement('div');
