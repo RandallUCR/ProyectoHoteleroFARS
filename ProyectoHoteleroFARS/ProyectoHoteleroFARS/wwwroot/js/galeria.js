@@ -91,7 +91,7 @@ function guardarImgGaleria() {
             $.ajax(
                 {
                     data: parametros,
-                    url: '/Administrador/guardarImagenGaleria',
+                    url: '/AdministradorPaginas/guardarImagenGaleria',
                     type: 'post',
                     beforeSend: function () {
                         var div = document.createElement('div');
@@ -139,7 +139,7 @@ function eliminarImgGaleria(button) {
     $.ajax(
         {
             data: parametros,
-            url: '/Administrador/eliminarImagenGaleria',
+            url: '/AdministradorPaginas/eliminarImagenGaleria',
             type: 'post',
             beforeSend: function () {
                 var div = document.createElement('div');

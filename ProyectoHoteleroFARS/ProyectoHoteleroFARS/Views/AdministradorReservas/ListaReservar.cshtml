@@ -8,7 +8,7 @@
 </div>
 
 <div class="row shadow-lg p-3 mb-5 bg-transparent rounded justify-content-around">
-    <form class="col-10 col-md-6 justify-content-around" autocomplete="off" asp-controller="Administrador" asp-action="Lista_Reservar_Filtro" style="display:flex">
+    <form class="col-10 col-md-6 justify-content-around" autocomplete="off" asp-controller="AdministradorReservas" asp-action="Lista_Reservar_Filtro" style="display:flex">
         <input type="text" name="rangofechasNo" placeholder="Rango de Fechas" class="form-control mt-1" required />
         <input type="submit" value="Filtrar" class="btn btn-success ml-1" />
     </form>
@@ -73,7 +73,7 @@
                 </button>
             </div>
             <span style="color:red" id="span"></span>
-            <form id="resModForm" autocomplete="off" asp-controller="Administrador" asp-action="ModificarReserva">
+            <form id="resModForm" autocomplete="off" asp-controller="AdministradorReservas" asp-action="ModificarReserva">
                 <div class="modal-body">
                     <input type="hidden" id="id" name="id" />
 
@@ -84,7 +84,7 @@
                     <input type="text" placeholder="ID Reserva" id="id_res" name="id_res" class="form-control" disabled required />
 
                     <label for="cedula" class="font-weight-bold">Cedula</label>
-                    <input type="text" id="cedula" class="form-control mt-1" name="cedula" placeholder="Cedula" required />
+                    <input type="text" id="cedula" class="form-control mt-1" name="cedula" placeholder="Cedula" maxlength="9" minlength="9" required />
 
                     <label for="nombre" class="font-weight-bold">Nombre</label>
                     <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="form-control" required />
@@ -96,7 +96,7 @@
                     <input type="text" placeholder="Email" id="email" name="email" class="form-control" required />
 
                     <label for="tarjeta" class="font-weight-bold">Tarjeta</label>
-                    <input type="text" placeholder="Tarjeta" id="tarjeta" name="tarjeta" class="form-control" required />
+                    <input type="text" placeholder="Tarjeta" id="tarjeta" name="tarjeta" class="form-control" maxlength="16" minlength="16" required />
 
                     <label for="trans" class="font-weight-bold">Transaccion</label>
                     <input type="number" placeholder="Transaccion" id="trans" name="trans" class="form-control" disabled required />
@@ -134,11 +134,11 @@
                 </button>
             </div>
             <span style="color:red" id="span"></span>
-            <form id="resInsForm" autocomplete="off" asp-controller="Administrador" asp-action="InsertarReserva">
+            <form id="resInsForm" autocomplete="off" asp-controller="AdministradorReservas" asp-action="InsertarReserva">
                 <div class="modal-body">
 
                     <label for="cedula" class="font-weight-bold">Cedula</label>
-                    <input type="text" id="cedula" class="form-control mt-1" name="cedula" placeholder="Cedula" required />
+                    <input type="text" id="cedula" class="form-control mt-1" name="cedula" placeholder="Cedula" maxlength="9" minlength="9" required />
 
                     <label for="nombre" class="font-weight-bold">Nombre</label>
                     <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="form-control" required />
@@ -150,7 +150,7 @@
                     <input type="text" placeholder="Email" id="email" name="email" class="form-control" required />
 
                     <label for="tarjeta" class="font-weight-bold">Tarjeta</label>
-                    <input type="text" placeholder="Tarjeta" id="tarjeta" name="tarjeta" class="form-control" maxlength="16" minlength="16"required />
+                    <input type="text" placeholder="Tarjeta" id="tarjeta" name="tarjeta" class="form-control" maxlength="16" minlength="16" required />
 
                     <label for="rangofechas" class="font-weight-bold">Seleccione el Rango de Fechas a Hospedarse:</label>
                     <input class="form-control" type="text" id="rangofechas" name="rangofechas" placeholder="Rango de Fechas" required />
