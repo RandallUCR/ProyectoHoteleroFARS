@@ -25,10 +25,10 @@
 </div>
 <form class="row bg-transparent shadow-lg rounded p-3" autocomplete="off" asp-controller="Reserva" asp-action="Reservar" style="max-width:50%; display:flex; flex-direction: column; text-align:center">
     <legend style="font-weight: bold;  font-family:Forte;">Formulario Personal</legend>
-    <input type="text" class="form-control mt-1" name="cedula" placeholder="Cedula" required />
+    <input type="text" class="form-control mt-1" name="cedula" placeholder="Cedula" maxlength="9" minlength="9" required />
     <input type="text" class="form-control mt-1" name="nombre" placeholder="Nombre" required />
     <input type="text" class="form-control mt-1" name="apellidos" placeholder="Apellidos" required />
     <input type="email" class="form-control mt-1" name="correo" placeholder="Correo electronico" required />
-    <input type="number" class="form-control mt-1" name="tarjeta" placeholder="Tarjeta Bancaria" required />
+    <input type="text" class="form-control mt-1" name="tarjeta" placeholder="Tarjeta Bancaria" maxlength="16" minlength="16" required />
     <input type="submit" value="Reservar" class="btn btn-success mt-1" />
 </form>

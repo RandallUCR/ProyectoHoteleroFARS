@@ -91,7 +91,7 @@ function guardarImgGaleria() {
             $.ajax(
                 {
                     data: parametros,
-                    url: '/Administrador/guardarImagenGaleria',
+                    url: '/AdministradorPaginas/guardarImagenGaleria',
                     type: 'post',
                     beforeSend: function () {
                         var div = document.createElement('div');
@@ -114,7 +114,6 @@ function guardarImgGaleria() {
 
                     success: function (response) {
                         document.getElementById('respuestaGL').innerHTML = '';
-                        alert(response);
                         if (response == 1) {
                             Swal.fire('Imagen guardada', '', 'success');
                         } else {
@@ -140,7 +139,7 @@ function eliminarImgGaleria(button) {
     $.ajax(
         {
             data: parametros,
-            url: '/Administrador/eliminarImagenGaleria',
+            url: '/AdministradorPaginas/eliminarImagenGaleria',
             type: 'post',
             beforeSend: function () {
                 var div = document.createElement('div');
@@ -163,7 +162,6 @@ function eliminarImgGaleria(button) {
 
             success: function (response) {
                 document.getElementById('respuestaGL').innerHTML = '';
-                alert(response);
                 if (response == 1) {
                     Swal.fire('Imagen eliminada', '', 'success');
                 } else {

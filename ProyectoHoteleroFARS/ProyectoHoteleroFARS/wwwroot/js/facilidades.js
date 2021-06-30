@@ -91,7 +91,7 @@ function agregarFacilidad() {
             $.ajax(
                 {
                     data: parametros,
-                    url: '/Administrador/guardarNuevaFacilidad',
+                    url: '/AdministradorPaginas/guardarNuevaFacilidad',
                     type: 'post',
                     beforeSend: function () {
                         var div = document.createElement('div');
@@ -114,7 +114,6 @@ function agregarFacilidad() {
 
                     success: function (response) {
                         document.getElementById('respuestaNFL').innerHTML = '';
-                        alert(response);
                         if (response == 1) {
                             Swal.fire('Facilidad guardada', '', 'success');
                             window.location.href = '/Administrador/AdministrarPaginas';
@@ -144,7 +143,7 @@ function editarFacilidad(button) {
     $.ajax(
         {
             data: parametros,
-            url: '/Administrador/editarFacilidad',
+            url: '/AdministradorPaginas/editarFacilidad',
             type: 'post',
             beforeSend: function () {
                 var div = document.createElement('div');
@@ -167,7 +166,6 @@ function editarFacilidad(button) {
 
             success: function (response) {
                 document.getElementById('respuestaFL_' + idFac).innerHTML = '';
-                alert(response);
                 if (response == 1) {
                     Swal.fire('Facilidad editada', '', 'success');
                     window.location.href = '/Administrador/AdministrarPaginas';
@@ -184,7 +182,7 @@ function eliminarFacilidad(button) {
     $.ajax(
         {
             data: parametros,
-            url: '/Administrador/eliminarFacilidad',
+            url: '/AdministradorPaginas/eliminarFacilidad',
             type: 'post',
             beforeSend: function () {
                 var div = document.createElement('div');
@@ -207,7 +205,6 @@ function eliminarFacilidad(button) {
 
             success: function (response) {
                 document.getElementById('respuestaFL_' + button.id).innerHTML = '';
-                alert(response);
                 if (response == 1) {
                     Swal.fire('Facilidad eliminada', '', 'success');
                     window.location.href = '/Administrador/AdministrarPaginas';
