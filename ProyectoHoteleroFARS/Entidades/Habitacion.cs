@@ -8,7 +8,9 @@ namespace Entidades
     {
         public int TN_Id { get; set; }
         public int TN_Numero { get; set; }
-        public int TB_Estado { get; set; }
+        public bool TB_Estado { get; set; }
+
+        public TipoHabitacion tipo { get; set; }
 
     }
 }
