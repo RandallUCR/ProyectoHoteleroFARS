@@ -10,27 +10,38 @@
 
 <div class="row mb-5 justify-content-around">
     <div class="col-12 col-md-12 col-lg-5 shadow-lg bg-transparent rounded  p-3" style="max-height:125px">
-        <form class=" d-flex flex-column" autocomplete="off" asp-controller="" asp-action="">
+        <form class=" d-flex flex-column" autocomplete="off" asp-controller="AdministradorHabitaciones" asp-action="CambiarTipo">
             <div class="form-group row">
                 <div class="col-10">
-                    <select name="tipoHabi" class="form-control">
-                        <option value="1">Standard</option>
+                    <select id="tipoHabi" name="tipoHabi" class="form-control">
+                        @foreach (Entidades.TipoHabitacion t in ViewBag.Tipos)
+                        {
+                            <option value="@t.TN_Id">@t.TC_Nombre</option>
+                        }
                     </select>
-                </div>
+                    @if (ViewBag.Index != null)
+                    {
+                        <script>
+
+                            document.getElementById('tipoHabi').value = @ViewBag.Index;
+                        
+                        </script>
+                    }
+                    </div>
                 <div class="col-2"><input type="submit" value="Buscar" class="btn btn-success" /></div>
             </div>
         </form>
         <div class="d-flex justify-content-center">
-            <button class="btn btn-outline-primary" onclick="modalInsTipo()">Nuevo</button>
-            <a class="btn btn-outline-warning ml-1" type="button" href="/AdministradorHabitaciones/CambiarDescripcion/1">Ver</a>
-            <button class="btn btn-outline-danger ml-1" type="button" onclick="eliminarHabi(22)">Eliminar</button>
+            <button class="btn btn-outline-primary" onclick="modalInsTipo()">Nuevo</button> 
+            <button class="btn btn-outline-warning ml-1" onclick="irTipo()">Ver</button>
+            <button class="btn btn-outline-danger ml-1" onclick="eliminarTipo(22)">Eliminar</button>
         </div>
     </div>
 
     <div class="col-12 col-md-12 col-lg-6 d-flex flex-column shadow-lg bg-transparent rounded  p-3">
         <div class="row mb-1">
             <div style="text-align:end" class="col-11">
-                <h5>Habitaciones Standard</h5>
+                <h5>Habitaciones @Model</h5>
             </div>
             <div class="col-1 justify-content-end"><button type="submit" class="btn btn-primary font-weight-bold" onclick="modalInsHabi()">+</button></div>
         </div>
@@ -45,18 +56,22 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach (Entidades.Habitacion h in ViewBag.Habitaciones)
+                {
                 <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td><button class="btn-primary" onclick="modalInsHabi(4,23,0)">Ver</button></td>
-                    <td><button class="btn-danger" onclick="eliminarTipo(1)">Eliminar</button></td>
+                    <td>@h.TN_Numero</td>
+                    @if (h.TB_Estado)
+                    {
+                        <td>Activa</td>
+                    }
+                    else
+                    {
+                        <td>Inactiva</td>
+                    }
+                    <td><button class="btn-primary" onclick="modalEditHabi(@h.TN_Id, @h.TN_Numero, '@h.TB_Estado')">Ver</button></td>
+                    <td><button class="btn-danger" onclick="eliminarHabi(@h.TN_Id)">Eliminar</button></td>
                 </tr>
-                <tr>
-                    <td>100</td>
-                    <td>100</td>
-                    <td><button class="btn-primary" onclick="modalInsHabi(4,25,1)">Ver</button></td>
-                    <td><button class="btn-danger">Eliminar</button></td>
-                </tr>
+                }
             </tbody>
         </table>
     </div>
@@ -107,7 +122,7 @@
                 </button>
             </div>
             <span style="color:red" id="span"></span>
-            <form id="" autocomplete="off" asp-controller="" asp-action="">
+            <form id="insHabiForm" autocomplete="off" asp-controller="AdministradorHabitaciones" asp-action="insertarHabitacion">
                 <div class="modal-body">
 
                     <label for="num" class="font-weight-bold">Número</label>
@@ -115,7 +130,7 @@
 
                     <div class="form-group row mt-2">
                         <label for="estado" class="font-weight-bold col-2">Activa</label>
-                        <input type="checkbox" id="estado" class="form-control col-10" name="estado" placeholder="Activa" min="0" required />
+                        <input type="checkbox" id="estado" class="form-control col-10" name="estado" placeholder="Activa"/>
                     </div>
 
                 </div>
@@ -138,7 +153,7 @@
                 </button>
             </div>
             <span style="color:red" id="span"></span>
-            <form id="" autocomplete="off" asp-controller="" asp-action="">
+            <form id="editHabiForm" autocomplete="off" asp-controller="AdministradorHabitaciones" asp-action="modificarHabitacion">
                 <div class="modal-body">
 
                     <input type="hidden" id="idhabi" name="idhabi" class="form-control" required />
@@ -148,7 +163,7 @@
 
                     <div class="form-group row mt-2">
                         <label for="estadoe" class="font-weight-bold col-2">Activa</label>
-                        <input type="checkbox" id="estadoe" class="form-control col-10" name="estadoe" placeholder="Activa" min="0" required />
+                        <input type="checkbox" id="estadoe" class="form-control col-10" name="estadoe" placeholder="Activa"/>
                     </div>
 
                 </div>
