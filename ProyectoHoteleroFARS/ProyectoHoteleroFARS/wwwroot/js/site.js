@@ -44,3 +44,18 @@ $('input[name="rangofechasNo"]').on('apply.daterangepicker', function (ev, picke
         picker.setEndDate(moment(uno).add(1, 'days'));
     }
 });
+
+$('#example2').DataTable({
+    "lengthChange": false,
+    "searching": false,
+    "lengthMenu": [5],
+    "ordering": false,
+    "language": {
+        "infoEmpty": "No hay registros disponibles",
+        "info": "Mostrando página _PAGE_ de _PAGES_",
+        "oPaginate": {
+            "sNext": "Siguiente",
+            "sPrevious": "Anterior"
+        }
+    }
+});
