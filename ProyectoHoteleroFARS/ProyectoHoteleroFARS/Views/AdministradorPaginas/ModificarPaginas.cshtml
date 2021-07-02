@@ -140,7 +140,7 @@
                             <th scope="col">Acción</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="contenidoTablaGaleria">
                         @for (int i = 0; i < ViewBag.Galeria.Count; i++) { 
                             <tr>
                                 <th scope="row">@ViewBag.Galeria[i].TN_Id</th>
@@ -204,7 +204,7 @@
                             <th scope="col">Acción</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="contenidoTablaFacilidades">
                         @for (int i = 0; i < ViewBag.Facilidad.Count; i++) { 
                             <tr>
                                 <th scope="row">@ViewBag.Facilidad[i].TN_Id</th>
