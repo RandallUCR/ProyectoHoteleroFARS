@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using ReglasNegocio;
 using System;
 using System.Collections.Generic;
@@ -71,6 +72,18 @@ namespace ProyectoHoteleroFARS.Controllers
             Facilidad facilidad = new Facilidad();
             facilidad.TN_Id = idFac;
             return new FacilidadRN().eliminarFacilidadRN(facilidad);
+        }
+
+        public JsonResult actualizarTablaFacilidades() {
+            FacilidadRN frn = new FacilidadRN();
+            string lista = JsonConvert.SerializeObject(frn.getFacilidadRN());
+            return Json(new { resultado = lista });
+        }
+
+        public JsonResult actualizarTablaGaleria() {
+            GaleriaRN grn = new GaleriaRN();
+            string lista = JsonConvert.SerializeObject(grn.getGaleria());
+            return Json(new { resultado = lista });
         }
     }
 }

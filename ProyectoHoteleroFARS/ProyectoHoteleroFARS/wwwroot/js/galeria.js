@@ -115,7 +115,16 @@ function guardarImgGaleria() {
                     success: function (response) {
                         document.getElementById('respuestaGL').innerHTML = '';
                         if (response == 1) {
+                            actualizarTablaGaleria();
                             Swal.fire('Imagen guardada', '', 'success');
+
+                            while (preview.firstChild) {
+                                preview.removeChild(preview.firstChild);
+                            }
+                            const para = document.createElement('p');
+                            para.textContent = 'No se ha seleccionado ningún archivo';
+                            preview.appendChild(para);
+                            $('#image_uploads').val('');
                         } else {
                             Swal.fire('Error al guardar la imagen', '', 'error');
                         }
@@ -123,51 +132,88 @@ function guardarImgGaleria() {
                 }
             );
         };
-        //esto va al final
-        while (preview.firstChild) {
-            preview.removeChild(preview.firstChild);
-        }
-        const para = document.createElement('p');
-        para.textContent = 'No se ha seleccionado ningún archivo';
-        preview.appendChild(para);
     }
 }
 
 function eliminarImgGaleria(button) {
-    //hacer llamada al controller para guardar
-    parametros = { "idImg": button.id };
+    Swal.fire({
+        title: '¿Desea eliminar la imagen de la galería?',
+        showDenyButton: true,
+        confirmButtonText: 'Eliminar',
+        denyButtonText: 'Cancelar',
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            //hacer llamada al controller para guardar
+            parametros = { "idImg": button.id };
+            $.ajax(
+                {
+                    data: parametros,
+                    url: '/AdministradorPaginas/eliminarImagenGaleria',
+                    type: 'post',
+                    beforeSend: function () {
+                        var div = document.createElement('div');
+                        div.setAttribute('class', 'd-flex align-items-center justify-content-center');
+
+                        var divSpin = document.createElement('div');
+                        divSpin.setAttribute('class', 'spinner-grow text-primary');
+                        divSpin.setAttribute('style', 'width: 2em; height: 2em;');
+                        divSpin.setAttribute('role', 'status');
+
+                        var newSpan = document.createElement('strong');
+                        //newSpan.setAttribute('class', 'sr-only');
+                        newSpan.innerHTML = 'Eliminando....';
+
+                        div.appendChild(divSpin);
+                        div.appendChild(newSpan);
+                        document.getElementById('respuestaGL').innerHTML = '';
+                        document.getElementById('respuestaGL').appendChild(div);
+                    }, //antes de enviar
+
+                    success: function (response) {
+                        document.getElementById('respuestaGL').innerHTML = '';
+                        if (response == 1) {
+                            actualizarTablaGaleria();
+                            Swal.fire('Imagen eliminada', '', 'success');
+                        } else {
+                            Swal.fire('Error al eliminar la imagen', '', 'error');
+                        }
+                    }
+                }
+            );
+        } else if (result.isDenied) {
+            Swal.fire('Acción cancelada', '', 'info')
+        }
+    });
+}
+
+function actualizarTablaGaleria() {
     $.ajax(
         {
-            data: parametros,
-            url: '/AdministradorPaginas/eliminarImagenGaleria',
+            url: '/AdministradorPaginas/actualizarTablaGaleria',
             type: 'post',
-            beforeSend: function () {
-                var div = document.createElement('div');
-                div.setAttribute('class', 'd-flex align-items-center justify-content-center');
-
-                var divSpin = document.createElement('div');
-                divSpin.setAttribute('class', 'spinner-grow text-primary');
-                divSpin.setAttribute('style', 'width: 2em; height: 2em;');
-                divSpin.setAttribute('role', 'status');
-
-                var newSpan = document.createElement('strong');
-                //newSpan.setAttribute('class', 'sr-only');
-                newSpan.innerHTML = 'Guardando....';
-
-                div.appendChild(divSpin);
-                div.appendChild(newSpan);
-                document.getElementById('respuestaGL').innerHTML = '';
-                document.getElementById('respuestaGL').appendChild(div);
-            }, //antes de enviar
-
+            beforeSend: function () { }, //antes de enviar
             success: function (response) {
-                document.getElementById('respuestaGL').innerHTML = '';
-                if (response == 1) {
-                    Swal.fire('Imagen eliminada', '', 'success');
-                } else {
-                    Swal.fire('Error al eliminar la imagen', '', 'error');
+                var lista = JSON.parse(response.resultado);
+
+                $('#contenidoTablaGaleria tr').remove(); //destruimos toda la tabla
+
+                for (var x = 0; x < lista.length; x++) {
+                    var info = '<tr> <th scope="row">' + lista[x].TN_Id + '</th>' +
+                        '<td> <img height = "200" width = "250" style = "max-height:inherit; max-width:inherit" src = "data:image/' + lista[x].TC_Formato + ';base64,' + lista[x].TV_Archivo + '" />' +
+                        '</td > <td> <button class="btn btn-danger" id="' + lista[x].TN_Id + '" onclick="eliminarImgGaleria(this)">Eliminar</button> </td> </td> </tr>';
+
+                    document.getElementById('contenidoTablaGaleria').innerHTML += info;
                 }
-            }
+
+            },
+            error: function () {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error inesperado',
+                    text: 'Ocurrió un error al actualizar la tabla, recargue la página'
+                });
+            }, //antes de enviar
         }
     );
 }

@@ -39,7 +39,7 @@ namespace AccesoDatos
         }
 
         public int guardarNuevaFacilidadAD(Facilidad facilidad) {
-            int respuesta = -1;
+            int respuesta = -5;
             try
             {
                 SqlDataReader dr = consultar($"EXEC sp_create_facilidad '{facilidad.TC_Descripcion}', '{facilidad.galeria.TV_Archivo}', '{facilidad.galeria.TC_Formato}'");
@@ -50,7 +50,7 @@ namespace AccesoDatos
                 }
                 else
                 {
-                    respuesta = -1;
+                    respuesta = -3;
                 }
             }
             catch (SqlException e)
