@@ -32,8 +32,12 @@
             <label for="inputImagen" style="font-family: Century Gothic;">Subir nueva imagen</label>
             <input class="form-control" type="file" id="inputImagen" name="inputImagen" accept="image/png, .jpeg, .jpg" />
         </div>
-        <div class="col-12 col-md-4 align-self-end" style="margin-top: 1em;">
-            <input class="btn btn-info" type="submit" value="Aceptar" />
+        <div class="col-12 col-md-2 align-self-end d-flex justify-content-end" style="margin-top: 1em;">
+            <input class="btn btn-info" type="submit" value="Aceptar" />           
         </div>        
     </div>
+</form>
+<form class="d-flex justify-content-end p-3" asp-controller="AdministradorHabitaciones" asp-action="CambiarTipo">
+    <input type="hidden" id="tipoHabi" name="tipoHabi" value="@ViewBag.Id_Tipo" required />
+    <input class="btn btn-danger" type="submit" value="Cancelar" />
 </form>
