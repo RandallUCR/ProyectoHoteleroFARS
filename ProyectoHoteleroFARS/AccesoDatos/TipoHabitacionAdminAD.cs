@@ -47,5 +47,25 @@ namespace AccesoDatos
             return result;
         }
 
+        public int eliminarTiposHabitaciones(int id)
+        {
+            int result = 3;
+            try
+            {
+                SqlDataReader dr = consultar($"EXEC sp_del_tipo_habi {id}");
+                if (dr != null)
+                {
+                    dr.Read();
+                    result = int.Parse(dr[0].ToString());
+                }
+            }
+            catch (SqlException e)
+            {
+                result = 3;
+            }
+
+            return result;
+        }
+
     }
 }

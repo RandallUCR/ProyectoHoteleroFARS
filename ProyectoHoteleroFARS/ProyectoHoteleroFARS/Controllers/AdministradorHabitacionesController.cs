@@ -169,5 +169,23 @@ namespace ProyectoHoteleroFARS.Controllers
                     break;
             }
         }
+
+        public JsonResult eliminarTipo(int id)
+        {
+            int result = new TipoHabitacionAdminRN().eliminarTiposHabitaciones(id);
+
+            switch (result)
+            {
+                case 1:
+                    return Json(new { success = true, inserted = true, url = Url.Action("AdministrarHabitacion", "AdministradorHabitaciones") });
+                    break;
+                case 2:
+                    return Json(new { success = true, inserted = false });
+                    break;
+                default:
+                    return Json(new { success = false, inserted = false });
+                    break;
+            }
+        }
     }
 }

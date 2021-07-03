@@ -27,5 +27,23 @@ namespace ReglasNegocio
 
             return result;
         }
+
+        public int eliminarTiposHabitaciones(int id)
+        {
+            TipoHabitacionAdminAD tad = new TipoHabitacionAdminAD();
+            int result = 3;
+            try
+            {
+                result = tad.eliminarTiposHabitaciones(id);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                result = 3;
+            }
+
+            return result;
+        }
     }
 }
