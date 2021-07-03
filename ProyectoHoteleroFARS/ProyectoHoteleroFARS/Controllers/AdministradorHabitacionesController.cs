@@ -150,5 +150,24 @@ namespace ProyectoHoteleroFARS.Controllers
                     break;
             }
         }
+
+        public JsonResult insertarTipo(string nombre, string desc,int precio, string base64, string ext)
+        {
+            int result = new TipoHabitacionAdminRN().insertarTiposHabitaciones(nombre, desc, precio, base64, ext);
+
+            switch (result)
+            {
+                case -3:
+                    return Json(new { success = false, inserted = false });
+                    break;
+                case -2:
+                    return Json(new { success = true, inserted = false });
+                    break;
+                default:
+                    HttpContext.Session.SetInt32("TipoActualId", result);
+                    return Json(new { success = true, inserted = true, url = Url.Action("CambiarTipo", "AdministradorHabitaciones", new { tipoHabi = result }) });
+                    break;
+            }
+        }
     }
 }
