@@ -82,6 +82,7 @@ namespace ProyectoHoteleroFARS.Controllers
             {
                 ViewBag.Layout = new LayoutController().getHotel(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
                 TipoHabitacion th = new TipoHabitacionRN().getTipoHabitacionById(id);
+                ViewBag.Id_Tipo = th.TN_Id;
                 ViewBag.Nombre = th.TC_Nombre;
                 ViewBag.Descripcion = th.TC_Descripcion;
                 ViewBag.Precio = (int)th.TN_Precio;
@@ -184,6 +185,25 @@ namespace ProyectoHoteleroFARS.Controllers
                     break;
                 default:
                     return Json(new { success = false, inserted = false });
+                    break;
+            }
+        }
+
+        public JsonResult editarTipo(int id, string nombre, string desc, int precio, string base64, string ext)
+        {
+            int result = new TipoHabitacionAdminRN().modificarTiposHabitaciones(id, nombre, desc, precio, base64, ext);
+
+            switch (result)
+            {
+                case -3:
+                    return Json(new { success = false, inserted = false });
+                    break;
+                case -2:
+                    return Json(new { success = true, inserted = false });
+                    break;
+                default:
+                    HttpContext.Session.SetInt32("TipoActualId", result);
+                    return Json(new { success = true, inserted = true, url = Url.Action("CambiarDescripcion", "AdministradorHabitaciones", new { id = id }) });
                     break;
             }
         }

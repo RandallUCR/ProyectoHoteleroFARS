@@ -329,6 +329,154 @@ $('#insTipoForm').submit(function (e) {
     reader.readAsDataURL(file);
 });
 
+$('#editTipoForm').submit(function (e) {
+    e.preventDefault();
+
+    const fileInput = document.querySelector("#inputImagen");
+    // get a reference to the file
+    const file = fileInput.files[0];
+    // encode the file using the FileReader API
+    const reader = new FileReader();
+
+
+    if (fileInput.files.length == 0) {
+
+        var form = $(this);
+        var url = form.attr('action');
+        var id = $('#id').val();
+        var nombre = $('#nombre').val();
+        var desc = $('#txtDesc').val();
+        var precio = $('#precio').val();
+
+        var data = { id: id, nombre: nombre, desc: desc, precio: precio, base64: 'NO', ext: 'NO' }
+        $.ajax({
+            type: 'post',
+            url: url,
+            data: data,
+            success: function (response) {
+
+                if (response.success == true) {
+                    if (response.inserted == true) {
+                        window.location.href = response.url;
+                    } else {
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'error',
+                            title: 'Ya existe este Tipo de Habitación',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                } else {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'error',
+                        title: 'Error en el sistema',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+
+            },
+            error: function (response) {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Error en el sistema',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
+        });
+
+    } else {
+        reader.onloadend = () => {
+            // use a regex to remove data url part
+            const base64String = reader.result
+                .replace("data:", "")
+                .replace(/^.+,/, "");
+
+            // log to console
+            // logs wL2dvYWwgbW9yZ...
+            //console.log(base64String);
+            //alert(base64String);
+
+            if (fileInput.files[0].size <= 2000000) {
+                var form = $(this);
+                var url = form.attr('action');
+                var id = $('#id').val();
+                var nombre = $('#nombre').val();
+                var desc = $('#txtDesc').val();
+                var precio = $('#precio').val();
+
+                var aux = fileInput.files[0].name;
+
+                var ext = aux.substring(aux.lastIndexOf('.') + 1, aux.length);
+
+                var data = { id: id, nombre: nombre, desc: desc, precio: precio, base64: base64String, ext: ext }
+                $.ajax({
+                    type: 'post',
+                    url: url,
+                    data: data,
+                    beforeSend: function () {
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'info',
+                            title: 'Espere...',
+                            showConfirmButton: false,
+                            timer: 2000
+                        });
+                    },
+                    success: function (response) {
+
+                        if (response.success == true) {
+                            if (response.inserted == true) {
+                                window.location.href = response.url;
+                            } else {
+                                Swal.fire({
+                                    position: 'center',
+                                    icon: 'error',
+                                    title: 'Ya existe este Tipo de Habitación',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
+                            }
+                        } else {
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'error',
+                                title: 'Error en el sistema',
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        }
+
+                    },
+                    error: function (response) {
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'error',
+                            title: 'Error en el sistema',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                });
+            } else {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'El peso de la imagen debe ser igual o menor a 2 MB',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+
+            };            
+        }
+        reader.readAsDataURL(file);
+    }
+
+});
 
 
 /*function toBase64(img) {
