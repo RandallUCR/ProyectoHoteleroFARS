@@ -133,7 +133,60 @@ $('#editHabiForm').submit(function (e) {
 });
 
 function eliminarTipo(id) {
-    alert(id);
+
+    Swal.fire({
+        title: '¿Seguro?',
+        text: 'No se podrán revertir los cambios',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Si, eliminar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.value) {
+            // Proceso de eliminacion de datos
+            var id = $('#tipoHabi').val();
+            var data = { id: id }
+            $.ajax({
+                type: 'post',
+                url: '/AdministradorHabitaciones/eliminarTipo',
+                data: data,
+                success: function (response) {
+                    if (response.success == true) {
+                        if (response.inserted == true) {
+                            window.location.href = response.url;
+                        } else {
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'error',
+                                title: 'Imposible, promociones o habitaciones ligadas.',
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        }
+                    } else {
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'error',
+                            title: 'Error en el sistema',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                },
+                error: function (response) {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'error',
+                        title: 'Error en el sistema.',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            });
+            
+
+        }
+    })
 }
 
 function eliminarHabi(id) {
@@ -275,6 +328,8 @@ $('#insTipoForm').submit(function (e) {
     };
     reader.readAsDataURL(file);
 });
+
+
 
 /*function toBase64(img) {
     const fileInput = document.querySelector("#"+img);
