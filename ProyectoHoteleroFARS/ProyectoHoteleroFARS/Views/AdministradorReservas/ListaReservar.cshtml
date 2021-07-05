@@ -15,7 +15,7 @@
 
     <div class="col-2 col-md-6" style="display:flex;justify-content:flex-end">
         <button class="btn btn-primary font-weight-bold" onclick="InsertarReserva()">+</button>
-        <button class="btn btn-secondary font-weight-bold ml-1" onclick="">Reporte</button>
+        <button class="btn btn-secondary font-weight-bold ml-1" onclick="reporteReservas()">Reporte</button>
     </div>
 </div>
 
@@ -32,8 +32,8 @@
             <th>Llegada</th>
             <th>Salida</th>
             <th>Tipo</th>
-            <th>Ver</th>
-            <th>Eliminar</th>
+            <th id="acc1">Ver</th>
+            <th id="acc2">Eliminar</th>
         </tr>
     </thead>
     <tbody>
@@ -78,34 +78,34 @@
                     <input type="hidden" id="id" name="id" />
 
                     <label for="fecha" class="font-weight-bold">Fecha</label>
-                    <input type="date" placeholder="Fecha" id="fecha" name="fecha" class="form-control" disabled required />
+                    <input type="date" placeholder="Fecha" id="fechae" name="fecha" class="form-control" disabled required />
 
                     <label for="id_res" class="font-weight-bold">ID Reserva</label>
-                    <input type="text" placeholder="ID Reserva" id="id_res" name="id_res" class="form-control" disabled required />
+                    <input type="text" placeholder="ID Reserva" id="id_rese" name="id_res" class="form-control" disabled required />
 
                     <label for="cedula" class="font-weight-bold">Cedula</label>
-                    <input type="text" id="cedula" class="form-control mt-1" name="cedula" placeholder="Cedula" maxlength="9" minlength="9" required />
+                    <input type="text" id="cedulae" class="form-control mt-1" name="cedula" placeholder="Cedula" maxlength="9" minlength="9" required />
 
                     <label for="nombre" class="font-weight-bold">Nombre</label>
-                    <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="form-control" required />
+                    <input type="text" placeholder="Nombre" id="nombree" name="nombre" class="form-control" required />
 
                     <label for="apellidos" class="font-weight-bold">Apellidos</label>
-                    <input type="text" placeholder="Apellidos" id="apellidos" name="apellidos" class="form-control" required />
+                    <input type="text" placeholder="Apellidos" id="apellidose" name="apellidos" class="form-control" required />
 
                     <label for="email" class="font-weight-bold">Email</label>
-                    <input type="text" placeholder="Email" id="email" name="email" class="form-control" required />
+                    <input type="text" placeholder="Email" id="emaile" name="email" class="form-control" required />
 
                     <label for="tarjeta" class="font-weight-bold">Tarjeta</label>
-                    <input type="text" placeholder="Tarjeta" id="tarjeta" name="tarjeta" class="form-control" maxlength="16" minlength="16" required />
+                    <input type="text" placeholder="Tarjeta" id="tarjetae" name="tarjeta" class="form-control" maxlength="16" minlength="16" required />
 
                     <label for="trans" class="font-weight-bold">Transaccion</label>
-                    <input type="number" placeholder="Transaccion" id="trans" name="trans" class="form-control" disabled required />
+                    <input type="number" placeholder="Transaccion" id="transe" name="trans" class="form-control" disabled required />
 
                     <label for="rangofechas" class="font-weight-bold">Seleccione el Rango de Fechas a Hospedarse:</label>
-                    <input class="form-control" type="text" id="rangofechas" name="rangofechas" placeholder="Rango de Fechas" required />
+                    <input class="form-control" type="text" id="rangofechase" name="rangofechas" placeholder="Rango de Fechas" required />
 
                     <label for="tipo" class="font-weight-bold">Tipo Habitacion</label>
-                    <select id="tipo" name="tipo" class="form-control">
+                    <select id="tipoe" name="tipo" class="form-control">
                         @foreach (Entidades.TipoHabitacion t in ViewBag.Tipos)
                         {
                             <option value="@t.TN_Id">
@@ -116,9 +116,10 @@
                 </div>
                 <div class="modal-footer">
                     <input type="submit" class="btn btn-primary" value="Editar" />
-                    <button type="button" class="btn btn-secondary">Reporte</button>
+                    <button type="button" class="btn btn-secondary" onclick="reporteReserva()">Reporte</button>
                 </div>
             </form>
+            
         </div>
     </div>
 </div>
