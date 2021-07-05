@@ -1,29 +1,29 @@
-﻿const inputF = document.querySelector('.formFacilidad');
-const previewF = document.querySelector('.previewFacilidad');
+﻿const inputP = document.querySelector('.formPublicidad');
+const previewP = document.querySelector('.previewPublicidad');
 
-inputF.style.opacity = 0;
+inputP.style.opacity = 0;
 
-inputF.addEventListener('change', updateImageDisplayF);
+inputP.addEventListener('change', updateImageDisplayP);
 
-function updateImageDisplayF() {
-    while (previewF.firstChild) {
-        previewF.removeChild(previewF.firstChild);
+function updateImageDisplayP() {
+    while (previewP.firstChild) {
+        previewP.removeChild(previewP.firstChild);
     }
 
-    const curFiles = inputF.files;
+    const curFiles = inputP.files;
     if (curFiles.length === 0) {
         const para = document.createElement('p');
         para.textContent = 'No seleccionó ningún archivo';
-        previewF.appendChild(para);
+        previewP.appendChild(para);
     } else {
         const list = document.createElement('ol');
-        previewF.appendChild(list);
+        previewP.appendChild(list);
 
         for (const file of curFiles) {
             const listItem = document.createElement('li');
             const para = document.createElement('p');
 
-            if (validFileType(file) && file.size <= 2000000) {
+            if (validFileTypeP(file) && file.size <= 2000000) {
                 para.textContent = `Imagen ${file.name}, tamaño ${returnFileSize(file.size)}.`;
                 const image = document.createElement('img');
                 image.src = URL.createObjectURL(file);
@@ -46,7 +46,7 @@ function updateImageDisplayF() {
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
-const fileTypesF = [
+const fileTypesP = [
     'image/apng',
     'image/bmp',
     'image/gif',
@@ -59,8 +59,8 @@ const fileTypesF = [
     `image/x-icon`
 ];
 
-function validFileType(file) {
-    return fileTypesF.includes(file.type);
+function validFileTypeP(file) {
+    return fileTypesP.includes(file.type);
 }
 
 function returnFileSize(number) {
@@ -73,16 +73,16 @@ function returnFileSize(number) {
     }
 }
 
-function agregarFacilidad() {
-    const curFiles = inputF.files;
+function agregarPublicidad() {
+    const curFiles = inputP.files;
     if (curFiles.length === 0) {
         Swal.fire('No se ha seleccionado ningún archivo', '', 'error');
     } else {
-        if (document.getElementById('ta_facilidad').value == '') {
-            Swal.fire('No se ha ingresado una descripción', '', 'error');
+        if (document.getElementById('in_publicidad').value == '') {
+            Swal.fire('No se ha ingresado ningún link', '', 'error');
         } else {
             var reader = new FileReader();
-            reader.readAsDataURL(inputF.files[0]);
+            reader.readAsDataURL(inputP.files[0]);
             reader.onload = function () {
                 var dataURL = reader.result;
 
@@ -90,11 +90,11 @@ function agregarFacilidad() {
                 var ext = (dataURL.split(';')[0]).split('/')[1];
 
                 //hacer llamada al controller para guardar
-                parametros = { "base64": base64, "formato": ext, "descF": document.getElementById('ta_facilidad').value };
+                parametros = { "base64": base64, "formato": ext, "linkP": document.getElementById('in_publicidad').value };
                 $.ajax(
                     {
                         data: parametros,
-                        url: '/AdministradorPaginas/guardarNuevaFacilidad',
+                        url: '/AdministradorPublicidad/guardarNuevaPublicidad',
                         type: 'post',
                         beforeSend: function () {
                             var div = document.createElement('div');
@@ -111,26 +111,26 @@ function agregarFacilidad() {
 
                             div.appendChild(divSpin);
                             div.appendChild(newSpan);
-                            document.getElementById('respuestaNFL').innerHTML = '';
-                            document.getElementById('respuestaNFL').appendChild(div);
+                            document.getElementById('respuestaNPL').innerHTML = '';
+                            document.getElementById('respuestaNPL').appendChild(div);
                         }, //antes de enviar
 
                         success: function (response) {
-                            document.getElementById('respuestaNFL').innerHTML = '';
+                            document.getElementById('respuestaNPL').innerHTML = '';
                             if (response == 1) {
-                                Swal.fire('Facilidad guardada', '', 'success');
-                                actualizarTabla();
-                                document.getElementById('ta_facilidad').value = '';
+                                Swal.fire('Publicidad guardada', '', 'success');
+                                actualizarTablaPublicidad();
+                                document.getElementById('in_publicidad').value = '';
                                 //esto va al final
-                                while (previewF.firstChild) {
-                                    previewF.removeChild(previewF.firstChild);
+                                while (previewP.firstChild) {
+                                    previewP.removeChild(previewP.firstChild);
                                 }
                                 const para = document.createElement('p');
                                 para.textContent = 'No seleccionó ningún archivo';
-                                previewF.appendChild(para);
-                                $('#image_facilidad').val('');
+                                previewP.appendChild(para);
+                                $('#image_publicidad').val('');
                             } else {
-                                Swal.fire('Error al guardar la nueva facilidad', '', 'error');
+                                Swal.fire('Error al guardar la nueva publicidad', '', 'error');
                             }
                         }
                     }
@@ -140,9 +140,9 @@ function agregarFacilidad() {
     }
 }
 
-function editarFacilidad(button) {
+function editarLinkPublicidad(button) {
     Swal.fire({
-        title: '¿Desea editar la facilidad seleccionada?',
+        title: '¿Desea editar la publicidad seleccionada?',
         showDenyButton: true,
         confirmButtonText: 'Editar',
         denyButtonText: 'Cancelar',
@@ -150,13 +150,13 @@ function editarFacilidad(button) {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
             var idFac = button.id;
-            var desc = document.getElementById('ta_fac_' + idFac).value;
+            var desc = document.getElementById('in_pub_' + idFac).value;
 
-            parametros = { "idFac": idFac, "descripcion": desc };
+            parametros = { "id": idFac, "linkP": desc };
             $.ajax(
                 {
                     data: parametros,
-                    url: '/AdministradorPaginas/editarFacilidad',
+                    url: '/AdministradorPublicidad/editarLinkPublicidad',
                     type: 'post',
                     beforeSend: function () {
                         var div = document.createElement('div');
@@ -173,17 +173,17 @@ function editarFacilidad(button) {
 
                         div.appendChild(divSpin);
                         div.appendChild(newSpan);
-                        document.getElementById('respuestaFL_' + idFac).innerHTML = '';
-                        document.getElementById('respuestaFL_' + idFac).appendChild(div);
+                        document.getElementById('respuestaPL_' + idFac).innerHTML = '';
+                        document.getElementById('respuestaPL_' + idFac).appendChild(div);
                     }, //antes de enviar
 
                     success: function (response) {
-                        document.getElementById('respuestaFL_' + idFac).innerHTML = '';
+                        document.getElementById('respuestaPL_' + idFac).innerHTML = '';
                         if (response == 1) {
                             actualizarTabla();
-                            Swal.fire('Facilidad editada', '', 'success');
+                            Swal.fire('Publicidad editada', '', 'success');
                         } else {
-                            Swal.fire('Error al editar la facilidad', '', 'error');
+                            Swal.fire('Error al editar la publicidad', '', 'error');
                         }
                     }
                 }
@@ -194,19 +194,19 @@ function editarFacilidad(button) {
     });
 }
 
-function eliminarFacilidad(button) {
+function eliminarPublicidad(button) {
     Swal.fire({
-        title: '¿Desea eliminar la facilidad seleccionada?',
+        title: '¿Desea eliminar la publicidad seleccionada?',
         showDenyButton: true,
         confirmButtonText: 'Eliminar',
         denyButtonText: 'Cancelar',
     }).then((result) => {
         if (result.isConfirmed) {
-            parametros = { "idFac": button.id };
+            parametros = { "id": button.id };
             $.ajax(
                 {
                     data: parametros,
-                    url: '/AdministradorPaginas/eliminarFacilidad',
+                    url: '/AdministradorPublicidad/eliminarPublicidad',
                     type: 'post',
                     beforeSend: function () {
                         var div = document.createElement('div');
@@ -223,17 +223,17 @@ function eliminarFacilidad(button) {
 
                         div.appendChild(divSpin);
                         div.appendChild(newSpan);
-                        document.getElementById('respuestaFL_' + button.id).innerHTML = '';
-                        document.getElementById('respuestaFL_' + button.id).appendChild(div);
+                        document.getElementById('respuestaPL_' + button.id).innerHTML = '';
+                        document.getElementById('respuestaPL_' + button.id).appendChild(div);
                     }, //antes de enviar
 
                     success: function (response) {
-                        document.getElementById('respuestaFL_' + button.id).innerHTML = '';
+                        document.getElementById('respuestaPL_' + button.id).innerHTML = '';
                         if (response == 1) {
-                            actualizarTabla();
-                            Swal.fire('Facilidad eliminada', '', 'success');
+                            actualizarTablaPublicidad();
+                            Swal.fire('Publicidad eliminada', '', 'success');
                         } else {
-                            Swal.fire('Error al eliminar facilidad', '', 'error');
+                            Swal.fire('Error al eliminar la publicidad', '', 'error');
                         }
                     }
                 }
@@ -244,30 +244,30 @@ function eliminarFacilidad(button) {
     });
 }
 
-function actualizarTabla() {
+function actualizarTablaPublicidad() {
     $.ajax(
         {
-            url: '/AdministradorPaginas/actualizarTablaFacilidades',
+            url: '/AdministradorPublicidad/actualizarTablaPublicidad',
             type: 'post',
             beforeSend: function () { }, //antes de enviar
             success: function (response) {
                 var lista = JSON.parse(response.resultado);
 
-                $('#contenidoTablaFacilidades tr').remove(); //destruimos toda la tabla
+                $('#contenidoTablaPublicidad tr').remove(); //destruimos toda la tabla
 
                 for (var x = 0; x < lista.length; x++) {
                     var info = '<tr> <th scope="row">' + lista[x].TN_Id + '</th>' +
                         '<td>' +
                         '<img height="200" width="250" style="max-height:inherit; max-width:inherit" src="data:image/' + lista[x].galeria.TC_Formato + ';base64,' + lista[x].galeria.TV_Archivo + '"/>' +
-                        '</td> <td> <form> <div> <span>Descripción</span><br />' +
-                        '<textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="ta_fac_' + lista[x].TN_Id + '" name="ta_fac_' + lista[x].TN_Id + '" rows="4" cols="40">' + lista[x].TC_Descripcion + '</textarea >' +
+                        '</td> <td> <form> <div> <span>Link</span><br />' +
+                        '<input class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="in_pub_' + lista[x].TN_Id + '" name="in_pub_' + lista[x].TN_Id + '" value="' + lista[x].TC_Link + '">' +
                         '</div>' +
                         '<div>' +
-                        '<button type="button" id="' + lista[x].TN_Id + '" onclick="editarFacilidad(this)"> Guardar</button> <br/>' +
-                        '<span id="respuestaFL_' + lista[x].TN_Id + '"></span> </div > </form> </td > <td>' +
-                        '<button class="btn btn-danger" id="' + lista[x].TN_Id + '" onclick="eliminarFacilidad(this)">Eliminar</button> </td> </tr>';
+                        '<button type="button" id="' + lista[x].TN_Id + '" onclick="editarLinkPublicidad(this)"> Guardar</button> <br/>' +
+                        '<span id="respuestaPL_' + lista[x].TN_Id + '"></span> </div > </form> </td > <td>' +
+                        '<button class="btn btn-danger" id="' + lista[x].TN_Id + '" onclick="eliminarPublicidad(this)">Eliminar</button> </td> </tr>';
 
-                    document.getElementById('contenidoTablaFacilidades').innerHTML += info;
+                    document.getElementById('contenidoTablaPublicidad').innerHTML += info;
                 }
 
             },

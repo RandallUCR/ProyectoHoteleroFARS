@@ -13,8 +13,4 @@
     <ProjectReference Include="..\ReglasNegocio\ReglasNegocio.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\AdministradorSugerencias\" />
-  </ItemGroup>
-
 </Project>
