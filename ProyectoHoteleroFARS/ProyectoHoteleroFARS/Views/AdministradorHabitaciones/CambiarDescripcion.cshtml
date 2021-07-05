@@ -9,27 +9,35 @@
     </div>
 </div>
 
-<div class="row justify-content-center shadow-lg p-3 mb-5 bg-transparent rounded">
-    <div class="col-11 col-md-5">
-        <label class="font-weight-bold" style="font-family: Century Gothic;">@ViewBag.Nombre </label>
+<form id="editTipoForm" autocomplete="off" asp-controller="AdministradorHabitaciones" asp-action="editarTipo" enctype="multipart/form-data" accept="image/png, .jpeg, .jpg">
+    <div class="row justify-content-center shadow-lg p-3 mb-5 bg-transparent rounded">
+
+        <input type="hidden" id="id" name="id" value="@ViewBag.Id_Tipo" required />
+
+        <div class="col-11 col-md-5">
+            Nombre: <input type="text" value="@ViewBag.Nombre" name="nombre" id="nombre" required />
+        </div>
+        <div class="col-11 col-md-5">
+            Tarifa diaria: <input type="number" value="@ViewBag.Precio" name="precio" id="precio" required />
+        </div>
+        <div class="col-11" style="margin-top: 1em; font-family: Century Gothic;">
+            <label for="txtDesc">Descripción</label>
+            <textarea class="form-control" style="font-family: Century Gothic;" id="txtDesc" name="txtDesc" rows="4" cols="50" required> @ViewBag.Descripcion </textarea>
+        </div>
+        <div class="col-12 col-md-5" style="margin-top: 1em; font-family: Century Gothic;">
+            Imagen actual: <br />
+            <img height="auto" width="auto" style="max-height:inherit; max-width:inherit" src="data:@ViewBag.Formato;base64,@ViewBag.Foto" />
+        </div>
+        <div class="col-12 col-md-5" style="margin-top: 1em;">
+            <label for="inputImagen" style="font-family: Century Gothic;">Subir nueva imagen</label>
+            <input class="form-control" type="file" id="inputImagen" name="inputImagen" accept="image/png, .jpeg, .jpg" />
+        </div>
+        <div class="col-12 col-md-2 align-self-end d-flex justify-content-end" style="margin-top: 1em;">
+            <input class="btn btn-info" type="submit" value="Aceptar" />           
+        </div>        
     </div>
-    <div class="col-11 col-md-5">
-        Tarifa diaria: <input type="number" value="@ViewBag.Precio" />
-    </div>
-    <div class="col-11" style="margin-top: 1em; font-family: Century Gothic;">
-        <label for="txtDesc">Descripción</label>
-        <textarea class="form-control" style="font-family: Century Gothic;" id="txtDesc" name="txtDesc" rows="4" cols="50"> @ViewBag.Descripcion </textarea>
-    </div>
-    <div class="col-12 col-md-5" style="margin-top: 1em; font-family: Century Gothic;">
-        Imagen actual: <br />
-        <img height="auto" width="auto" style="max-height:inherit; max-width:inherit" src="data:@ViewBag.Formato;base64,@ViewBag.Foto" />
-    </div>
-    <div class="col-12 col-md-5" style="margin-top: 1em;">
-        <label for="inputImagen" style="font-family: Century Gothic;">Subir nueva imagen</label>
-        <input class="form-control" type="file" id="inputImagen" name="inputImagen" />
-    </div>
-    <div class="col-12 col-md-4 align-self-end" style="margin-top: 1em;">
-        <button class="btn btn-info" type="button">Aceptar</button>
-        <button class="btn btn-danger" type="button">Cancelar</button>
-    </div>
-</div>
+</form>
+<form class="d-flex justify-content-end p-3" asp-controller="AdministradorHabitaciones" asp-action="CambiarTipo">
+    <input type="hidden" id="tipoHabi" name="tipoHabi" value="@ViewBag.Id_Tipo" required />
+    <input class="btn btn-danger" type="submit" value="Cancelar" />
+</form>

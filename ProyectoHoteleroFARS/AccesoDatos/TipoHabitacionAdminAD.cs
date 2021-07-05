@@ -28,5 +28,64 @@ namespace AccesoDatos
             return JsonConvert.SerializeObject(th);
         }
 
+        public int insertarTiposHabitaciones(TipoHabitacion t)
+        {
+            int result = -3;
+            try
+            {
+                SqlDataReader dr = consultar($"EXEC sp_ins_tipo_habi '{t.TC_Nombre}','{t.TC_Descripcion}',{t.TN_Precio},'{t.galeria.TV_Archivo}','{t.galeria.TC_Formato}'");
+                if (dr != null)
+                {
+                    dr.Read();
+                    result = int.Parse(dr[0].ToString());
+                }
+            }
+            catch (SqlException e) {
+                result = -3;
+            }
+
+            return result;
+        }
+
+        public int eliminarTiposHabitaciones(int id)
+        {
+            int result = 3;
+            try
+            {
+                SqlDataReader dr = consultar($"EXEC sp_del_tipo_habi {id}");
+                if (dr != null)
+                {
+                    dr.Read();
+                    result = int.Parse(dr[0].ToString());
+                }
+            }
+            catch (SqlException e)
+            {
+                result = 3;
+            }
+
+            return result;
+        }
+
+        public int modificarTiposHabitaciones(TipoHabitacion t)
+        {
+            int result = -3;
+            try
+            {
+                SqlDataReader dr = consultar($"EXEC sp_edit_tipo_habi {t.TN_Id},'{t.TC_Nombre}','{t.TC_Descripcion}',{t.TN_Precio},'{t.galeria.TV_Archivo}','{t.galeria.TC_Formato}'");
+                if (dr != null)
+                {
+                    dr.Read();
+                    result = int.Parse(dr[0].ToString());
+                }
+            }
+            catch (SqlException e)
+            {
+                result = -3;
+            }
+
+            return result;
+        }
+
     }
 }

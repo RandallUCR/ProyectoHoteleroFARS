@@ -88,7 +88,7 @@
                 </button>
             </div>
             <span style="color:red" id="span"></span>
-            <form id="" autocomplete="off" asp-controller="" asp-action="">
+            <form id="insTipoForm" autocomplete="off" asp-controller="AdministradorHabitaciones" asp-action="insertarTipo" enctype="multipart/form-data" >
                 <div class="modal-body">
 
                     <label for="nombre" class="font-weight-bold">Nombre</label>
@@ -101,7 +101,7 @@
                     <input type="number" id="precio" class="form-control mt-1" name="precio" placeholder="Precio" min="0" required />
 
                     <label for="img" class="font-weight-bold">Imagen</label>
-                    <input type="file" id="img" class="form-control mt-1" name="img" placeholder="Imagen" required />
+                    <input type="file" id="img" class="form-control mt-1" name="img" placeholder="Imagen" accept="image/png, .jpeg, .jpg" required />
                 </div>
                 <div class="modal-footer">
                     <input type="submit" class="btn btn-primary" value="Registrar" />
