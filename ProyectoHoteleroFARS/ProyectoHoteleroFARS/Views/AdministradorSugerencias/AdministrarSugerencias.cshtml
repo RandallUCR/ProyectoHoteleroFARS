@@ -1,0 +1,37 @@
+﻿@{ ViewData["Title"] = "Home";
+    Layout = "_LayoutAdmin"; 
+}
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
+    <div class="col-12">
+        <legend style="font-weight: bold;  font-family:Felix Titling;">Administrar Sugerencias</legend>
+        <span style="font-family: Century Gothic; margin-top: 1em;">Acá podrá ver y eliminar las diferentes sugerencias hechas por nuestros clientes</span>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Sugerencia</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Acción</th>
+        </tr>
+    </thead>
+    <tbody id="contenidoTablaSugerencias">
+        @for (int i = 0; i < ViewBag.Sugerencias.Count; i++){
+            <tr>
+                <th scope="row">@ViewBag.Sugerencias[i].TN_Id</th>
+                <td>
+                    <span>@ViewBag.Sugerencias[i].TC_Sugerencia</span>
+                </td>
+                <td>
+                    <span>@ViewBag.Sugerencias[i].TF_Fecha</span>
+                </td>
+                <td>
+                    <button class="btn btn-danger" id="@ViewBag.Sugerencias[i].TN_Id" onclick="eliminarSugerencia(this)">Eliminar</button>
+                </td>
+            </tr>
+         }
+    </tbody>
+</table>

@@ -10,7 +10,6 @@ D:\UCR\Ing\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcore
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\bin\Debug\netcoreapp3.1\Entidades.deps.json
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\bin\Debug\netcoreapp3.1\Entidades.dll
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\bin\Debug\netcoreapp3.1\Entidades.pdb
-C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.csprojAssemblyReference.cache
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.AssemblyInfoInputs.cache
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.AssemblyInfo.cs
 C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.csproj.CoreCompileInputs.cache
@@ -24,3 +23,4 @@ C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFAR
 C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.AssemblyInfo.cs
 C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.dll
 C:\Users\Ani Achi Sanchez\Desktop\PFARS\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.pdb
+C:\Users\congr\source\repos\ProyectoHoteleroFARS\ProyectoHoteleroFARS\Entidades\obj\Debug\netcoreapp3.1\Entidades.csprojAssemblyReference.cache
