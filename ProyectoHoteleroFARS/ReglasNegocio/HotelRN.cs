@@ -31,6 +31,16 @@ namespace ReglasNegocio
 
         public int modificarSobreNosotrosRN(Hotel hotel) {
             return new HotelAD().modificarSobreNosotrosAD(hotel);
-        }       
+        }
+
+        public int modificarHomeDescripcionRN(Hotel hotel)
+        {
+            return new HotelAD().modificarHomeDescripcionAD(hotel);
+        }
+       
+        public int modificarComoLLegarRN(Hotel hotel)
+        {
+            return new HotelAD().modificarComoLLegarAD(hotel);
+        }
     }
 }

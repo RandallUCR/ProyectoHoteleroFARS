@@ -37,3 +37,68 @@
         }
     });
 });
+
+
+function eliminarSugerencia(button) {
+    Swal.fire({
+        title: '¿Desea eliminar la sugerencia seleccionada?',
+        showDenyButton: true,
+        confirmButtonText: 'Eliminar',
+        denyButtonText: 'Cancelar',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            parametros = { "id": button.id };
+            $.ajax(
+                {
+                    data: parametros,
+                    url: '/AdministradorSugerencias/eliminarSugerencia',
+                    type: 'post',
+                    beforeSend: function () {}, //antes de enviar
+
+                    success: function (response) {
+                        if (response == 1) {
+                            actualizarTablaSugerencia();
+                            Swal.fire('Sugerencia eliminada', '', 'success');
+                        } else {
+                            Swal.fire('Error al eliminar la sugerencia', '', 'error');
+                        }
+                    }
+                }
+            );
+        } else if (result.isDenied) {
+            Swal.fire('Acción cancelada', '', 'info')
+        }
+    });
+}
+
+function actualizarTablaSugerencia() {
+    $.ajax(
+        {
+            url: '/AdministradorSugerencias/actualizarTablaSugerencias',
+            type: 'post',
+            beforeSend: function () { }, //antes de enviar
+            success: function (response) {
+                var lista = JSON.parse(response.resultado);
+
+                $('#contenidoTablaSugerencias tr').remove(); //destruimos toda la tabla
+
+                for (var x = 0; x < lista.length; x++) {
+                    var info = '<tr> <th scope="row">' + lista[x].TN_Id + '</th>' +
+                        '<td> <span>' + lista[x].TC_Sugerencia + '</span> </td>' +
+                        '<td> <span>' + lista[x].TF_Fecha + '</span> </td >' + 
+                        '<td> <button class="btn btn-danger" id="' + lista[x].TN_Id + '" onclick="eliminarSugerencia(this)">Eliminar</button></td></tr>';
+
+                    document.getElementById('contenidoTablaSugerencias').innerHTML += info;
+                }
+
+            },
+            error: function () {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error inesperado',
+                    text: 'Ocurrió un error al actualizar la tabla, recargue la página'
+                });
+            }, //antes de enviar
+        }
+    );
+}

@@ -1,0 +1,152 @@
+﻿@{ ViewData["Title"] = "Publicidad";
+    Layout = "_LayoutAdmin"; 
+}
+
+<style>
+    form {
+        width: 600px;
+        background: #ccc;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid black;
+    }
+
+    form ol {
+        padding-left: 0;
+    }
+
+    form li, div > p {
+        background: #eee;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        list-style-type: none;
+        border: 1px solid black;
+    }
+
+    form img {
+        height: 64px;
+        order: 1;
+    }
+
+    form p {
+        line-height: 32px;
+        padding-left: 10px;
+    }
+
+    form label, form button {
+        background-color: #7F9CCB;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px ridge black;
+        font-size: 0.8rem;
+        height: auto;
+    }
+
+        form label:hover, form button:hover {
+            background-color: #2D5BA3;
+            color: white;
+        }
+
+        form label:active, form button:active {
+            background-color: #0D3F8F;
+            color: white;
+        }
+</style>
+
+<form>
+    <div style="margin-bottom: 1em;">
+        <span>Link de la publicidad</span><br />
+        <input class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="in_publicidad" name="in_publicidad">
+    </div>
+    <div>
+        <label for="image_publicidad">Seleccione una imagen para guardarla como publicidad</label>
+        <input class="formPublicidad" type="file" id="image_publicidad" name="image_publicidad" accept="image/*">  <!-- accept=".jpg, .jpeg, .png" -->
+    </div>
+    <div class="previewPublicidad">
+        <p>No se ha seleccionado ningún archivo</p>
+    </div>
+    <div>
+        <button type="button" onclick="agregarPublicidad()">Guardar</button>
+        <br />
+        <span id="respuestaNPL"></span>
+    </div>
+</form>
+<span style="font-family: Century Gothic; margin-top: 1em;">Imágenes y links de Publicidad</span>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Edición</th>
+            <th scope="col">Acción</th>
+        </tr>
+    </thead>
+    <tbody id="contenidoTablaPublicidad">
+        @for (int i = 0; i < ViewBag.Publicidad.Count; i++)
+        {
+            <tr>
+                <th scope="row">@ViewBag.Publicidad[i].TN_Id</th>
+                <td>
+                    <img height="200" width="250" style="max-height:inherit; max-width:inherit" src="data:image/@ViewBag.Publicidad[i].galeria.TC_Formato;base64,@ViewBag.Publicidad[i].galeria.TV_Archivo" />
+                </td>
+                <td>
+                    <form>
+                        <div>
+                            <span>Link</span><br />
+                            <input class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="in_pub_@ViewBag.Publicidad[i].TN_Id" name="in_pub_@ViewBag.Publicidad[i].TN_Id" value="@ViewBag.Publicidad[i].TC_Link">
+                        </div>
+                        <div>
+                            <button type="button" id="@ViewBag.Publicidad[i].TN_Id" onclick="editarLinkPublicidad(this)">Guardar</button>
+                            <br />
+                            <span id="respuestaPL_@ViewBag.Publicidad[i].TN_Id"></span>
+                        </div>
+                    </form>
+                    <!--
+                    <div>
+                        <button id="@ViewBag.Publicidad[i].TN_Id" type="button" class="btn btn-success" style="margin-top: 1em" data-toggle="modal" data-target="#exampleModal" onclick="cargarIdModal(this)">Editar imagen</button>
+                    </div>
+                    -->
+                </td>
+                <td>
+                    <button class="btn btn-danger" id="@ViewBag.Publicidad[i].TN_Id" onclick="eliminarPublicidad(this)">Eliminar</button>
+                </td>
+            </tr>
+         }
+    </tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div>
+                        <label for="image_publicidad_modal">Seleccione una imagen para guardarla como publicidad</label>
+                        <input class="formPublicidadModal" type="file" id="image_publicidad_modal" name="image_publicidad_modal" accept="image/*">  <!-- accept=".jpg, .jpeg, .png" -->
+                    </div>
+                    <div class="previewPublicidadModal">
+                        <p>No se ha seleccionado ningún archivo</p>
+                    </div>
+                    <div>
+                        <input type="hidden" id="hideId" value="" />
+                        <button type="button" onclick="editarImagenPublicidad()">Guardar</button>
+                        <br />
+                        <span id="respuestaMPL"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
