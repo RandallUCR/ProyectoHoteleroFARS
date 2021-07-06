@@ -193,7 +193,7 @@ function editarLinkPublicidad(button) {
         }
     });
 }
-
+alert('XD');
 function eliminarPublicidad(button) {
     Swal.fire({
         title: '¿Desea eliminar la publicidad seleccionada?',

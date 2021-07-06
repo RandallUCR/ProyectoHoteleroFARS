@@ -36,7 +36,7 @@
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Ver estado del hotel hoy</a>
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Consultar Disponibilidad de Habitaciones</a>
             <a asp-action="AdministrarPublicidad" asp-controller="AdministradorPublicidad" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Publicidad</a>
-            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Temporadas</a>
+            <a asp-action="Index" asp-controller="AdministradorTemporadas" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Temporadas</a>
             <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Promociones</a>
             <a asp-action="AdministrarSugerencias" asp-controller="AdministradorSugerencias" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Sugerencias</a>
         </section>
@@ -64,6 +64,7 @@
     <script type="text/javascript" src="~/js/adminhabitaciones.js"></script>
     <script type="text/javascript" src="~/js/sugerencias.js"></script>
     <script type="text/javascript" src="~/js/publicidad.js"></script>
+    <script type="text/javascript" src="~/js/admintemp.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
