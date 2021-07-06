@@ -6,9 +6,11 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/daterangepciker.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/datatables.min.css" />
 </head>
-<body style="background: #F5E3B7
-">
+<body style="background-image: url(https://media.istockphoto.com/photos/blue-abstract-diagonal-backgrounds-picture-id1131996097?k=6&m=1131996097&s=612x612&w=0&h=-Wgup3_71kmsjcd-gCNXP_nskRs77CusXlImqAjESjU=);
+      background-repeat: no-repeat;background-size: cover; background-attachment: fixed;">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -17,25 +19,26 @@
                         <img style="display:block; max-width: 50px; max-height: 50px; width:auto; height:auto" src="data:image/png;base64,@ViewBag.Layout.TC_Logo" />
                     </section>
                     <section class="col-9">
-                        <h1 class="navbar-brand text-light" style="padding-top:0.5em">@ViewBag.Layout.TC_Nombre</h1>
+                        <h1 class="navbar-brand" style="padding-top:0.5em; font-family:Forte; color:deepskyblue;">@ViewBag.Layout.TC_Nombre</h1>
                     </section>
                 </div>
             </div>
-            <h1 class="navbar-brand text-light" style="padding-top:0.5em">Bienvenido @ViewBag.Usuario</h1>
-            <a asp-controller="Administrador" asp-action="LogOut" class="font-weight-bold text-primary">LogOut</a>
+            <h1 class="navbar-brand" style="padding-top:0.5em; font-family:Century Gothic; color:deepskyblue;">Bienvenido @ViewBag.Usuario</h1>
+            <a asp-controller="Administrador" asp-action="LogOut" class="font-weight-bold text-primary" style="font-family:Century Gothic;">LogOut</a>
         </nav>
     </header>
     <div class="container-fluid" style="display:flex;">
         <section class="" style="display:flex; flex-direction: column; margin-right:1em">
-            <a asp-action="Home" asp-controller="Administrador" class="btn btn-dark" style="width:100%; border-radius:0px">Home</a>
-            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Modificar Páginas</a>
-            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Listado de Reservaciones</a>
-            <a asp-action="AdministrarHabitacion" asp-controller="Administrador" class="btn btn-dark" style="width:100%; border-radius:0px">Administrar Habitaciones</a>
-            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Ver estado del hotel hoy</a>
-            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Consultar Disponibilidad de Habitaciones</a>
-            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Publicidad</a>
-            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Temporadas</a>
-            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; border-radius:0px">Promociones</a>
+            <a asp-action="Home" asp-controller="Administrador" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Home</a>
+            <a asp-action="AdministrarPaginas" asp-controller="AdministradorPaginas" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Modificar Páginas</a>
+            <a asp-action="Lista_Reservar" asp-controller="AdministradorReservas" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Listado de Reservaciones</a>
+            <a asp-action="AdministrarHabitacion" asp-controller="AdministradorHabitaciones" class="btn btn-dark" style="width: 100%; font-family:Century Gothic; border-radius: 0px">Administrar Habitaciones</a>
+            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Ver estado del hotel hoy</a>
+            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Consultar Disponibilidad de Habitaciones</a>
+            <a asp-action="AdministrarPublicidad" asp-controller="AdministradorPublicidad" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Publicidad</a>
+            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Temporadas</a>
+            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Promociones</a>
+            <a asp-action="AdministrarSugerencias" asp-controller="AdministradorSugerencias" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Sugerencias</a>
         </section>
         <section class="ml-3 mr-3 container-fluid">
             <main role="main" class="pb-3">
@@ -46,7 +49,21 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="~/js/moment.min.js"></script>
+    <script type="text/javascript" src="~/js/daterangepicker.js"></script>
+    <script type="text/javascript" src="~/js/swal.js"></script>
+    <script type="text/javascript" src="~/js/datatables.min.js"></script>
+    <script type="text/javascript" src="~/js/jspdf.min.js"></script>
+    <script type="text/javascript" src="~/js/jspdf.plugin.autotable.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/js/galeria.js"></script>
+    <script type="text/javascript" src="~/js/facilidades.js"></script>
+    <script type="text/javascript" src="~/js/adminpaginas.js"></script>
+    <script type="text/javascript" src="~/js/adminreserva.js"></script>
+    <script type="text/javascript" src="~/js/adminhabitaciones.js"></script>
+    <script type="text/javascript" src="~/js/sugerencias.js"></script>
+    <script type="text/javascript" src="~/js/publicidad.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

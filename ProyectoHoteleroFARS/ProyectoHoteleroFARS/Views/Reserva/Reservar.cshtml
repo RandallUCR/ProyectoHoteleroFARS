@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Reserva";
+    Layout = "_Layout";
+}
+
+<div class="row shadow-lg p-3 mb-2 bg-transparent rounded" style="text-align:left">
+    <legend style="font-weight: bold;  font-family:Forte;">Reservar en Línea</legend>
+</div>
+
+<div class="row shadow-lg p-3 mb-2 bg-transparent rounded" style="text-align:left">
+    <section class="col-12 col-md-12" style="text-align:left">
+        <label style="font-family:Century Gothic;" class="font-weight-bold">Habitación Disponible</label>
+    </section>
+    <section class="col-12 col-md-6" style="text-align:left; max-width:400px">
+        <img class="align-self-center" style="max-width: 100%; height:auto"
+             src="data:image/@ViewBag.Habitacion.galeria.TC_Formato;base64,@ViewBag.Habitacion.galeria.TV_Archivo" />
+    </section>
+    <section class="col-12 col-md-6" style="text-align:left">
+        <p>@ViewBag.Habitacion.TC_Descripcion</p>
+    </section>
+</div>
+
+<div class="row shadow-lg p-3 mb-2 bg-white rounded" style="text-align:left;max-width:50%">
+    <legend style="font-weight: bold;  font-family:Forte;">Monto de su reservación: ₡@ViewBag.Habitacion.TN_Precio ($@ViewBag.Habitacion.TN_Precio_Dolares)</legend>
+</div>
+<form class="row bg-transparent shadow-lg rounded p-3" autocomplete="off" asp-controller="Reserva" asp-action="Reservar" style="max-width:50%; display:flex; flex-direction: column; text-align:center">
+    <legend style="font-weight: bold;  font-family:Forte;">Formulario Personal</legend>
+    <input type="text" class="form-control mt-1" name="cedula" placeholder="Cedula" maxlength="9" minlength="9" required />
+    <input type="text" class="form-control mt-1" name="nombre" placeholder="Nombre" required />
+    <input type="text" class="form-control mt-1" name="apellidos" placeholder="Apellidos" required />
+    <input type="email" class="form-control mt-1" name="correo" placeholder="Correo electronico" required />
+    <input type="text" class="form-control mt-1" name="tarjeta" placeholder="Tarjeta Bancaria" maxlength="16" minlength="16" required />
+    <input type="submit" value="Reservar" class="btn btn-success mt-1" />
+</form>

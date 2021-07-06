@@ -59,7 +59,6 @@ namespace ProyectoHoteleroFARS.Controllers
             return View("ComoLlegar");
         }
 
-
         public IActionResult Privacy()
         {
             return View();

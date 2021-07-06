@@ -3,8 +3,8 @@
     Layout = "_Layout";
 }
 
-<div class="row shadow-lg p-3 mb-5 bg-white rounded">
-    <legend>Tarifas</legend>
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
+    <legend style="font-weight: bold;  font-family:Felix Titling;">Tarifas</legend>
 </div>
 
 <div class="row">
@@ -17,8 +17,8 @@
                     <img class="align-self-center" src="data:image/@t.galeria.TC_Formato;base64,@t.galeria.TV_Archivo" style="max-width: 100%; height: 300px;">
                 </div>
                 <div class="col-12 col-md-5" style="display:flex; flex-direction:column">
-                    <h5>@t.TC_Nombre</h5>
-                    <div style="text-align:left"><p>@t.TC_Descripcion</p></div>
+                    <h5 style="font-weight: bold;  font-family:Century Gothic;">@t.TC_Nombre</h5>
+                    <div style="text-align:left; font-family:Century Gothic;"><p>@t.TC_Descripcion</p></div>
                     
                     @foreach (Entidades.Caracteristica c in t.caracteristicas)
                     {

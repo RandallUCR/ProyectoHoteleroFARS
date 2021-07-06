@@ -1,0 +1,178 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
+    <legend style="font-family:Forte;">Listado Reservaciones</legend>
+</div>
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded justify-content-around">
+    <form class="col-10 col-md-6 justify-content-around" autocomplete="off" asp-controller="AdministradorReservas" asp-action="Lista_Reservar_Filtro" style="display:flex">
+        <input type="text" name="rangofechasNo" placeholder="Rango de Fechas" class="form-control mt-1" required />
+        <input type="submit" value="Filtrar" class="btn btn-success ml-1" />
+    </form>
+
+    <div class="col-2 col-md-6" style="display:flex;justify-content:flex-end">
+        <button class="btn btn-primary font-weight-bold" onclick="InsertarReserva()">+</button>
+        <button class="btn btn-secondary font-weight-bold ml-1" onclick="reporteReservas()">Reporte</button>
+    </div>
+</div>
+
+<table id="tablaReporte" class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>ID Reserva</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Email</th>
+            <th>Tarjeta</th>
+            <th>Transaccion</th>
+            <th>Llegada</th>
+            <th>Salida</th>
+            <th>Tipo</th>
+            <th id="acc1">Ver</th>
+            <th id="acc2">Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Entidades.Reserva r in ViewBag.Reservas)
+        {
+            <tr>
+                <td>@r.TF_Fecha</td>
+                <td>@r.TC_Id_Reserva</td>
+                <td>@r.cliente.TC_Nombre</td>
+                <td>@r.cliente.TC_Apellidos</td>
+                <td>@r.cliente.TC_Email</td>
+                <td>************@r.TN_Tarjeta.Substring(12)</td>
+                <td>@r.TN_Transaccion</td>
+                <td>@r.TF_Llegada</td>
+                <td>@r.TF_Salida</td>
+                <td>@r.tipo.TC_Nombre</td>
+                <td>
+                    <button class="btn-primary" onclick="modal('@r.TN_Id', '@r.TF_Fecha', '@r.TC_Id_Reserva', '@r.cliente.TC_Cedula', '@r.cliente.TC_Nombre', '@r.cliente.TC_Apellidos', '@r.cliente.TC_Email',
+                    '@r.TN_Tarjeta','@r.TN_Transaccion','@r.TF_Llegada','@r.TF_Salida','@r.tipo.TN_Id')">
+                        Ver
+                    </button>
+                </td>
+                <td><button class="btn-danger" onclick="EliminarReserva(@r.TN_Id)">Eliminar</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!--Modal para editar-->
+<div class="modal" tabindex="-1" id="modalEdit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Editar Reserva</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <span style="color:red" id="span"></span>
+            <form id="resModForm" autocomplete="off" asp-controller="AdministradorReservas" asp-action="ModificarReserva">
+                <div class="modal-body">
+                    <input type="hidden" id="id" name="id" />
+
+                    <label for="fecha" class="font-weight-bold">Fecha</label>
+                    <input type="date" placeholder="Fecha" id="fechae" name="fecha" class="form-control" disabled required />
+
+                    <label for="id_res" class="font-weight-bold">ID Reserva</label>
+                    <input type="text" placeholder="ID Reserva" id="id_rese" name="id_res" class="form-control" disabled required />
+
+                    <label for="cedula" class="font-weight-bold">Cedula</label>
+                    <input type="text" id="cedulae" class="form-control mt-1" name="cedula" placeholder="Cedula" maxlength="9" minlength="9" required />
+
+                    <label for="nombre" class="font-weight-bold">Nombre</label>
+                    <input type="text" placeholder="Nombre" id="nombree" name="nombre" class="form-control" required />
+
+                    <label for="apellidos" class="font-weight-bold">Apellidos</label>
+                    <input type="text" placeholder="Apellidos" id="apellidose" name="apellidos" class="form-control" required />
+
+                    <label for="email" class="font-weight-bold">Email</label>
+                    <input type="text" placeholder="Email" id="emaile" name="email" class="form-control" required />
+
+                    <label for="tarjeta" class="font-weight-bold">Tarjeta</label>
+                    <input type="text" placeholder="Tarjeta" id="tarjetae" name="tarjeta" class="form-control" maxlength="16" minlength="16" required />
+
+                    <label for="trans" class="font-weight-bold">Transaccion</label>
+                    <input type="number" placeholder="Transaccion" id="transe" name="trans" class="form-control" disabled required />
+
+                    <label for="rangofechas" class="font-weight-bold">Seleccione el Rango de Fechas a Hospedarse:</label>
+                    <input class="form-control" type="text" id="rangofechase" name="rangofechas" placeholder="Rango de Fechas" required />
+
+                    <label for="tipo" class="font-weight-bold">Tipo Habitacion</label>
+                    <select id="tipoe" name="tipo" class="form-control">
+                        @foreach (Entidades.TipoHabitacion t in ViewBag.Tipos)
+                        {
+                            <option value="@t.TN_Id">
+                                @t.TC_Nombre
+                            </option>
+                        }
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Editar" />
+                    <button type="button" class="btn btn-secondary" onclick="reporteReserva()">Reporte</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+<!--Modal para insertar-->
+<div class="modal" tabindex="-1" id="modalInsert">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Registrar Reserva</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <span style="color:red" id="span"></span>
+            <form id="resInsForm" autocomplete="off" asp-controller="AdministradorReservas" asp-action="InsertarReserva">
+                <div class="modal-body">
+
+                    <label for="cedula" class="font-weight-bold">Cedula</label>
+                    <input type="text" id="cedula" class="form-control mt-1" name="cedula" placeholder="Cedula" maxlength="9" minlength="9" required />
+
+                    <label for="nombre" class="font-weight-bold">Nombre</label>
+                    <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="form-control" required />
+
+                    <label for="apellidos" class="font-weight-bold">Apellidos</label>
+                    <input type="text" placeholder="Apellidos" id="apellidos" name="apellidos" class="form-control" required />
+
+                    <label for="email" class="font-weight-bold">Email</label>
+                    <input type="text" placeholder="Email" id="email" name="email" class="form-control" required />
+
+                    <label for="tarjeta" class="font-weight-bold">Tarjeta</label>
+                    <input type="text" placeholder="Tarjeta" id="tarjeta" name="tarjeta" class="form-control" maxlength="16" minlength="16" required />
+
+                    <label for="rangofechas" class="font-weight-bold">Seleccione el Rango de Fechas a Hospedarse:</label>
+                    <input class="form-control" type="text" id="rangofechas" name="rangofechas" placeholder="Rango de Fechas" required />
+
+                    <label for="tipo" class="font-weight-bold">Tipo Habitacion</label>
+                    <select id="tipo" name="tipo" class="form-control">
+                        @foreach (Entidades.TipoHabitacion t in ViewBag.Tipos)
+                        {
+                            <option value="@t.TN_Id">
+                                @t.TC_Nombre
+                            </option>
+                        }
+                    </select>
+
+                    <label for="pago" class="font-weight-bold">Pago</label>
+                    <input type="number" id="pago" class="form-control mt-1" name="pago" placeholder="Pago" required />
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Registrar" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

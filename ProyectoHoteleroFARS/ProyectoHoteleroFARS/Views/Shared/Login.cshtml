@@ -3,21 +3,21 @@
     Layout = "_LayoutLogin";
 }
 
-<form class="bg-white shadow-lg rounded p-2" autocomplete="off" asp-controller="Administrador" asp-action="Login">
-    <div class="form-group">
-        <label for="usuario">Usuario</label>
-        <input class="form-control" type="text" name="usuario" placeholder="Escriba su usuario" required />
+<form class="bg-transparent shadow-lg rounded p-2" style="width:600px; margin-left:250px; margin-top:100px" autocomplete="off" asp-controller="Administrador" asp-action="Login">
+    <div class="form-group" style="margin-left:40px">
+        <label for="usuario" style="font-family:Century Gothic;">Usuario</label>
+        <input class="form-control" style="width: 500px; " type="text" name="usuario" placeholder="Escriba su usuario" required />
     </div>
-    <div class="form-group">
-        <label for="contrasena">Contraseña</label>
-        <input class="form-control" type="password" name="contrasena" placeholder="Escriba su contraseña" required />
+    <div class="form-group" style="margin-left:40px">
+        <label for="contrasena" style="font-family:Century Gothic;">Contraseña</label>
+        <input class="form-control" style="width:500px; " type="password" name="contrasena" placeholder="Escriba su contraseña" required />
     </div>
-    <input type="submit" value="Ingresar" class="btn btn-primary" />
+    <input type="submit"  value="Ingresar" style="width:500px; margin-left:40px" class="btn btn-primary" />
 </form>
 
 @if (Model != null){
     if (Model == -1){
-        <div class="alert alert-danger alert-dismissible fade show mt-2" role="alert">
+        <div class="alert alert-danger alert-dismissible fade show mt-2" style="width:500px; margin-left:300px;" role="alert">
             <strong>¡Error!</strong> Usuario o contraseña incorrecto.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>

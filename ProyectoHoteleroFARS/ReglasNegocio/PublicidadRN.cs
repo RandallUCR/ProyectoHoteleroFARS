@@ -48,5 +48,17 @@ namespace ReglasNegocio
             return p;
         }
 
+        public int guardarNuevaPublicidadRN(Publicidad pub) {
+            return new PublicidadAD().guardarNuevaPublicidadAD(pub);
+        }
+
+        public int eliminarPublicidadRN(Publicidad pub) {
+            return new PublicidadAD().eliminarPublicidadAD(pub);
+        }
+
+        public int editarLinkPublicidadRN(Publicidad pub) {
+            return new PublicidadAD().editarLinkPublicidadAD(pub);
+        }
+
     }
 }

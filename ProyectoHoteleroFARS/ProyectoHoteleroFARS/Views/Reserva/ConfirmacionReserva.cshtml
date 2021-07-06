@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Reserva";
+    Layout = "_Layout";
+}
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded" style="text-align:left">
+    <legend style="font-weight: bold;  font-family:Forte;">Reservar en Línea</legend>
+</div>
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded" style="text-align:left">
+    <legend style="font-weight: bold;  font-family:Forte;">Reservación realizada.</legend>
+    <hr style="width:100%"/>
+    <legend style="font-family:Forte;">Gracias <b>@ViewBag.Confirmacion.TC_Nombre</b> <b>@ViewBag.Confirmacion.TC_Apellidos</b> Su reservacion fue realizada exitosamente.</legend>
+    <hr style="width:100%" />
+    <legend style="font-family:Forte;">Número de Reservación: <b>@ViewBag.Confirmacion.TC_Id_Reserva</b></legend>
+    <hr style="width:100%" />
+    <legend style="font-family:Forte;">Acabamos de enviar esta informacion a la direccion <b>@ViewBag.Confirmacion.TC_Correo</b> para mayor facilidad.</legend>
+    <hr style="width:100%" />
+    <legend style="font-weight: bold;  font-family:Forte;">Gracias por preferirnos.</legend>
+</div>
+
+

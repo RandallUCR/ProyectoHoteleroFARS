@@ -29,6 +29,8 @@ namespace ReglasNegocio
             return h;
         }
 
-
+        public int modificarSobreNosotrosRN(Hotel hotel) {
+            return new HotelAD().modificarSobreNosotrosAD(hotel);
+        }       
     }
 }

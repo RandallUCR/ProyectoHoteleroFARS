@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Reserva";
+    Layout = "_Layout";
+}
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded" style="text-align:left">
+    <legend style="font-weight: bold;  font-family:Forte;">Reservar en Línea</legend>
+</div>
+
+<form class="row bg-transparent shadow-lg rounded p-3" autocomplete="off" asp-controller="Reserva" asp-action="VerificarHabitacion" style="max-width:50%; display:flex; flex-direction: column">
+    <div class="form-group">
+        <label for="rangofechas" style="font-family:Century Gothic;" class="font-weight-bold">Seleccione el Rango de Fechas a Hospedarse:</label>
+        <input class="form-control" type="text" name="rangofechas" placeholder="Rango de Fechas" required />
+    </div>
+    <div class="form-group">
+        <label for="tiposh" style="font-family:Century Gothic;" class="font-weight-bold">Tipo de Habitación</label>
+        <select class="form-control" name="tiposh" required>
+            @foreach (Entidades.TipoHabitacion t in ViewBag.TiposHabi)
+            {
+                <option value="@t.TN_Id">@t.TC_Nombre</option>
+            }
+        </select>
+    </div>
+    <input type="submit" value="Buscar" class="btn btn-primary" />
+</form>
+
+@if (Model != null)
+{
+
+    if (Model == -1)
+    {
+        <div class="alert alert-danger mt-2" role="alert" id="success-alert">
+            <h4 class="alert-heading">Lo sentimos</h4>
+            <p>Sin habitaciones disponibles, intente de nuevo con otra clase de habitación.</p>
+            <hr>
+            <p class="mb-0">Puede disfrutar de otras habitaciones a el mejor precio.</p>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning mt-2" role="alert" id="success-alert">
+            <h4 class="alert-heading">Lo sentimos</h4>
+            <p>Ha ocurrido un error en el sistema.</p>
+            <hr>
+            <p class="mb-0">Comprueba dentro de unas horas.</p>
+        </div>
+    }
+
+    <script>
+        window.setTimeout(function () {
+            $("#success-alert").alert('close');
+        }, 7000);</script>
+}
+
+
