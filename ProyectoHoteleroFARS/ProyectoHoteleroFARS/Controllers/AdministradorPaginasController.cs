@@ -49,6 +49,10 @@ namespace ProyectoHoteleroFARS.Controllers
         {
             return new GaleriaRN().guardarImagenGaleriaRN(new Galeria { TC_Descripcion = "desc", TV_Archivo = base64, TC_Formato = formato });
         }
+        public int actualizarFoto(string base64, string formato)
+        {
+            return new HotelRN().modificarFotoRN(new Hotel{  TC_Foto_Principal = base64, TC_Formato = formato });
+        }
 
         public int eliminarImagenGaleria(int idImg)
         {
