@@ -13,6 +13,7 @@ namespace Entidades
         public int TN_Cod_Postal { set; get; }
         public string TC_Logo { set; get; }
         public string TC_Foto_Principal { set; get; }
+        public string TC_Formato { set; get; }
 
     }
 }
