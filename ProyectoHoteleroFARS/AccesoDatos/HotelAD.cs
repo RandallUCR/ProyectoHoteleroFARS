@@ -85,12 +85,15 @@ namespace AccesoDatos
             }
             return respuesta;
         }
-        public int modificarFotoAD(Hotel hotel)
+
+
+        public int modificarComoLLegarAD(Hotel hotel)
         {
             int respuesta = -1;
+
             try
             {
-                SqlDataReader dr = consultar($"EXEC update_Foto_Principal'{hotel.TC_Foto_Principal}', '{hotel.TC_Formato}'");
+                SqlDataReader dr = consultar($"EXEC update_Como_Llegar '{hotel.TC_Maps}', '{hotel.TC_Ubicacion}'");
                 if (dr != null)
                 {
                     dr.Read();
@@ -107,14 +110,12 @@ namespace AccesoDatos
             }
             return respuesta;
         }
-
-        public int modificarComoLLegarAD(Hotel hotel)
+        public int modificarFotoAD(Hotel hotel)
         {
             int respuesta = -1;
-
             try
             {
-                SqlDataReader dr = consultar($"EXEC update_Como_Llegar '{hotel.TC_Maps}', '{hotel.TC_Ubicacion}'");
+                SqlDataReader dr = consultar($"EXEC update_Foto_Principal'{hotel.TC_Foto_Principal}', '{hotel.TC_Formato}'");
                 if (dr != null)
                 {
                     dr.Read();

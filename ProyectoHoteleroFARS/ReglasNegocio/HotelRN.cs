@@ -37,14 +37,15 @@ namespace ReglasNegocio
         {
             return new HotelAD().modificarHomeDescripcionAD(hotel);
         }
-       
-        public int modificarComoLLegarRN(Hotel hotel)
-        {
-            return new HotelAD().modificarComoLLegarAD(hotel);
-        }
         public int modificarFotoRN(Hotel hotel)
         {
             return new HotelAD().modificarFotoAD(hotel);
         }
+
+        public int modificarComoLLegarRN(Hotel hotel)
+        {
+            return new HotelAD().modificarComoLLegarAD(hotel);
+        }
+
     }
 }

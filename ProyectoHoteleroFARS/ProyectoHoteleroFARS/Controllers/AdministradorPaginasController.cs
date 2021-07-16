@@ -49,10 +49,6 @@ namespace ProyectoHoteleroFARS.Controllers
         {
             return new GaleriaRN().guardarImagenGaleriaRN(new Galeria { TC_Descripcion = "desc", TV_Archivo = base64, TC_Formato = formato });
         }
-        public int actualizarFoto(string base64, string formato)
-        {
-            return new HotelRN().modificarFotoRN(new Hotel{  TC_Foto_Principal = base64, TC_Formato = formato });
-        }
 
         public int eliminarImagenGaleria(int idImg)
         {
@@ -91,11 +87,17 @@ namespace ProyectoHoteleroFARS.Controllers
             string lista = JsonConvert.SerializeObject(frn.getFacilidadRN());
             return Json(new { resultado = lista });
         }
+        public int actualizarFoto(string base64, string formato)
+        {
+            return new HotelRN().modificarFotoRN(new Hotel { TC_Foto_Principal = base64, TC_Formato = formato });
+        }
 
         public JsonResult actualizarTablaGaleria() {
             GaleriaRN grn = new GaleriaRN();
             string lista = JsonConvert.SerializeObject(grn.getGaleria());
             return Json(new { resultado = lista });
         }
+
+
     }
 }
