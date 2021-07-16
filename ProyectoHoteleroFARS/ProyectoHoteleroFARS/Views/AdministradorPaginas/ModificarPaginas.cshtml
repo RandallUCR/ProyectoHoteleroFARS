@@ -64,18 +64,34 @@
 
 <div class="accordion bg-transparent rounded" id="accordionModificarPaginas">
     <!--Edición para la página home-->
+
+
     <div class="card">
-        <div class="card-header" id="cabeceraHome">
+        <div class="card-header" id="cabeceraHomeFoto">
             <h2 class="mb-0">
-                <button class="btn btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseHome" aria-expanded="true" aria-controls="collapseHome">
+                <button class="btn btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseHomeFoto" aria-expanded="true" aria-controls="collapseHomeFoto">
                     Home
                 </button>
             </h2>
         </div>
 
-        <div id="collapseHome" class="collapse" aria-labelledby="cabeceraHome" data-parent="#accordionModificarPaginas">
+        <div id="collapseHomeFoto" class="collapse" aria-labelledby="cabeceraHomeFoto" data-parent="#accordionModificarPaginas">
             <div class="card-body">
-                Opciones para editar la página home
+                <form>
+                    <div>
+                        <label for="image_foto">Seleccione una imagen para guardarla como foto principal</label>
+                        <input class="formFoto" type="file" id="image_foto" name="image_foto" accept="image/*">  <!-- accept=".jpg, .jpeg, .png" -->
+                    </div>
+                    <div class="previewFoto">
+                        <p>No se ha seleccionado ningún archivo</p>
+                    </div>
+                    <div>
+                        <button type="button" onclick="actualizarFoto()">Guardar</button>
+                        <br />
+                        <span id="respuestaNFL"></span>
+                    </div>
+                </form>
+                <span style="font-family: Century Gothic; margin-top: 1em;">Imágenes y texto </span>
             </div>
         </div>
     </div>
