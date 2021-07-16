@@ -95,5 +95,9 @@ namespace ProyectoHoteleroFARS.Controllers
             string lista = JsonConvert.SerializeObject(grn.getGaleria());
             return Json(new { resultado = lista });
         }
+        public int actualizarFoto(string base64, string formato)
+        {
+            return new HotelRN().modificarFotoRN(new Hotel { TC_Foto_Principal = base64, TC_Formato = formato });
+        }
     }
 }

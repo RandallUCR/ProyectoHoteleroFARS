@@ -108,5 +108,29 @@ namespace AccesoDatos
             }
             return respuesta;
         }
+
+        public int modificarFotoAD(Hotel hotel)
+        {
+            int respuesta = -1;
+            try
+            {
+                SqlDataReader dr = consultar($"EXEC update_Foto_Principal'{hotel.TC_Foto_Principal}', '{hotel.TC_Formato}'");
+                if (dr != null)
+                {
+                    dr.Read();
+                    respuesta = int.Parse(dr[0].ToString());
+                }
+                else
+                {
+                    respuesta = -1;
+                }
+            }
+            catch (SqlException e)
+            {
+                respuesta = -2;
+            }
+            return respuesta;
+        }
+
     }
 }
