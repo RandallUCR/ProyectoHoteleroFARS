@@ -63,5 +63,34 @@ namespace AccesoDatos
             }
             return result;
         }
+
+        public string getSugerenciasFiltro(string fechai, string fechaf)
+        {
+            List<Sugerencia> data = new List<Sugerencia>();
+            try
+            {
+                SqlDataReader dr = consultar($"EXEC sp_filtro_sugerencias'{fechai}','{fechaf}'");
+                if (dr != null)
+                {
+                    while (dr.Read())
+                    {
+                        Sugerencia sugerencia = new Sugerencia();
+                        sugerencia.TN_Id = int.Parse(dr[0].ToString());
+                        sugerencia.TC_Sugerencia = dr[1].ToString();
+                        sugerencia.TF_Fecha = dr[2].ToString();
+                        data.Add(sugerencia);
+                    }
+                }
+                else
+                {
+                    data.Add(null);
+                }
+            }
+            catch (SqlException e)
+            {
+                data.Add(null);
+            }
+            return JsonConvert.SerializeObject(data);
+        }
     }
 }
