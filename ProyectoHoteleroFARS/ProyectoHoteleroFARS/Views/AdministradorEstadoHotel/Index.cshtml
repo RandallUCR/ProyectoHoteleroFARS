@@ -1,0 +1,39 @@
+﻿@{ 
+    ViewData["Title"] = "Estado del hotel";
+    Layout = "_LayoutAdmin"; 
+}
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
+    <div class="col-12">
+        <legend style="font-weight: bold;  font-family:Felix Titling;">Estado de las habitaciones</legend>
+        <span style="font-family: Century Gothic; margin-top: 1em;">Fecha y hora del servidor: @ViewBag.Fecha</span>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Número</th>
+            <th scope="col">Activa</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Estado</th>
+        </tr>
+    </thead>
+    <tbody id="estadoHotelHoy">
+        @for (int i = 0; i < ViewBag.Habitaciones.Count; i++)
+        {
+            <tr>
+                <th scope="row">@ViewBag.Habitaciones[i].TN_Id</th>
+                <td> @ViewBag.Habitaciones[i].TN_Numero </td>
+                @if (@ViewBag.Habitaciones[i].TB_Estado) { 
+                    <td> Sí </td>
+                }else{
+                    <td> No </td>
+                }
+                <td> @ViewBag.Habitaciones[i].tipo.TC_Nombre </td>
+                <td> @ViewBag.Habitaciones[i].TC_Estado </td>
+            </tr>
+         }
+    </tbody>
+</table>
