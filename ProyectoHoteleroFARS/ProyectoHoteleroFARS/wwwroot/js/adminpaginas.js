@@ -104,8 +104,6 @@ function aceptarModificarComoLlegar() {
                 document.getElementById('respuestaSN').innerHTML = '';
                 if (response == 1) {
                     Swal.fire('Cambios guardados', '', 'success');
-                    alert(parametros.value)
-                    
                 } else {
                     Swal.fire('Cambios no guardados', '', 'error');
                 }
