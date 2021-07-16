@@ -26,6 +26,8 @@ namespace ProyectoHoteleroFARS.Controllers
                 ViewBag.Galeria = new GaleriaRN().getGaleria();
                 //cargar el texto de facilidades
                 ViewBag.Facilidad = new FacilidadRN().getFacilidadRN();
+
+                ViewBag.Hotel = h;
                 //cargar el texto de como llegar
                 return View("ModificarPaginas");
             }

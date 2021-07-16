@@ -59,3 +59,18 @@ $('#example2').DataTable({
         }
     }
 });
+
+$('#example1').DataTable({
+    "lengthChange": false,
+    "searching": false,
+    "lengthMenu": [7],
+    "ordering": false,
+    "language": {
+        "infoEmpty": "No hay registros disponibles",
+        "info": "Mostrando página _PAGE_ de _PAGES_",
+        "oPaginate": {
+            "sNext": "Siguiente",
+            "sPrevious": "Anterior"
+        }
+    }
+});

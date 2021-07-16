@@ -1,0 +1,118 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "_LayoutAdmin";
+}
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
+    <legend style="font-family:Forte;">Listado Reservaciones</legend>
+</div>
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded justify-content-around">
+    <form class="col-10 col-md-6 justify-content-around" autocomplete="off" asp-controller="AdministradorCliente" asp-action="Filtrar" style="display:flex">
+        <input type="text" name="busqueda" placeholder="Busqueda por nombre o cédula" class="form-control mt-1" required />
+        <input type="submit" value="Filtrar" class="btn btn-success ml-1" />
+    </form>
+    <div class="col-2 col-md-6" style="display:flex;justify-content:flex-end">
+        <button class="btn btn-primary" onclick="modalInsCliente()">Nuevo</button>
+    </div>
+</div>
+
+<table id="example1" class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>Cédula</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Email</th>
+            <th id="">Ver</th>
+            <th id="">Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Entidades.Cliente c in ViewBag.List)
+        {
+            <tr>
+                <td>@c.TC_Cedula</td>
+                <td>@c.TC_Nombre</td>
+                <td>@c.TC_Apellidos</td>
+                <td>@c.TC_Email</td>
+                <td>
+                    <button class="btn-primary" onclick="modalEditCliente(@c.TN_Id, '@c.TC_Cedula', '@c.TC_Nombre', '@c.TC_Apellidos', '@c.TC_Email')">
+                        Ver
+                    </button>
+                </td>
+                <td><button class="btn-danger" onclick="EliminarCliente(@c.TN_Id)">Eliminar</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!--Modal para editar-->
+<div class="modal" tabindex="-1" id="modalEditCliente">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Editar Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <span style="color:red" id="span"></span>
+            <form id="clientModForm" autocomplete="off" asp-controller="AdministradorCliente" asp-action="Modificar">
+                <div class="modal-body">
+                    <input type="hidden" id="idCliente" name="idCliente" />
+
+                    <label for="cedula" class="font-weight-bold">Cedula</label>
+                    <input type="text" id="cedulae" class="form-control mt-1" name="cedula" placeholder="Cedula del cliente" maxlength="9" minlength="9" required />
+
+                    <label for="nombre" class="font-weight-bold">Nombre</label>
+                    <input type="text" placeholder="Nombre del cliente" id="nombree" name="nombre" class="form-control" required />
+
+                    <label for="apellidos" class="font-weight-bold">Apellidos</label>
+                    <input type="text" placeholder="Apellidos del cliente" id="apellidose" name="apellidos" class="form-control" required />
+
+                    <label for="email" class="font-weight-bold">Email</label>
+                    <input type="text" placeholder="Email del cliente" id="emaile" name="email" class="form-control" required />
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Editar" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!--Modal para insertar-->
+<div class="modal" tabindex="-1" id="modalInsCliente">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Registrar Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <span style="color:red" id="span"></span>
+            <form id="clientInsForm" autocomplete="off" asp-controller="AdministradorCliente" asp-action="Insertar">
+                <div class="modal-body">
+
+                    <label for="cedula" class="font-weight-bold">Cedula</label>
+                    <input type="text" id="cedula" class="form-control mt-1" name="cedula" placeholder="Cedula del cliente" maxlength="9" minlength="9" required />
+
+                    <label for="nombre" class="font-weight-bold">Nombre</label>
+                    <input type="text" placeholder="Nombre del cliente" id="nombre" name="nombre" class="form-control" required />
+
+                    <label for="apellidos" class="font-weight-bold">Apellidos</label>
+                    <input type="text" placeholder="Apellidos del cliente" id="apellidos" name="apellidos" class="form-control" required />
+
+                    <label for="email" class="font-weight-bold">Email</label>
+                    <input type="text" placeholder="Email del cliente" id="email" name="email" class="form-control" required />
+
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Registrar" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
