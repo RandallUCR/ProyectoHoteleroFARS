@@ -9,13 +9,24 @@
     </div>
 </div>
 
-<table class="table table-striped">
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded justify-content-around">
+    <form class="col-10 col-md-6 justify-content-around" autocomplete="off" asp-controller="AdministradorSugerencias" asp-action="AdministrarSugerenciasFiltro" style="display:flex">
+        <input type="text" name="rangofechasNo" placeholder="Rango de Fechas" class="form-control mt-1" required />
+        <input type="submit" value="Filtrar" class="btn btn-success ml-1" />
+    </form>
+
+    <div class="col-2 col-md-6" style="display:flex;justify-content:flex-end">
+        <button class="btn btn-secondary font-weight-bold ml-1" onclick="reporteSugerencias()">Reporte</button>
+    </div>
+</div>
+
+<table class="table table-striped" id="tablaSug">
     <thead>
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Sugerencia</th>
             <th scope="col">Fecha</th>
-            <th scope="col">Acción</th>
+            <th scope="col" id="acc">Acción</th>
         </tr>
     </thead>
     <tbody id="contenidoTablaSugerencias">
