@@ -26,6 +26,8 @@ namespace ProyectoHoteleroFARS.Controllers
                 ViewBag.Galeria = new GaleriaRN().getGaleria();
                 //cargar el texto de facilidades
                 ViewBag.Facilidad = new FacilidadRN().getFacilidadRN();
+
+                ViewBag.Hotel = h;
                 //cargar el texto de como llegar
                 return View("ModificarPaginas");
             }
@@ -35,6 +37,14 @@ namespace ProyectoHoteleroFARS.Controllers
         public int modificarSobreNosotros(string sobreNosotros)
         {
             return new HotelRN().modificarSobreNosotrosRN(new Hotel { TC_Sobre_Nosotros = sobreNosotros });
+        }
+        public int modificarHomeDescripcion(string descripcion)
+        {
+            return new HotelRN().modificarHomeDescripcionRN(new Hotel { TC_Descripcion = descripcion });
+        }
+        public int modificarComoLlegar(string maps, string ubicacion)
+        {
+            return new HotelRN().modificarComoLLegarRN(new Hotel { TC_Maps=maps, TC_Ubicacion = ubicacion});
         }
 
         public int guardarImagenGaleria(string base64, string formato)

@@ -8,5 +8,7 @@ namespace Entidades
     {
         public int TN_Id { set; get; }
         public int TN_Porcentaje { set; get; }
+        public string TF_Inicio { set; get; }
+        public string TF_Final { set; get; }
     }
 }

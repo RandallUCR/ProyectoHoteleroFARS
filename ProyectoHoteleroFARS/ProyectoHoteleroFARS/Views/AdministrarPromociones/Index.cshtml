@@ -1,0 +1,103 @@
+﻿@{ ViewData["Title"] = "Administrar Promociones";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
+    <div class="col-12">
+        <legend style="font-weight: bold;  font-family:Felix Titling;">Administrar Promociones</legend>
+    </div>
+</div>
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
+    <form id="promInsForm" class="col-12 col-sm-6" asp-action="Insertar" asp-controller="AdministrarPromociones">
+        <label for="rangofechas" class="font-weight-bold">Rango de Fechas</label>
+        <input type="text" name="rangofechas" placeholder="Rango de Fechas" class="form-control" required />
+
+        <label for="porcentaje" class="font-weight-bold">Porcentaje de Aumento</label>
+        <input type="number" name="porcentaje" placeholder="Porcentaje" class="form-control" min="0" max="100" required />
+
+        <label for="tipo" class="font-weight-bold">Tipo Habitacion</label>
+        <select id="tipo" name="tipo" class="form-control">
+            @foreach (Entidades.TipoHabitacion t in ViewBag.Tipos)
+            {
+                <option value="@t.TN_Id">
+                    @t.TC_Nombre
+                </option>
+            }
+        </select>
+        <input type="submit" value="Registrar" class="btn btn-success mt-1" />
+    </form>
+    <div class="col-12 col-sm-6">
+        <h5>Temporadas</h5>
+        <table class="table table-striped table-dark" id="example2">
+            <thead class="">
+                <tr>
+                    <th>Fecha Inicio</th>
+                    <th>Fecha Final</th>
+                    <th>% Descuento</th>
+                    <th>Tipo Habitacion</th>
+                    <th>Ver</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Entidades.TipoHabitacion t in ViewBag.List)
+                {
+                    <tr>
+                        <td>@t.promocion.TF_Inicio</td>
+                        <td>@t.promocion.TF_Final</td>
+                        <td>@t.promocion.TN_Porcentaje</td>
+                        <td>@t.TC_Nombre</td>
+                        <td>
+                            <button class="btn-primary" onclick="modalEditProm(@t.promocion.TN_Id, '@t.promocion.TF_Inicio', '@t.promocion.TF_Final', @t.promocion.TN_Porcentaje, @t.TN_Id)">
+                                Ver
+                            </button>
+                        </td>
+                        <td><button class="btn-danger" onclick="EliminarPromo(@t.promocion.TN_Id)">Eliminar</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--Modal para editar-->
+<div class="modal" tabindex="-1" id="modalEditProm">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Editar Temporada</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <span style="color:red" id="span"></span>
+            <form id="promModForm" autocomplete="off" asp-action="Editar" asp-controller="AdministrarPromociones">
+                <div class="modal-body">
+                    <input type="hidden" id="idProm" name="idProm" />
+
+                    <label for="rangofechas" class="font-weight-bold">Rango de Fechas de la Temporada:</label>
+                    <input class="form-control" type="text" id="rangofechase" name="rangofechas" placeholder="Rango de Fechas" required />
+
+                    <label for="porcentaje" class="font-weight-bold">Porcentaje de Descuento</label>
+                    <input type="number" placeholder="Porcentaje" id="porcentajee" name="porcentaje" class="form-control" required />
+
+                    <label for="tipo" class="font-weight-bold">Tipo Habitacion</label>
+                    <select id="tipoe" name="tipo" class="form-control">
+                        @foreach (Entidades.TipoHabitacion t in ViewBag.Tipos)
+                        {
+                            <option value="@t.TN_Id">
+                                @t.TC_Nombre
+                            </option>
+                        }
+                    </select>
+
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Editar" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

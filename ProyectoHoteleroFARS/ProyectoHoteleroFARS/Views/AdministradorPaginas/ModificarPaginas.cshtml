@@ -103,6 +103,56 @@
             </div>
         </div>
     </div>
+    <!--Edición para la descripción de la página-->
+    <div class="card">
+        <div class="card-header" id="cabeceraHomeDescripcion">
+            <h2 class="mb-0">
+                <button class="btn btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseDescripcion" aria-expanded="true" aria-controls="collapseDescripcion">
+                    Descripcion
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseDescripcion" class="collapse" aria-labelledby="cabeceraDescripcion" data-parent="#accordionModificarPaginas">
+            <div class="card-body">
+                <span style="font-family: Century Gothic; margin-top: 1em;">Texto de la página Descripcion</span>
+                <!--Cargar el texto que está en la base de datos-->
+                <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="taDescripcion" name="taDescripcion" rows="4" cols="50">@ViewBag.Descripcion</textarea>
+                <div class="col-12 col-md-4 align-self-end" style="margin-top: 1em;">
+                    <button class="btn btn-info" type="button" onclick="aceptarModificarDescripcion()">Aceptar</button>
+                    <button class="btn btn-danger" type="button">Cancelar</button>
+                </div>
+                <br /> <span id="respuestaSN"></span>
+            </div>
+        </div>
+    </div>
+    <!--Edición para la descripción de la página-->
+    <div class="card">
+        <div class="card-header" id="cabeceracComoLlegar">
+            <h2 class="mb-0">
+                <button class="btn btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseComoLlegar" aria-expanded="true" aria-controls="collapseComoLlegar">
+                    Como LLegar
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseComoLlegar" class="collapse" aria-labelledby="cabeceraComoLlegar" data-parent="#accordionModificarPaginas">
+            <div class="card-body">
+                <span style="font-family: Century Gothic; margin-top: 1em;">Texto del URL del Mapa</span>
+                <!--Cargar el texto que está en la base de datos-->
+                <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="taMaps" name="taMaps" rows="4" cols="50">@ViewBag.Hotel.TC_Maps</textarea>
+                <span style="font-family: Century Gothic; margin-top: 1em;">Texto de la ubicacion</span>
+                <!--Cargar el texto que está en la base de datos-->
+                <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="taUbicacion" name="taUbicacion" rows="4" cols="50">@ViewBag.Hotel.TC_Ubicacion</textarea>
+
+                <div class="col-12 col-md-4 align-self-end" style="margin-top: 1em;">
+                    <button class="btn btn-info" type="button" onclick="aceptarModificarComoLlegar()">Aceptar</button>
+                    <button class="btn btn-danger" type="button">Cancelar</button>
+                </div>
+                <br /> <span id="respuestaSN"></span>
+            </div>
+        </div>
+    </div>
 
     <!--Edición para la página sobre nosotros (Galería)-->
     <div class="card">
@@ -235,20 +285,4 @@
         </div>
     </div>
 
-    <!--Edición para la página como llegar-->
-    <div class="card">
-        <div class="card-header" id="cabeceraComoLlegar">
-            <h2 class="mb-0">
-                <button class="btn btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseComoLlegar" aria-expanded="true" aria-controls="collapseComoLlegar">
-                    ¿Cómo llegar?
-                </button>
-            </h2>
-        </div>
-
-        <div id="collapseComoLlegar" class="collapse" aria-labelledby="cabeceraComoLlegar" data-parent="#accordionModificarPaginas">
-            <div class="card-body">
-                Opciones para editar la página ¿Cómo llegar?
-            </div>
-        </div>
-    </div>
-</div>
+   

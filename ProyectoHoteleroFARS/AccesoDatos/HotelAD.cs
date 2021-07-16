@@ -62,5 +62,51 @@ namespace AccesoDatos
             return respuesta;
         }
 
+        public int modificarHomeDescripcionAD(Hotel hotel)
+        {
+            int respuesta = -1;
+
+            try
+            {
+                SqlDataReader dr = consultar($"EXEC update_hotel_home '{hotel.TC_Descripcion}'");
+                if (dr != null)
+                {
+                    dr.Read();
+                    respuesta = int.Parse(dr[0].ToString());
+                }
+                else
+                {
+                    respuesta = -1;
+                }
+            }
+            catch (SqlException e)
+            {
+                respuesta = -2;
+            }
+            return respuesta;
+        }
+        public int modificarComoLLegarAD(Hotel hotel)
+        {
+            int respuesta = -1;
+
+            try
+            {
+                SqlDataReader dr = consultar($"EXEC update_Como_Llegar '{hotel.TC_Maps}', '{hotel.TC_Ubicacion}'");
+                if (dr != null)
+                {
+                    dr.Read();
+                    respuesta = int.Parse(dr[0].ToString());
+                }
+                else
+                {
+                    respuesta = -1;
+                }
+            }
+            catch (SqlException e)
+            {
+                respuesta = -2;
+            }
+            return respuesta;
+        }
     }
 }
