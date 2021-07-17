@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
+    <legend style="font-family:Forte;">Disponibilidad de Habitaciones</legend>
+</div>
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded justify-content-around">
+    <form class="justify-content-around" autocomplete="off" asp-controller="AdministradorHabitaciones" asp-action="DisponibilidadBusqueda" style="display:flex">
+        <input type="text" name="rangofechasNo" placeholder="Rango Fechas" class="form-control mt-1" required style="width:400px"/>
+        <select class="form-control mt-1" name="tipo">
+            <option value="0">Todas</option>
+            @foreach (Entidades.TipoHabitacion t in ViewBag.Tipos)
+            {
+                <option value="@t.TN_Id">@t.TC_Nombre</option>
+            }
+        </select>
+        <input type="submit" value="Filtrar" class="btn btn-success ml-1" />
+    </form>
+</div>
+
+<table id="example1" class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>Número</th>
+            <th>Tipo</th>
+            <th>Precio</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Entidades.Habitacion h in ViewBag.List)
+        {
+            @if (h.TC_Estado == "Disponible") {
+            <tr>
+                <td>@h.TN_Numero</td>
+                <td>@h.tipo.TC_Nombre</td>
+                <td>₡@h.tipo.TN_Precio</td>
+                <td>@h.TC_Estado</td>
+            </tr>
+                }
+            }
+    </tbody>
+</table>

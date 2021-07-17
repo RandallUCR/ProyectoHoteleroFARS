@@ -211,5 +211,41 @@ namespace ProyectoHoteleroFARS.Controllers
                     break;
             }
         }
+
+        public IActionResult Disponibilidad()
+        {
+            if (HttpContext.Session.GetInt32("AdminActualId") != null)
+            { //este if debe aparecer en todas las acciones del administrador
+                ViewBag.Layout = new LayoutController().getHotel(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+                ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+
+                List<TipoHabitacion> t = new TipoHabitacionRN().getTiposHabitacionTemp();
+                ViewBag.Tipos = t;
+
+                ViewBag.List = new List<Habitacion>();
+                return View("Disponibilidad");
+
+            }
+            return View("Login", -2); //este return debe aparecer en todas las acciones del administrador           
+        }
+
+        public IActionResult DisponibilidadBusqueda(string rangofechasNo, int tipo)
+        {
+            if (HttpContext.Session.GetInt32("AdminActualId") != null)
+            { //este if debe aparecer en todas las acciones del administrador
+                ViewBag.Layout = new LayoutController().getHotel(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+                ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+                string fechaUno = rangofechasNo.Substring(0, 10);
+                string fechaDos = rangofechasNo.Substring(13);
+
+                List<TipoHabitacion> t = new TipoHabitacionRN().getTiposHabitacionTemp();
+                ViewBag.Tipos = t;
+
+                ViewBag.List = new HabitacionAdminRN().getDisponibilidad(fechaUno, fechaDos, tipo);
+                return View("Disponibilidad");
+
+            }
+            return View("Login", -2); //este return debe aparecer en todas las acciones del administrador           
+        }
     }
 }
