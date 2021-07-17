@@ -86,5 +86,28 @@ namespace ReglasNegocio
 
             return result;
         }
+
+        public List<Habitacion> getDisponibilidad(string fechai, string fechaf, int tipo)
+        {
+            List<Habitacion> list = new List<Habitacion>();
+            HabitacionAdminAD ad = new HabitacionAdminAD();
+
+            string respuesta = null;
+
+            try
+            {
+                respuesta = ad.getDisponibilidad(fechai,fechaf,tipo);
+                if (respuesta != null)
+                {
+                    list = JsonConvert.DeserializeObject<List<Habitacion>>(respuesta);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return list;
+        }
     }
 }
