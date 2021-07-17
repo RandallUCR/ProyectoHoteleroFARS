@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
+    <div class="col-6">
+        <legend style="font-family:Forte;">Características de la habitación</legend>
+    </div>
+    <form class="col-6 p-3" style="display:flex; justify-content:flex-end" asp-controller="AdministradorHabitaciones" asp-action="CambiarTipo">
+        <input type="hidden" id="tipoHabi" name="tipoHabi" value="@Model" required />
+        <input class="btn btn-danger" type="submit" value="Cancelar" />
+    </form>
+</div>
+
+
+    
+<div class="row p-3" style="display:flex;justify-content:flex-end">
+    <button class="btn btn-primary" onclick="modalInsCaract()">Nuevo</button>
+</div>
+
+
+<table id="example1" class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>Descripción</th>
+            <th id="">Ver</th>
+            <th id="">Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Entidades.Caracteristica c in ViewBag.List)
+        {
+            <tr>
+                <td>@c.TC_Descripcion</td>
+                <td>
+                    <button class="btn-primary" onclick="modalEditCaract(@c.TN_Id, '@c.TC_Descripcion')">
+                        Ver
+                    </button>
+                </td>
+                <td><button class="btn-danger" onclick="EliminarCaract(@c.TN_Id)">Eliminar</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!--Modal para editar-->
+<div class="modal" tabindex="-1" id="modalEditCaract">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Editar Característica</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <span style="color:red" id="span"></span>
+            <form id="caractModForm" autocomplete="off" asp-controller="AdministradorCaracteristicas" asp-action="Modificar">
+                <div class="modal-body">
+                    <input type="hidden" id="idCaract" name="idCaract" />
+
+                    <label for="desce" class="font-weight-bold">Descripción</label>
+                    <input type="text" id="desce" class="form-control mt-1" name="desce" placeholder="Descripción de la característica" required />
+
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Editar" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!--Modal para insertar-->
+<div class="modal" tabindex="-1" id="modalInsCaract">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Registrar Característica</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <span style="color:red" id="span"></span>
+            <form id="caractInsForm" autocomplete="off" asp-controller="AdministradorCaracteristicas" asp-action="Insertar">
+                <div class="modal-body">
+
+                    <label for="desc" class="font-weight-bold">Descripción</label>
+                    <input type="text" id="desc" class="form-control mt-1" name="desc" placeholder="Descripción de la característica" required />
+
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Registrar" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
