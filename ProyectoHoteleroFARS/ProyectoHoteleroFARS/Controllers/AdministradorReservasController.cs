@@ -21,6 +21,8 @@ namespace ProyectoHoteleroFARS.Controllers
                 List<Reserva> r = new ReservaAdminRN().lista_reservas();
                 ViewBag.Reservas = r;
                 ViewBag.Tipos = new TipoHabitacionRN().getTiposHabitacionTemp();
+                int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+                ViewBag.RolActual = rol;
                 return View("ListaReservar");
             }
 
@@ -144,6 +146,8 @@ namespace ProyectoHoteleroFARS.Controllers
                 List<Reserva> r = new ReservaAdminRN().lista_reservas_filtro(fechaUno, fechaDos);
                 ViewBag.Reservas = r;
                 ViewBag.Tipos = new TipoHabitacionRN().getTiposHabitacionTemp();
+                int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+                ViewBag.RolActual = rol;
                 return View("ListaReservar");
             }
 

@@ -27,22 +27,28 @@
                     <th>Fecha Final</th>
                     <th>% Aumento</th>
                     <th>Ver</th>
-                    <th>Eliminar</th>
+                    @if (ViewBag.RolActual == 1)
+                    {
+                        <th>Eliminar</th>
+                    }
                 </tr>
             </thead>
             <tbody>
                 @foreach (Entidades.Temporada t in ViewBag.List)
                 {
-                    <tr>
-                        <td>@t.TF_Inicio</td>
-                        <td>@t.TF_Final</td>
-                        <td>@t.TN_Porcentaje</td>
-                        <td>
-                            <button class="btn-primary" onclick="modalEditTemp(@t.TN_Id, '@t.TF_Inicio', '@t.TF_Final', @t.TN_Porcentaje)">
-                                Ver
-                            </button>
-                        </td>
+                <tr>
+                    <td>@t.TF_Inicio</td>
+                    <td>@t.TF_Final</td>
+                    <td>@t.TN_Porcentaje</td>
+                    <td>
+                        <button class="btn-primary" onclick="modalEditTemp(@t.TN_Id, '@t.TF_Inicio', '@t.TF_Final', @t.TN_Porcentaje)">
+                            Ver
+                        </button>
+                    </td>
+                    @if (ViewBag.RolActual == 1)
+                    {
                         <td><button class="btn-danger" onclick="EliminarTemp(@t.TN_Id)">Eliminar</button></td>
+                    }
                     </tr>
                 }
             </tbody>
