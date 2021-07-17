@@ -20,6 +20,28 @@
     });
 }
 
+function irCaract() {
+    var id = $('#tipoHabi').val();
+    var data = { id: id }
+    $.ajax({
+        type: 'post',
+        url: '/AdministradorCaracteristicas/Index',
+        data: data,
+        success: function (response) {
+            window.location.href = response.url;
+        },
+        error: function (response) {
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: 'Error en el sistema.',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }
+    });
+}
+
 function modalInsTipo() {
     $('#modalInsertTipo').modal("show");
 }
