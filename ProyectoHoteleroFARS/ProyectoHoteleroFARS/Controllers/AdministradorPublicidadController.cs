@@ -18,6 +18,8 @@ namespace ProyectoHoteleroFARS.Controllers
             { //este if debe aparecer en todas las acciones del administrador
                 ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
                 ViewBag.Publicidad = new PublicidadRN().getVallaPublicitaria();
+                int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+                ViewBag.RolActual = rol;
                 return View("AdministrarPublicidad");
             }
             return View("Login", -2); //este return debe aparecer en todas las acciones del administrador

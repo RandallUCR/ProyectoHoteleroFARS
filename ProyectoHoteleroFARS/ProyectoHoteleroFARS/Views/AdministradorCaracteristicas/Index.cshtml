@@ -25,20 +25,26 @@
         <tr>
             <th>Descripción</th>
             <th id="">Ver</th>
-            <th id="">Eliminar</th>
-        </tr>
+            @if (ViewBag.RolActual == 1)
+            {
+                <th id="">Eliminar</th>
+            }
+            </tr>
     </thead>
     <tbody>
         @foreach (Entidades.Caracteristica c in ViewBag.List)
         {
-            <tr>
-                <td>@c.TC_Descripcion</td>
-                <td>
-                    <button class="btn-primary" onclick="modalEditCaract(@c.TN_Id, '@c.TC_Descripcion')">
-                        Ver
-                    </button>
-                </td>
+        <tr>
+            <td>@c.TC_Descripcion</td>
+            <td>
+                <button class="btn-primary" onclick="modalEditCaract(@c.TN_Id, '@c.TC_Descripcion')">
+                    Ver
+                </button>
+            </td>
+            @if (ViewBag.RolActual == 1)
+            {
                 <td><button class="btn-danger" onclick="EliminarCaract(@c.TN_Id)">Eliminar</button></td>
+            }
             </tr>
         }
     </tbody>

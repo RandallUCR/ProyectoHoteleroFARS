@@ -26,22 +26,28 @@
             <th scope="col">ID</th>
             <th scope="col">Sugerencia</th>
             <th scope="col">Fecha</th>
-            <th scope="col" id="acc">Acción</th>
-        </tr>
+            @if (ViewBag.RolActual == 1)
+            {
+                <th scope="col" id="acc">Acción</th>
+            }
+            </tr>
     </thead>
     <tbody id="contenidoTablaSugerencias">
         @for (int i = 0; i < ViewBag.Sugerencias.Count; i++){
-            <tr>
-                <th scope="row">@ViewBag.Sugerencias[i].TN_Id</th>
-                <td>
-                    <span>@ViewBag.Sugerencias[i].TC_Sugerencia</span>
-                </td>
-                <td>
-                    <span>@ViewBag.Sugerencias[i].TF_Fecha</span>
-                </td>
+        <tr>
+            <th scope="row">@ViewBag.Sugerencias[i].TN_Id</th>
+            <td>
+                <span>@ViewBag.Sugerencias[i].TC_Sugerencia</span>
+            </td>
+            <td>
+                <span>@ViewBag.Sugerencias[i].TF_Fecha</span>
+            </td>
+            @if (ViewBag.RolActual == 1)
+            {
                 <td>
                     <button class="btn btn-danger" id="@ViewBag.Sugerencias[i].TN_Id" onclick="eliminarSugerencia(this)">Eliminar</button>
                 </td>
+            }
             </tr>
          }
     </tbody>

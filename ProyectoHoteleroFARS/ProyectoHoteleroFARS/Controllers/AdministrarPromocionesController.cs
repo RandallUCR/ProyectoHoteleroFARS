@@ -17,6 +17,8 @@ namespace ProyectoHoteleroFARS.Controllers
 
             ViewBag.Tipos = new TipoHabitacionRN().getTiposHabitacionTemp();
             ViewBag.List = new PromocionRN().lista_promociones();
+            int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+            ViewBag.RolActual = rol;
             return View("Index");
         }
 

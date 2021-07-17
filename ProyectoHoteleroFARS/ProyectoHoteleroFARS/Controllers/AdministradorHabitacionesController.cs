@@ -21,6 +21,8 @@ namespace ProyectoHoteleroFARS.Controllers
                 List<TipoHabitacion> t = new TipoHabitacionRN().getTiposHabitacionTemp();
                 ViewBag.Tipos = t;
                 ViewBag.Habitaciones = new HabitacionAdminRN().getHabitacionesByTipo(t[0].TN_Id);
+                int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+                ViewBag.RolActual = rol;
                 if (t.Count()>0)
                 {
                     HttpContext.Session.SetInt32("TipoActualId", t[0].TN_Id);
@@ -46,6 +48,8 @@ namespace ProyectoHoteleroFARS.Controllers
             ViewBag.Habitaciones = h;
             ViewBag.Index = tipoHabi;
             HttpContext.Session.SetInt32("TipoActualId", tipoHabi);
+            int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+            ViewBag.RolActual = rol;
 
             return View("AdministrarHabitacion", findTipo(t,tipoHabi));
         }
