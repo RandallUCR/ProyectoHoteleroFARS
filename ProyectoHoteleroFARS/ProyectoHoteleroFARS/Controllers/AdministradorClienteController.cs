@@ -19,6 +19,8 @@ namespace ProyectoHoteleroFARS.Controllers
                 ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
 
                 ViewBag.List = new ClienteAdminRN().lista_clientes("");
+                int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+                ViewBag.RolActual = rol;
 
                 return View("Index");
             }              
@@ -34,6 +36,8 @@ namespace ProyectoHoteleroFARS.Controllers
                 ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
 
                 ViewBag.List = new ClienteAdminRN().lista_clientes(busqueda);
+                int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+                ViewBag.RolActual = rol;
 
                 return View("Index");
             }

@@ -21,6 +21,8 @@ namespace ProyectoHoteleroFARS.Controllers
                 List<TipoHabitacion> t = new TipoHabitacionRN().getTiposHabitacionTemp();
                 ViewBag.Tipos = t;
                 ViewBag.Habitaciones = new HabitacionAdminRN().getHabitacionesByTipo(t[0].TN_Id);
+                int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+                ViewBag.RolActual = rol;
                 if (t.Count()>0)
                 {
                     HttpContext.Session.SetInt32("TipoActualId", t[0].TN_Id);
@@ -46,6 +48,8 @@ namespace ProyectoHoteleroFARS.Controllers
             ViewBag.Habitaciones = h;
             ViewBag.Index = tipoHabi;
             HttpContext.Session.SetInt32("TipoActualId", tipoHabi);
+            int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+            ViewBag.RolActual = rol;
 
             return View("AdministrarHabitacion", findTipo(t,tipoHabi));
         }
@@ -206,6 +210,42 @@ namespace ProyectoHoteleroFARS.Controllers
                     return Json(new { success = true, inserted = true, url = Url.Action("CambiarDescripcion", "AdministradorHabitaciones", new { id = id }) });
                     break;
             }
+        }
+
+        public IActionResult Disponibilidad()
+        {
+            if (HttpContext.Session.GetInt32("AdminActualId") != null)
+            { //este if debe aparecer en todas las acciones del administrador
+                ViewBag.Layout = new LayoutController().getHotel(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+                ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+
+                List<TipoHabitacion> t = new TipoHabitacionRN().getTiposHabitacionTemp();
+                ViewBag.Tipos = t;
+
+                ViewBag.List = new List<Habitacion>();
+                return View("Disponibilidad");
+
+            }
+            return View("Login", -2); //este return debe aparecer en todas las acciones del administrador           
+        }
+
+        public IActionResult DisponibilidadBusqueda(string rangofechasNo, int tipo)
+        {
+            if (HttpContext.Session.GetInt32("AdminActualId") != null)
+            { //este if debe aparecer en todas las acciones del administrador
+                ViewBag.Layout = new LayoutController().getHotel(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+                ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+                string fechaUno = rangofechasNo.Substring(0, 10);
+                string fechaDos = rangofechasNo.Substring(13);
+
+                List<TipoHabitacion> t = new TipoHabitacionRN().getTiposHabitacionTemp();
+                ViewBag.Tipos = t;
+
+                ViewBag.List = new HabitacionAdminRN().getDisponibilidad(fechaUno, fechaDos, tipo);
+                return View("Disponibilidad");
+
+            }
+            return View("Login", -2); //este return debe aparecer en todas las acciones del administrador           
         }
     }
 }

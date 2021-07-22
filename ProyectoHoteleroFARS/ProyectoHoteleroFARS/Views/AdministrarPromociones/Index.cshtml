@@ -37,23 +37,28 @@
                     <th>% Descuento</th>
                     <th>Tipo Habitacion</th>
                     <th>Ver</th>
+                    @if (ViewBag.RolActual == 1) {
                     <th>Eliminar</th>
+                    }
                 </tr>
             </thead>
             <tbody>
                 @foreach (Entidades.TipoHabitacion t in ViewBag.List)
                 {
-                    <tr>
-                        <td>@t.promocion.TF_Inicio</td>
-                        <td>@t.promocion.TF_Final</td>
-                        <td>@t.promocion.TN_Porcentaje</td>
-                        <td>@t.TC_Nombre</td>
-                        <td>
-                            <button class="btn-primary" onclick="modalEditProm(@t.promocion.TN_Id, '@t.promocion.TF_Inicio', '@t.promocion.TF_Final', @t.promocion.TN_Porcentaje, @t.TN_Id)">
-                                Ver
-                            </button>
-                        </td>
+                <tr>
+                    <td>@t.promocion.TF_Inicio</td>
+                    <td>@t.promocion.TF_Final</td>
+                    <td>@t.promocion.TN_Porcentaje</td>
+                    <td>@t.TC_Nombre</td>
+                    <td>
+                        <button class="btn-primary" onclick="modalEditProm(@t.promocion.TN_Id, '@t.promocion.TF_Inicio', '@t.promocion.TF_Final', @t.promocion.TN_Porcentaje, @t.TN_Id)">
+                            Ver
+                        </button>
+                    </td>
+                    @if (ViewBag.RolActual == 1)
+                    {
                         <td><button class="btn-danger" onclick="EliminarPromo(@t.promocion.TN_Id)">Eliminar</button></td>
+                    }
                     </tr>
                 }
             </tbody>

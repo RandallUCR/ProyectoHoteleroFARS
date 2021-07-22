@@ -24,23 +24,29 @@
             <th>Apellidos</th>
             <th>Email</th>
             <th id="">Ver</th>
+            @if (ViewBag.RolActual == 1)
+            {
             <th id="">Eliminar</th>
+            }
         </tr>
     </thead>
     <tbody>
         @foreach (Entidades.Cliente c in ViewBag.List)
         {
-            <tr>
-                <td>@c.TC_Cedula</td>
-                <td>@c.TC_Nombre</td>
-                <td>@c.TC_Apellidos</td>
-                <td>@c.TC_Email</td>
-                <td>
-                    <button class="btn-primary" onclick="modalEditCliente(@c.TN_Id, '@c.TC_Cedula', '@c.TC_Nombre', '@c.TC_Apellidos', '@c.TC_Email')">
-                        Ver
-                    </button>
-                </td>
+        <tr>
+            <td>@c.TC_Cedula</td>
+            <td>@c.TC_Nombre</td>
+            <td>@c.TC_Apellidos</td>
+            <td>@c.TC_Email</td>
+            <td>
+                <button class="btn-primary" onclick="modalEditCliente(@c.TN_Id, '@c.TC_Cedula', '@c.TC_Nombre', '@c.TC_Apellidos', '@c.TC_Email')">
+                    Ver
+                </button>
+            </td>
+            @if (ViewBag.RolActual == 1)
+            {
                 <td><button class="btn-danger" onclick="EliminarCliente(@c.TN_Id)">Eliminar</button></td>
+            }
             </tr>
         }
     </tbody>

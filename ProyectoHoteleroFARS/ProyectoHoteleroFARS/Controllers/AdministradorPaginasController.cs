@@ -28,6 +28,8 @@ namespace ProyectoHoteleroFARS.Controllers
                 ViewBag.Facilidad = new FacilidadRN().getFacilidadRN();
 
                 ViewBag.Hotel = h;
+                int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+                ViewBag.RolActual = rol;
                 //cargar el texto de como llegar
                 return View("ModificarPaginas");
             }

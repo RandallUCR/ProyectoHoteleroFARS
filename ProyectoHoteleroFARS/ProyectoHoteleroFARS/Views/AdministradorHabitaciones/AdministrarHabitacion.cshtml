@@ -32,10 +32,14 @@
             </div>
         </form>
         <div class="d-flex justify-content-center">
-            <button class="btn btn-outline-primary" onclick="modalInsTipo()">Nuevo</button> 
+            <button class="btn btn-outline-primary" onclick="modalInsTipo()">Nuevo</button>
             <button class="btn btn-outline-warning ml-1" onclick="irTipo()">Ver</button>
-            <button class="btn btn-outline-danger ml-1" onclick="eliminarTipo(22)">Eliminar</button>
-        </div>
+            <button class="btn btn-outline-success ml-1" onclick="irCaract()">Características</button>
+            @if (ViewBag.RolActual == 1)
+            {
+                <button class="btn btn-outline-danger ml-1" onclick="eliminarTipo(22)">Eliminar</button>
+            }
+            </div>
     </div>
 
     <div class="col-12 col-md-12 col-lg-6 d-flex flex-column shadow-lg bg-transparent rounded  p-3">
@@ -52,8 +56,11 @@
                     <th>No. Habitación</th>
                     <th>Estado</th>
                     <th>Ver</th>
-                    <th>Eliminar</th>
-                </tr>
+                    @if (ViewBag.RolActual == 1)
+                    {
+                        <th>Eliminar</th>
+                    }
+                    </tr>
             </thead>
             <tbody>
                 @foreach (Entidades.Habitacion h in ViewBag.Habitaciones)
@@ -69,8 +76,11 @@
                         <td>Inactiva</td>
                     }
                     <td><button class="btn-primary" onclick="modalEditHabi(@h.TN_Id, @h.TN_Numero, '@h.TB_Estado')">Ver</button></td>
-                    <td><button class="btn-danger" onclick="eliminarHabi(@h.TN_Id)">Eliminar</button></td>
-                </tr>
+                    @if (ViewBag.RolActual == 1)
+                    {
+                        <td><button class="btn-danger" onclick="eliminarHabi(@h.TN_Id)">Eliminar</button></td>
+                    }
+                    </tr>
                 }
             </tbody>
         </table>

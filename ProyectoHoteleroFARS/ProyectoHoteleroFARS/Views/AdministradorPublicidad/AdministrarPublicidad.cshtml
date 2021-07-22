@@ -79,7 +79,10 @@
             <th scope="col">ID</th>
             <th scope="col">Imagen</th>
             <th scope="col">Edición</th>
+            @if (ViewBag.RolActual == 1)
+            {
             <th scope="col">Acción</th>
+            }
         </tr>
     </thead>
     <tbody id="contenidoTablaPublicidad">
@@ -108,9 +111,12 @@
                     </div>
                     -->
                 </td>
+                @if (ViewBag.RolActual == 1)
+                {
                 <td>
                     <button class="btn btn-danger" id="@ViewBag.Publicidad[i].TN_Id" onclick="eliminarPublicidad(this)">Eliminar</button>
                 </td>
+                }
             </tr>
          }
     </tbody>

@@ -10,7 +10,11 @@
     </div>
 </div>
 
-<table class="table table-striped">
+<div style="display:flex; justify-content:flex-end">
+    <button class="btn btn-secondary" onclick="reporteEstados('@ViewBag.Fecha')">Reporte</button>
+</div>
+
+<table class="table table-striped" id="testados">
     <thead>
         <tr>
             <th scope="col">ID</th>
