@@ -133,7 +133,7 @@
             <div class="card-body">
                 <span style="font-family: Century Gothic; margin-top: 1em;">Texto de la página Descripcion</span>
                 <!--Cargar el texto que está en la base de datos-->
-                <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="taDescripcion" name="taDescripcion" rows="4" cols="50">@ViewBag.Descripcion</textarea>
+                <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="taDescripcion" name="taDescripcion" rows="4" cols="50">@ViewBag.Hotel.TC_Descripcion</textarea>
                 <div class="col-12 col-md-4 align-self-end" style="margin-top: 1em;">
                     <button class="btn btn-info" type="button" onclick="aceptarModificarDescripcion()">Aceptar</button>
                     <button class="btn btn-danger" type="button">Cancelar</button>
@@ -203,19 +203,25 @@
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Imagen</th>
-                            <th scope="col">Acción</th>
-                        </tr>
+                            @if (ViewBag.RolActual == 1)
+                            {
+                                <th scope="col">Acción</th>
+                            }
+                            </tr>
                     </thead>
                     <tbody id="contenidoTablaGaleria">
                         @for (int i = 0; i < ViewBag.Galeria.Count; i++) { 
-                            <tr>
-                                <th scope="row">@ViewBag.Galeria[i].TN_Id</th>
-                                <td>
-                                    <img height="200" width="250" style="max-height:inherit; max-width:inherit" src="data:image/@ViewBag.Galeria[i].TC_Formato;base64,@ViewBag.Galeria[i].TV_Archivo"/>
-                                </td>
+                        <tr>
+                            <th scope="row">@ViewBag.Galeria[i].TN_Id</th>
+                            <td>
+                                <img height="200" width="250" style="max-height:inherit; max-width:inherit" src="data:image/@ViewBag.Galeria[i].TC_Formato;base64,@ViewBag.Galeria[i].TV_Archivo" />
+                            </td>
+                            @if (ViewBag.RolActual == 1)
+                            {
                                 <td>
                                     <button class="btn btn-danger" id="@ViewBag.Galeria[i].TN_Id" onclick="eliminarImgGaleria(this)">Eliminar</button>
                                 </td>
+                            }
                             </tr>
                         }
                     </tbody>
@@ -267,32 +273,38 @@
                             <th scope="col">ID</th>
                             <th scope="col">Imagen</th>
                             <th scope="col">Edición</th>
-                            <th scope="col">Acción</th>
-                        </tr>
+                            @if (ViewBag.RolActual == 1)
+                            {
+                                <th scope="col">Acción</th>
+                            }
+                            </tr>
                     </thead>
                     <tbody id="contenidoTablaFacilidades">
                         @for (int i = 0; i < ViewBag.Facilidad.Count; i++) { 
-                            <tr>
-                                <th scope="row">@ViewBag.Facilidad[i].TN_Id</th>
-                                <td>
-                                    <img height="200" width="250" style="max-height:inherit; max-width:inherit" src="data:image/@ViewBag.Facilidad[i].galeria.TC_Formato;base64,@ViewBag.Facilidad[i].galeria.TV_Archivo"/>
-                                </td>
-                                <td>
-                                    <form>
-                                        <div>
-                                            <span>Descripción</span><br />
-                                            <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="ta_fac_@ViewBag.Facilidad[i].TN_Id" name="ta_fac_@ViewBag.Facilidad[i].TN_Id" rows="4" cols="40">@ViewBag.Facilidad[i].TC_Descripcion</textarea>
-                                        </div>
-                                        <div>
-                                            <button type="button" id="@ViewBag.Facilidad[i].TN_Id" onclick="editarFacilidad(this)">Guardar</button>
-                                            <br />
-                                            <span id="respuestaFL_@ViewBag.Facilidad[i].TN_Id"></span>
-                                        </div>
-                                    </form>
-                                </td>
+                        <tr>
+                            <th scope="row">@ViewBag.Facilidad[i].TN_Id</th>
+                            <td>
+                                <img height="200" width="250" style="max-height:inherit; max-width:inherit" src="data:image/@ViewBag.Facilidad[i].galeria.TC_Formato;base64,@ViewBag.Facilidad[i].galeria.TV_Archivo" />
+                            </td>
+                            <td>
+                                <form>
+                                    <div>
+                                        <span>Descripción</span><br />
+                                        <textarea class="form-control" style="font-family: Century Gothic; margin-top: 0.5em" id="ta_fac_@ViewBag.Facilidad[i].TN_Id" name="ta_fac_@ViewBag.Facilidad[i].TN_Id" rows="4" cols="40">@ViewBag.Facilidad[i].TC_Descripcion</textarea>
+                                    </div>
+                                    <div>
+                                        <button type="button" id="@ViewBag.Facilidad[i].TN_Id" onclick="editarFacilidad(this)">Guardar</button>
+                                        <br />
+                                        <span id="respuestaFL_@ViewBag.Facilidad[i].TN_Id"></span>
+                                    </div>
+                                </form>
+                            </td>
+                            @if (ViewBag.RolActual == 1)
+                            {
                                 <td>
                                     <button class="btn btn-danger" id="@ViewBag.Facilidad[i].TN_Id" onclick="eliminarFacilidad(this)">Eliminar</button>
                                 </td>
+                            }
                             </tr>
                         }
                     </tbody>

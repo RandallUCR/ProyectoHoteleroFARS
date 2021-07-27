@@ -52,5 +52,84 @@ namespace ProyectoHoteleroFARS.Controllers
             return View("Login", -2);
         }
 
+        public IActionResult Admin()
+        {
+            ViewBag.Layout = new LayoutController().getHotel();
+            if (HttpContext.Session.GetInt32("AdminActualId") != null)
+            {
+                ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+                int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+                ViewBag.RolActual = rol;
+                ViewBag.List = new AdministradorRN().lista_admins();
+
+                return View("AdministrarAdmin");
+            }
+            return View("Login", -2);          
+        }
+
+        public JsonResult Insertar(string user, string pass, int rol)
+        {
+
+            int result = new AdministradorRN().insertarAdmin(user, pass, rol);
+
+            if (result == 1)
+            {
+                return Json(new { success = true, inserted = true, url = Url.Action("Admin", "Administrador") });
+            }
+            else
+            {
+                if (result == 2)
+                {
+                    return Json(new { success = true, inserted = false });
+                }
+                else
+                {
+                    return Json(new { success = false, inserted = false });
+
+                }
+            }
+
+        }
+
+        public JsonResult Modificar(int idAdmin, string usere, string passe, int role)
+        {
+
+            int result = new AdministradorRN().modificarAdmin(idAdmin, usere, passe, role);
+
+            if (result == 1)
+            {
+                return Json(new { success = true, inserted = true, url = Url.Action("Admin", "Administrador") });
+            }
+            else
+            {
+                if (result == 2)
+                {
+                    return Json(new { success = true, inserted = false });
+                }
+                else
+                {
+                    return Json(new { success = false, inserted = false });
+
+                }
+            }
+
+        }
+
+        public JsonResult Eliminar(int id)
+        {
+
+            int result = new AdministradorRN().eliminarAdmin(id);
+
+            if (result == 1)
+            {
+                return Json(new { success = true, inserted = true, url = Url.Action("Admin", "Administrador") });
+            }
+            else
+            {
+                return Json(new { success = false, inserted = false });
+            }
+
+        }
+
     }
 }

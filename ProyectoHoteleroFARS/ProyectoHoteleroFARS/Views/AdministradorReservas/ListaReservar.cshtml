@@ -33,30 +33,36 @@
             <th>Salida</th>
             <th>Tipo</th>
             <th id="acc1">Ver</th>
-            <th id="acc2">Eliminar</th>
-        </tr>
+            @if (ViewBag.RolActual == 1)
+            {
+                <th id="acc2">Eliminar</th>
+            }
+            </tr>
     </thead>
     <tbody>
         @foreach (Entidades.Reserva r in ViewBag.Reservas)
         {
-            <tr>
-                <td>@r.TF_Fecha</td>
-                <td>@r.TC_Id_Reserva</td>
-                <td>@r.cliente.TC_Nombre</td>
-                <td>@r.cliente.TC_Apellidos</td>
-                <td>@r.cliente.TC_Email</td>
-                <td>************@r.TN_Tarjeta.Substring(12)</td>
-                <td>@r.TN_Transaccion</td>
-                <td>@r.TF_Llegada</td>
-                <td>@r.TF_Salida</td>
-                <td>@r.tipo.TC_Nombre</td>
-                <td>
-                    <button class="btn-primary" onclick="modal('@r.TN_Id', '@r.TF_Fecha', '@r.TC_Id_Reserva', '@r.cliente.TC_Cedula', '@r.cliente.TC_Nombre', '@r.cliente.TC_Apellidos', '@r.cliente.TC_Email',
+        <tr>
+            <td>@r.TF_Fecha</td>
+            <td>@r.TC_Id_Reserva</td>
+            <td>@r.cliente.TC_Nombre</td>
+            <td>@r.cliente.TC_Apellidos</td>
+            <td>@r.cliente.TC_Email</td>
+            <td>************@r.TN_Tarjeta.Substring(12)</td>
+            <td>@r.TN_Transaccion</td>
+            <td>@r.TF_Llegada</td>
+            <td>@r.TF_Salida</td>
+            <td>@r.tipo.TC_Nombre</td>
+            <td>
+                <button class="btn-primary" onclick="modal('@r.TN_Id', '@r.TF_Fecha', '@r.TC_Id_Reserva', '@r.cliente.TC_Cedula', '@r.cliente.TC_Nombre', '@r.cliente.TC_Apellidos', '@r.cliente.TC_Email',
                     '@r.TN_Tarjeta','@r.TN_Transaccion','@r.TF_Llegada','@r.TF_Salida','@r.tipo.TN_Id')">
-                        Ver
-                    </button>
-                </td>
+                    Ver
+                </button>
+            </td>
+            @if (ViewBag.RolActual == 1)
+            {
                 <td><button class="btn-danger" onclick="EliminarReserva(@r.TN_Id)">Eliminar</button></td>
+            }
             </tr>
         }
     </tbody>

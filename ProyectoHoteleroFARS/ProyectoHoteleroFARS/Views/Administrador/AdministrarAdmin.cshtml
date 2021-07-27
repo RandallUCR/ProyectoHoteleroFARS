@@ -1,0 +1,117 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "_LayoutAdmin";
+}
+<div class="row shadow-lg p-3 mb-5 bg-transparent rounded">
+    <legend style="font-family:Forte;">Listado Reservaciones</legend>
+</div>
+
+<div class="row p-3 mb-5" style="justify-content:flex-end">
+    <button class="btn btn-primary" onclick="modalInsAdmin()">Nuevo</button>
+</div>
+
+<table id="example1" class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Contraseña</th>
+            <th>Rol</th>
+            <th>Ver</th>
+            @if (ViewBag.RolActual == 1)
+            {
+                <th id="">Eliminar</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Entidades.Administrador a in ViewBag.List)
+        {
+            <tr>
+                <td>@a.TC_Usuario</td>
+                <td>@a.TC_Contrasena</td>
+                <td>@a.rol.TC_Rol</td>
+                <td>
+                    <button class="btn-primary" onclick="modalEditAdmin(@a.TN_Id, '@a.TC_Usuario', '@a.TC_Contrasena', @a.rol.TN_Id)">
+                        Ver
+                    </button>
+                </td>
+                @if (ViewBag.RolActual == 1)
+                {
+                    <td><button class="btn-danger" onclick="EliminarAdmin(@a.TN_Id)">Eliminar</button></td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!--Modal para editar-->
+<div class="modal" tabindex="-1" id="modalEditAdmin">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Editar Administrador</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <span style="color:red" id="span"></span>
+            <form id="adminModForm" autocomplete="off" asp-controller="Administrador" asp-action="Modificar">
+                <div class="modal-body">
+                    <input type="hidden" id="idAdmin" name="idAdmin" />
+
+                    <label for="usere" class="font-weight-bold">Usuario</label>
+                    <input type="text" id="usere" class="form-control mt-1" name="usere" placeholder="Usuario del Administrador" required />
+
+                    <label for="passe" class="font-weight-bold">Contraseña del Administrador</label>
+                    <input type="text" placeholder="Contraseña del Administrador" id="passe" name="passe" class="form-control" required />
+
+                    <label for="role" class="font-weight-bold">Rol</label>
+                    <select id="role" name="role" class="form-control">
+                        <option value="1">Gerencia</option>
+                        <option value="2">Secretariado</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Editar" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!--Modal para insertar-->
+<div class="modal" tabindex="-1" id="modalInsAdmin">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Registrar Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <span style="color:red" id="span"></span>
+            <form id="adminInsForm" autocomplete="off" asp-controller="Administrador" asp-action="Insertar">
+                <div class="modal-body">
+
+                    <label for="user" class="font-weight-bold">Usuario</label>
+                    <input type="text" id="user" class="form-control mt-1" name="user" placeholder="Usuario del Administrador" required />
+
+                    <label for="pass" class="font-weight-bold">Contraseña del Administrador</label>
+                    <input type="text" placeholder="Contraseña del Administrador" id="pass" name="pass" class="form-control" required />
+
+                    <label for="rol" class="font-weight-bold">Rol</label>
+                    <select id="rol" name="rol" class="form-control">
+                        <option value="1">Gerencia</option>
+                        <option value="2">Secretariado</option>
+                    </select>
+
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Registrar" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

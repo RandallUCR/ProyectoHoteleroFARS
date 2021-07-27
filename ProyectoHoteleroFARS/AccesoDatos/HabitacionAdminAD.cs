@@ -128,5 +128,39 @@ namespace AccesoDatos
             }
             return result;
         }
+
+        public string getDisponibilidad(string fechai, string fechaf, int tipo)
+        {
+            List<Habitacion> list = new List<Habitacion>();
+
+            try
+            {
+                SqlDataReader dr = consultar($"exec sp_get_disponibilidad_habitaciones_by_fechas '{fechai}','{fechaf}',{tipo}");
+                if (dr != null)
+                {
+                    while (dr.Read())
+                    {
+                        Habitacion h = new Habitacion();
+                        h.TN_Numero = int.Parse(dr[0].ToString());
+                        h.TC_Estado = dr[3].ToString();
+
+                        TipoHabitacion t = new TipoHabitacion();
+                        t.TC_Nombre = dr[1].ToString();
+                        t.TN_Precio = decimal.Parse(dr[2].ToString());
+
+                        h.tipo = t;
+
+                        list.Add(h);
+                    }
+
+
+                }
+            }
+            catch (SqlException e)
+            {
+                //list = null;               
+            }
+            return JsonConvert.SerializeObject(list);
+        }
     }
 }

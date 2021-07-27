@@ -17,6 +17,8 @@ namespace ProyectoHoteleroFARS.Controllers
             if (HttpContext.Session.GetInt32("AdminActualId") != null){ //este if debe aparecer en todas las acciones del administrador
                 ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
                 ViewBag.Sugerencias = new SugerenciaRN().getSugerenciasRN();
+                int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+                ViewBag.RolActual = rol;
                 return View("AdministrarSugerencias");
             }
             return View("Login", -2); //este return debe aparecer en todas las acciones del administrador
@@ -34,6 +36,22 @@ namespace ProyectoHoteleroFARS.Controllers
             return Json(new { resultado = lista });
         }
 
+        public IActionResult AdministrarSugerenciasFiltro(string rangofechasNo)
+        {
+            ViewBag.Layout = new LayoutController().getHotel(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+            if (HttpContext.Session.GetInt32("AdminActualId") != null)
+            { //este if debe aparecer en todas las acciones del administrador
 
+                string fechaUno = rangofechasNo.Substring(0, 10);
+                string fechaDos = rangofechasNo.Substring(13);
+
+                ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
+                ViewBag.Sugerencias = new SugerenciaRN().getSugerenciasFiltro(fechaUno,fechaDos);
+                int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+                ViewBag.RolActual = rol;
+                return View("AdministrarSugerencias");
+            }
+            return View("Login", -2); //este return debe aparecer en todas las acciones del administrador
+        }
     }
 }

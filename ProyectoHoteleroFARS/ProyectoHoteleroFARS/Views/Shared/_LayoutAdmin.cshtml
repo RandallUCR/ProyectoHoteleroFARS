@@ -33,13 +33,14 @@
             <a asp-action="AdministrarPaginas" asp-controller="AdministradorPaginas" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Modificar Páginas</a>
             <a asp-action="Lista_Reservar" asp-controller="AdministradorReservas" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Listado de Reservaciones</a>
             <a asp-action="AdministrarHabitacion" asp-controller="AdministradorHabitaciones" class="btn btn-dark" style="width: 100%; font-family:Century Gothic; border-radius: 0px">Administrar Habitaciones</a>
-            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Ver estado del hotel hoy</a>
-            <a asp-action="" asp-controller="" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Consultar Disponibilidad de Habitaciones</a>
+            <a asp-action="Index" asp-controller="AdministradorEstadoHotel" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Ver estado del hotel hoy</a>
+            <a asp-action="Disponibilidad" asp-controller="AdministradorHabitaciones" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Consultar Disponibilidad de Habitaciones</a>
             <a asp-action="AdministrarPublicidad" asp-controller="AdministradorPublicidad" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Publicidad</a>
             <a asp-action="Index" asp-controller="AdministradorTemporadas" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Temporadas</a>
             <a asp-action="Index" asp-controller="AdministrarPromociones" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Promociones</a>
             <a asp-action="AdministrarSugerencias" asp-controller="AdministradorSugerencias" class="btn btn-dark" style="width:100%; font-family:Century Gothic; border-radius:0px">Sugerencias</a>
             <a asp-action="Index" asp-controller="AdministradorCliente" class="btn btn-dark" style="width: 100%; font-family:Century Gothic; border-radius: 0px">Administrar Clientes</a>
+            <a asp-action="Admin" asp-controller="Administrador" class="btn btn-dark" style="width: 100%; font-family:Century Gothic; border-radius: 0px">Administrar Staff</a>
         </section>
         <section class="ml-3 mr-3 container-fluid">
             <main role="main" class="pb-3">
@@ -68,6 +69,9 @@
     <script type="text/javascript" src="~/js/admintemp.js"></script>
     <script type="text/javascript" src="~/js/adminpromos.js"></script>
     <script type="text/javascript" src="~/js/admincliente.js"></script>
+    <script type="text/javascript" src="~/js/estadohabitaciones.js"></script>
+    <script type="text/javascript" src="~/js/admincaract.js"></script>
+    <script type="text/javascript" src="~/js/admin.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

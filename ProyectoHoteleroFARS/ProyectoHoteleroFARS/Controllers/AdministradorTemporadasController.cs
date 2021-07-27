@@ -14,7 +14,8 @@ namespace ProyectoHoteleroFARS.Controllers
         {
             ViewBag.Layout = new LayoutController().getHotel();
             ViewBag.Usuario = ((string)HttpContext.Session.GetString("AdminActualUsuario")).ToUpper(); //NO BORRAR, AGREGAR ESTA LINEA PARA CADA VISTA DEL ADMIN******
-
+            int rol = (int)HttpContext.Session.GetInt32("AdminActualRol");
+            ViewBag.RolActual = rol;
             ViewBag.List = new TemporadaRN().lista_reservas();
             return View("Index");
         }

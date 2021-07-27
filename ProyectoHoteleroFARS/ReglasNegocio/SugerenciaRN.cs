@@ -39,5 +39,24 @@ namespace ReglasNegocio
             return new SugerenciaAD().eliminarSugerenciaAD(sug);
         }
 
+        public List<Sugerencia> getSugerenciasFiltro(string fechai, string fechaf)
+        {
+            List<Sugerencia> lista = new List<Sugerencia>();
+            SugerenciaAD sad = new SugerenciaAD();
+            string respuesta = null;
+            try
+            {
+                respuesta = sad.getSugerenciasFiltro(fechai, fechaf);
+                if (respuesta != null)
+                {
+                    lista = JsonConvert.DeserializeObject<List<Sugerencia>>(respuesta);
+                }
+            }
+            catch (Exception e)
+            {
+            }
+            return lista;
+        }
+
     }
 }
